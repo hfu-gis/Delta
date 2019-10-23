@@ -1,0 +1,33 @@
+body{
+	
+	background: #E6161A;
+	
+	
+}
+h1{
+	font-family:Constantia, "Lucida Bright", "DejaVu Serif", Georgia, "serif";
+	font-size: 100px;
+	text-decoration: underline;
+	
+	
+}
+table{
+	background: #E7DDDE;
+	font-family: Constantia, "Lucida Bright", "DejaVu Serif", Georgia, "serif";
+	border: solid #090303; border-spacing: 8px;
+	border: ridge;
+	box-shadow: 10px 10px 15px silver inset;
+}
+thead{
+	font-size: 40px;
+}
+tbody{
+	font-size: 30px;
+}
+td,th{
+	width: 300px;
+}
+th{
+	background: #5CDB28;
+}
+
