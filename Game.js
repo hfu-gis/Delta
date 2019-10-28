@@ -1,0 +1,1 @@
+gameCanvas.getContext('2d');
