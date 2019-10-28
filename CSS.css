@@ -38,17 +38,52 @@ td{
 	background: #FFFAFA;
 }
 h2{
-	text-align: center
-	
+	font-size: 30px;
+	text-align: left;
 }
-aside{
-	font-size: 20px;
+nav{
+	width: 400px;
+	background: gray;
+	height: 500px;
+}
+.seite{
+	height: 40px;
+	position: absolute;
+	left: 10px;
+	z-index: 5;
+}
+.seite ul{
+	list-style: none;
 	font-family: Constantia, "Lucida Bright", "DejaVu Serif", Georgia, "serif";
-	width: 18%; height: auto;
-	background: #FFFFFF;
-
+	width: 180px;
+	margin: 0;
+	padding: 0;
 }
-.nebeneinander{
-	display: flex;
-	flex-direction: row;
+.seite ul li{
+	position: relative;
+}
+.seite a{
+	color: #f9f9f9;
+	display: block;
+	text-decoration: none;
+	transition: 1s;
+	-moz-transition: 1s;
+	-webkit-transition: 1s;
+	-o-transition: 1s;
+	font-family: Constantia, "Lucida Bright", "DejaVu Serif", Georgia, "serif";
+	font-weight: bold;
+	font-size: 16px;
+	padding: 12px 0px 12px 20px;
+}
+.seite a:hover{
+	background: #9400D3;
+	color: #fff;
+	font-style: italic;
+}
+.seite ul li:hover{
+	display: block;
+}
+
+br{
+	height: 70px;
 }
