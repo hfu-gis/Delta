@@ -1,23 +1,25 @@
 html{
     font-family: "Baskerville Old Face";
 }
+body{
+    margin: 0;
+    padding: 0;
+}
 .drpddown{
-    padding: 16px;
     border: none;
     cursor: pointer;
-    margin-right: 100px;
 }
 .dropdownmenu{
     position: relative;
     display: inline-block;
-    float: right;
 }
 .dropdowninhalt{
     visibility: hidden;
     position: absolute;
-    top: -10px;
+    top: -20px;
     background-color: limegreen;
-    min-width: 200px;
+    right: -172px;
+    width: 200px;
     box-shadow: 0px 8px 16px 0px darkgreen;
     z-index: 1;
     opacity: 0;
@@ -25,7 +27,6 @@ html{
     line-height: 20px;
 }
 .dropdowninhalt a{
-    color: blueviolet;
     padding: 18px 16px;
     text-decoration: none;
     display: block;
@@ -42,14 +43,13 @@ html{
 .dropdownmenu:hover .dropdowninhalt {
     visibility: visible;
     opacity: 1;
-
 }
 .dropdownmenu .drpddown{
     background-color: white;
-
 }
 h1{
     text-align: center;
+    height: 100px;
     font-size: 100px;
     color: blueviolet;
     background-color: orange;
@@ -58,11 +58,16 @@ h1{
     width: 700px;
     text-align: center;
     margin-left: auto;
-    margin-right: 250px;
+    margin-right: 430px;
     margin-top: 200px;
+    box-sizing: initial;
+}
+tr{
+
 }
 th{
     font-size: 50px;
+    background-color: yellow;
 }
 td{
     font-size: 30px;
@@ -73,38 +78,41 @@ ul{
 li{
     font-size: 20px;
 }
-.strichnachh1{
-    height: 5px;
-    background-color: red;
-    margin-top: 70px;
-    margin-right: auto;
-}
-.zwischennavundtable{
-    height: 5px;
-    background-color: red;
-    margin-top: -630px;
-    width: 77.8%;
-    margin-right: 0px;
-}
-.seitenstrich{
-    height: 800px;
-    width: 5px;
-    background-color: red;
-    margin-left: 331px;
-    margin-top: -171.5px;
-}
-.hilfe{
-    width: 50px;
-    height: 50px;
-}
-.seite{
-    margin-top: -680px;
+.seitenanzeige1{
+    margin-top: -24.2px;
     background-color: blue;
     width: 300px;
 }
 h2{
-    font-size: 40px;
+    font-size: 30px;
+    text-align: center;
+}
+.faq{
+    float: left;
+    margin-left: 440px;
 }
 .istgleich{
-    margin-top: 38px;
+    float: right;
+    margin-right: 172px;
+}
+.übertabelle{
+    margin-top: -630px;
+    height: 5px;
+    border: none;
+    background-color: red;
+}
+.seitenstrich{
+    float: left;
+    margin-left: 300px;
+    height: 900px;
+    width: 5px;
+    border: none;
+    background-color: red;
+    margin-top: -786px;
+}
+.seitenanzeige2{
+    margin-top: -10px;
+    margin-top: -24.2px;
+    background-color: limegreen;
+    width: 300px;
 }
