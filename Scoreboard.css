@@ -4,6 +4,7 @@ html{
 body{
     margin: 0;
     padding: 0;
+    background: #303437;
 }
 .drpddown{
     border: none;
@@ -71,6 +72,7 @@ th{
 }
 td{
     font-size: 30px;
+    background: white;
 }
 ul{
     list-style: none;

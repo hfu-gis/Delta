@@ -4,6 +4,7 @@ html{
 body{
     margin: 0;
     padding: 0;
+    background: #303437;
 }
 h1{
     text-align: center;
@@ -19,9 +20,11 @@ h1{
 }
 .tabelle th{
     font-size: 50px;
+    background: white;
 }
 .tabelle td{
     font-size: 30px;
+    background: white;
 }
 .tabellenreiter a {
     text-decoration: none;
@@ -39,6 +42,8 @@ h1{
 .tabellenreiter h2{
     font-size: 40px;
     text-align: left;
+    background: white;
+    width: 430px;
 }
 .Abschnitt_eins h2{
     font-size: 30px;
@@ -61,6 +66,5 @@ h1{
 .Abschnitt_eins li{
     margin-bottom: 15px;
 }
-
 
 
