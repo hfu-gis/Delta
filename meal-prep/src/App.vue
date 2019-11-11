@@ -35,11 +35,6 @@ export default {
   components: {
     Scoreboard
   },
-  table: "player",
-  component: {
-    PlayerDirectory
-  },
-
   data: () => ({
     //
   })
