@@ -1,7 +1,9 @@
 <template>
     <div>
         <main>
-            <h1>Player directory</h1>
+            <section>
+                <h1>Player directory</h1>
+            </section>
             <section class="Abschnitt_eins">
                 <nav class="seitennavigation">
                     <h2>Navigation</h2>
