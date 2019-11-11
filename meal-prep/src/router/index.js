@@ -4,6 +4,11 @@ import Registration from "../views/Registration";
 import Wiki from "../views/Wiki";
 import Scoreboard from "../views/Scoreboard";
 import Playerdirectory from "../views/Playerdirectory";
+import BleirohrItem from "../views/LedpipeItem";
+import DieSlums from "../views/TheSlums";
+import Handgranate from "../views/HandgrenadeItem";
+import LaptopItem from "../views/LaptopItem";
+import LoginBotS from "../views/LoginBotS";
 
 Vue.use(VueRouter);
 
@@ -27,7 +32,39 @@ const routes = [
     path: "/Playerdirectory",
     name: "Playerdirectory",
     component: Playerdirectory
-  }
+  },
+  {
+    path:"/Bleirohr",
+    name:"Bleirohr",
+    component:BleirohrItem
+  },
+  {
+    path:"/DieSlums",
+    name:"DieSlums",
+    component:DieSlums
+  },
+  {
+    path:"/Handgranate",
+    name:"Handgranate",
+    component:Handgranate
+
+  },
+  {
+    path:"/Laptop",
+    name:"Laptop",
+    component:LaptopItem
+  },
+  {
+    path:"/TheSlums",
+    name:"TheSlums",
+    component:TheSlums
+  },
+  {
+    path:"/LoginBotS",
+    name:"LoginBotS",
+    component:LoginBotS
+  },
+
 ];
 
 const router = new VueRouter({
