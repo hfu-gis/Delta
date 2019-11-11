@@ -4,6 +4,7 @@ import Registration from "../views/Registration";
 import Wiki from "../views/Wiki";
 import Scoreboard from "../views/Scoreboard";
 import Playerdirectory from "../views/Playerdirectory";
+import Game from "../views/Game";
 
 Vue.use(VueRouter);
 
@@ -27,6 +28,21 @@ const routes = [
     path: "/Playerdirectory",
     name: "Playerdirectory",
     component: Playerdirectory
+  },
+  {
+    path: "/Game",
+    name: "Game",
+    component: Game
+  },
+  {
+    path: "/Faq",
+    name: "Faq",
+    component: Faq
+  },
+  {
+    path: "/Privacy",
+    name: "Privacy",
+    component: Privacy
   }
 ];
 
