@@ -1,9 +1,9 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import Home from "../views/Home.vue";
 import Registration from "../views/Registration";
 import Wiki from "../views/Wiki";
-
+import Scoreboard from "../views/Scoreboard";
+import Playerdirectory from "../views/Playerdirectory";
 Vue.use(VueRouter);
 
 const routes = [
@@ -16,6 +16,16 @@ const routes = [
     path:"/Wiki",
     name:"Wiki",
     component: Wiki
+  },
+  {
+    path: "/Scoreboard",
+    name: "Scoreboard",
+    component: Scoreboard
+  },
+  {
+    path: "/Playerdirectory",
+    name: "Playerdirectory",
+    component: Playerdirectory
   }
 ];
 

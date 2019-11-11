@@ -22,23 +22,15 @@
     </v-app-bar>
     <v-content>
      <router-view/>
+
     </v-content>
   </v-app>
 </template>
 
 <script>
-import Scoreboard from "./components/Scoreboard";
-import PlayerDirectory from "./components/PlayerDirectory";
 
 export default {
-  name: "board",
-  components: {
-    Scoreboard
-  },
-  table: "player",
-  component: {
-    PlayerDirectory
-  },
+
 
   data: () => ({
     //
