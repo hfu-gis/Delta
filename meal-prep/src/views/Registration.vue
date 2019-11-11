@@ -1,9 +1,11 @@
 <template>
     <div>
     <main>
+       <h1>Registration</h1>
         <p></p>
         <strong>Please fill in this form to create an account</strong>
         <hr>
+        <p></p>
             <Strong>Username:</Strong>
             <p>
             </p>
