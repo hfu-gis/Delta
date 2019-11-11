@@ -21,8 +21,7 @@
       </div>
     </v-app-bar>
     <v-content>
-      <Scoreboard />
-      <PlayerDirectory />
+<router-view></router-view>
     </v-content>
   </v-app>
 </template>
