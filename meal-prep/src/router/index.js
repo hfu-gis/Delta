@@ -1,6 +1,6 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import Home from "../views/Home.vue";
+
 import Registration from "../views/Registration";
 import Wiki from "../views/Wiki";
 

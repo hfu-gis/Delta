@@ -27,14 +27,14 @@
 </template>
 
 <script>
-import Scoreboard from "./components/Scoreboard";
-import PlayerDirectory from "./components/PlayerDirectory";
+
 
 export default {
   name: "board",
   components: {
-    Scoreboard
   },
+
+
   data: () => ({
     //
   })
