@@ -4,16 +4,16 @@
             <h1>Scoreboard Bob</h1>
             <section>
                 <article class="faq">
-                    <a href="../Faq.html"></a>
+                    <a></a>
                 </article>
                 <article class="istgleich">
                     <nav class="dropdownmenu">
                         <img  class="drpddown">
                         <ul class="dropdowninhalt">
-                            <li><a href="../Registration/Registration.html">Registration page</a></li>
-                            <li><a href="../Login_Bob_der_Scrumventure.html">Login page</a></li>
-                            <li><a href="../Bob_Wiki.html">Wiki</a></li>
-                            <li><a href="../playerdirectory/Playerdirectory.html">Player directory</a></li>
+                            <li><a>Registration page</a></li>
+                            <li><a>Login page</a></li>
+                            <li><a>Wiki</a></li>
+                            <li><a>Player directory</a></li>
                         </ul>
                     </nav>
                 </article>
