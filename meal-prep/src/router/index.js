@@ -71,7 +71,6 @@ const routes = [
     name:"LoginBotS",
     component:LoginBotS
   },
-
   {
     path: "/Game",
     name: "Game",
