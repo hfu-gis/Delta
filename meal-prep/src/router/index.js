@@ -4,14 +4,16 @@ import Registration from "../views/Registration";
 import Wiki from "../views/Wiki";
 import Scoreboard from "../views/Scoreboard";
 import Playerdirectory from "../views/Playerdirectory";
-import BleirohrItem from "../views/LedpipeItem";
-import DieSlums from "../views/TheSlums";
-import Handgranate from "../views/HandgrenadeItem";
+import LedpipeItem from "../views/LedpipeItem";
+import TheSlums from "../views/TheSlums";
+import HandgrenadeItem from "../views/HandgrenadeItem";
 import LaptopItem from "../views/LaptopItem";
 import LoginBotS from "../views/LoginBotS";
-
 import Game from "../views/Game";
 import About from "../views/About"
+import Privacy from "../views/Privacy";
+import Faq from "../views/Faq";
+
 Vue.use(VueRouter);
 
 const routes = [
@@ -41,19 +43,14 @@ const routes = [
     component: Playerdirectory
   },
   {
-    path:"/Bleirohr",
-    name:"Bleirohr",
-    component:BleirohrItem
+    path:"/LedpipeItem",
+    name:"LedpipeItem",
+    component:LedpipeItem
   },
   {
-    path:"/DieSlums",
-    name:"DieSlums",
-    component:DieSlums
-  },
-  {
-    path:"/Handgranate",
-    name:"Handgranate",
-    component:Handgranate
+    path:"/HandgrenadeItem",
+    name:"HandgrenadeItem",
+    component:HandgrenadeItem
 
   },
   {

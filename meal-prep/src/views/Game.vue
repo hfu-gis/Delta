@@ -1,12 +1,10 @@
 <template>
-    <body>
-    <canvas id="gameCanvas"  style="border:1px solid #000000;">;>
+    <div>
+        <canvas id="gameCanvas"  style="border:1px solid #000000;">;>
 
 
-    </canvas>
-    </body>
-
-
+        </canvas>
+    </div>
 </template>
 
 <script>
