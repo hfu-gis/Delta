@@ -10,6 +10,8 @@ import Handgranate from "../views/HandgrenadeItem";
 import LaptopItem from "../views/LaptopItem";
 import LoginBotS from "../views/LoginBotS";
 
+import Game from "../views/Game";
+import About from "../views/About"
 Vue.use(VueRouter);
 
 const routes = [
@@ -17,6 +19,11 @@ const routes = [
     path: "/Registration",
     name: "Registration",
     component: Registration
+  },
+  {
+    path: "/About",
+    name: "About",
+    component: About
   },
   {
     path:"/Wiki",
@@ -65,6 +72,22 @@ const routes = [
     component:LoginBotS
   },
 
+  },
+  {
+    path: "/Game",
+    name: "Game",
+    component: Game
+  },
+  {
+    path: "/Faq",
+    name: "Faq",
+    component: Faq
+  },
+  {
+    path: "/Privacy",
+    name: "Privacy",
+    component: Privacy
+  }
 ];
 
 const router = new VueRouter({
