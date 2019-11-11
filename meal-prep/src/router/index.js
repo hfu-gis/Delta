@@ -10,7 +10,7 @@ import HandgrenadeItem from "../views/HandgrenadeItem";
 import LaptopItem from "../views/LaptopItem";
 import LoginBotS from "../views/LoginBotS";
 import Game from "../views/Game";
-import About from "../views/About"
+import About from "../views/About";
 import Privacy from "../views/Privacy";
 import Faq from "../views/Faq";
 
@@ -28,8 +28,8 @@ const routes = [
     component: About
   },
   {
-    path:"/Wiki",
-    name:"Wiki",
+    path: "/Wiki",
+    name: "Wiki",
     component: Wiki
   },
   {
@@ -43,30 +43,29 @@ const routes = [
     component: Playerdirectory
   },
   {
-    path:"/LedpipeItem",
-    name:"LedpipeItem",
-    component:LedpipeItem
+    path: "/LedpipeItem",
+    name: "LedpipeItem",
+    component: LedpipeItem
   },
   {
-    path:"/HandgrenadeItem",
-    name:"HandgrenadeItem",
-    component:HandgrenadeItem
-
+    path: "/HandgrenadeItem",
+    name: "HandgrenadeItem",
+    component: HandgrenadeItem
   },
   {
-    path:"/Laptop",
-    name:"Laptop",
-    component:LaptopItem
+    path: "/Laptop",
+    name: "Laptop",
+    component: LaptopItem
   },
   {
-    path:"/TheSlums",
-    name:"TheSlums",
-    component:TheSlums
+    path: "/TheSlums",
+    name: "TheSlums",
+    component: TheSlums
   },
   {
-    path:"/LoginBotS",
-    name:"LoginBotS",
-    component:LoginBotS
+    path: "/LoginBotS",
+    name: "LoginBotS",
+    component: LoginBotS
   },
   {
     path: "/Game",
