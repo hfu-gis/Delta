@@ -1,23 +1,14 @@
 <template>
     <div>
         <main>
-            <section>
-                <h1>Player directory</h1>
-            </section>
-            <section class="Abschnitt_eins">
-                <nav class="seitennavigation">
-                    <h2>Navigation</h2>
-                    <ul>
-                        <li><a>Scoreboard</a></li>
-                        <li><a>Registration</a></li>
-                        <li><a>Login</a></li>
-                        <li><a>Wiki</a></li>
-                    </ul>
-                </nav>
+            <section class="ueberschrift">
+                <header>
+                    <h1>Player directory</h1>
+                </header>
             </section>
             <section class="tabelle">
                 <article class="tabellenreiter">
-                    <h2>CHARACTERCLASSES</h2>
+                    <h2>CHARACTER CLASSES</h2>
                     <a>Scrappers</a>
                     <a>Thief</a>
                     <a>Robot</a>
@@ -26,7 +17,7 @@
                 <article>
                     <table border="1" >
                         <tr>
-                            <th>Profilepicture</th>
+                            <th>Profile picture</th>
                             <th>Username</th>
                             <th>Score</th>
                             <th>Playtime</th>
@@ -51,5 +42,8 @@
 </script>
 
 <style scoped>
+    .ueberschrift{
+        text-align: center;
+    }
 
 </style>

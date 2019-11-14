@@ -3,18 +3,18 @@
          <v-app>
             <v-app-bar app color="#181818" height="90pm">
               <div class="d-flex align-center">
-                <v-img alt="BOB Logo" class="shrink mr-2" contain src="./assets/bots-logo.png" height="162" width="288" transition="g" align="center" style="margin: 110px 0px 0px 750px"/>
+                <v-img alt="BOB Logo" class="shrink mr-2" contain src="./assets/bots-logo.png" height="162" width="288" transition="g" align="center" style="margin: 110px 0px 0px 600px"/>
                 <v-img alt="BOB Name" class="shrink mt-1 hidden-sm-and-down" contain min-width="100" src="" width="100"/>
               </div>
             </v-app-bar>
               <v-sheet height="250px" style="background-color: #333333">
-                  <v-container >
+                  <v-container>
                       <v-row>
-                          <img src="./assets/menue.png" height="90" width="90" @click.stop="drawer = !drawer" style="margin: 140px 0px 0px 30px"/>
+                          <img src="./assets/menue.png" height="90" width="90" @click.stop="drawer = !drawer" style="margin: 140px 0px 0px 10px"/>
                       </v-row>
                   </v-container>
                   <v-navigation-drawer v-model="drawer" absolute temporary right>
-                      <v-list dense style="margin-top: 230px">
+                      <v-list dense style="margin-top: 200px">
                           <v-list-item v-for="item in items" :key="item.title" :to="item.to" link>
                               <v-list-item-content>
                                   <v-list-item-title>{{ item.title }}</v-list-item-title>

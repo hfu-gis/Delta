@@ -1,22 +1,8 @@
 <template>
     <div>
         <main>
-            <h1>Scoreboard Bob</h1>
-            <section>
-                <article class="faq">
-                    <a></a>
-                </article>
-                <article class="istgleich">
-                    <nav class="dropdownmenu">
-                        <img  class="drpddown">
-                        <ul class="dropdowninhalt">
-                            <li><a>Registration page</a></li>
-                            <li><a>Login page</a></li>
-                            <li><a>Wiki</a></li>
-                            <li><a>Player directory</a></li>
-                        </ul>
-                    </nav>
-                </article>
+            <section class="ueberschrift">
+                <h1>Scoreboard Bob</h1>
             </section>
             <section class="tabelle">
                 <table border="1">
@@ -63,5 +49,8 @@
 </script>
 
 <style scoped>
+    .ueberschrift{
+        text-align: center;
+    }
 
 </style>
