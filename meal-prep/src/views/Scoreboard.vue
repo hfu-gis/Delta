@@ -51,6 +51,10 @@
 <style scoped>
     .ueberschrift{
         text-align: center;
+        margin-top: -100px;
+    }
+    .tabelle{
+        margin: 50px 0px 0px 550px;
     }
 
 </style>
