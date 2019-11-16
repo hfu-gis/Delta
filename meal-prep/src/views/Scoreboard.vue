@@ -1,7 +1,12 @@
 <template>
     <div class="scoreboard_Seiteninhalt">
         <main>
-
+            <section class="überschrift">
+                <h1>Scoreboard</h1>
+            </section>
+            <section class="scorebard">
+                <v-data-table :Player="sections" :items="usernames" :items-per-page="2"></v-data-table>
+            </section>
            <!-- <section class="ueberschrift">
                 <h1>Scoreboard Bob</h1>
             </section>
@@ -45,20 +50,31 @@
 
 <script>
     export default {
-        name: "Scoreboard"
+        name: "Scoreboard",
+        data(){
+            return{
+                sections: [
+                    {
+                    text: 'ingame',
+                    align: 'left',
+                    sortable: 'false',
+                    value: 'names'},
+
+                    {text: 'Reached level', value: 'level'},
+                    {text: 'Score', value: 'score'}
+                ],
+                usernames: [
+                    {
+                    names: 'Jonathan',
+                    level: '2',
+                    score: '8',},
+                ],
+            }
+        },
     }
 </script>
 
 <style scoped>
-    .ueberschrift{
-        text-align: center;
-        margin-top: -100px;
-    }
-    .tabelle{
-        margin: 50px 0px 0px 550px;
-    }
-    .scoreboard_Seiteninhalt{
 
-    }
 
 </style>
