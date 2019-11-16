@@ -7,29 +7,11 @@
                 </header>
             </section>
             <section class="tabelle">
-                <article class="tabellenreiter">
-                    <h2>CHARACTER CLASSES</h2>
-                    <router-link :to="Scrapper">Scrapper</router-link>
-                    <router-link :to="Thief">Thief</router-link>
-                    <a>Robot</a>
-                    <a>Magician</a>
-                </article>
-                <article>
-                    <table border="1" >
-                        <tr>
-                            <th>Profile picture</th>
-                            <th>Username</th>
-                            <th>Score</th>
-                            <th>Playtime</th>
-                        </tr>
-                        <tr>
-                            <td>?</td>
-                            <td>?</td>
-                            <td>?</td>
-                            <td>?</td>
-                        </tr>
-                    </table>
-                </article>
+                <v-container fluid>
+                    <v-data-iterator :items="items" item-key="name" :items-per-page="4" :single-expand="expand" hide-default-footer>
+                        <template v-slot:default="{items, isExpanded, expand}"></template>
+                    </v-data-iterator>
+                </v-container>
             </section>
         </main>
     </div>
@@ -47,3 +29,10 @@
     }
 
 </style>
+Scrapper
+Thief
+Robot
+Magician
+Profile picture
+Username
+Playtime

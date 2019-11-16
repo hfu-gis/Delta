@@ -9,7 +9,7 @@
             </v-app-bar>
                  <v-content style="background-color: #333333">
                      <div>
-                         <v-sheet height="110px" style="background-color: blue">
+                         <v-sheet height="110px" style="background-color: #333333">
                              <v-container>
                                  <v-row style="float: right">
                                      <img src="./assets/menue.png" height="90" width="90" @click.stop="drawer = !drawer"/>
@@ -31,7 +31,7 @@
                      </div>
                      <router-view/>
                  </v-content>
-             <v-footer color="grey" padless>
+             <v-footer color="grey" padless style="box-shadow: lightgray">
                  <v-row justify="center" no-gutters>
                      <v-btn v-for="link in links" :key="link.link" :to="link.to" color="green" text rounded class="footer">{{link.link}}</v-btn>
                      <v-col cols="12">{{new Date().getFullYear()}} - <strong>Bo.t.S.</strong></v-col>

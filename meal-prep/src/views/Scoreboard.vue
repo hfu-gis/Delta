@@ -2,48 +2,13 @@
     <div class="scoreboard_Seiteninhalt">
         <main>
             <section class="überschrift">
-                <h1>Scoreboard</h1>
+                <header>
+                    <h1>Scoreboard</h1>
+                </header>
             </section>
             <section class="scorebard">
-                <v-data-table :Player="sections" :items="usernames" :items-per-page="2"></v-data-table>
+                <v-data-table :headers="player" :items="infos" :sort-by="['score', 'level']" :sort-desc="[false, true]" fixed-header></v-data-table>
             </section>
-           <!-- <section class="ueberschrift">
-                <h1>Scoreboard Bob</h1>
-            </section>
-            <section class="tabelle">
-                <table border="1">
-                    <tr>
-                        <th>Username</th>
-                        <th>Reached level</th>
-                        <th>Score</th>
-                    </tr>
-                    <tr>
-                        <td>?</td>
-                        <td>?</td>
-                        <td>?</td>
-                    </tr>
-                </table>
-            </section>
-            <section class="Seitenanzeige">
-                <article>
-                    <aside class="seitenanzeige1">
-                        <h2 class="event">Next events</h2>
-                        <h3>?</h3>
-                        <ol>?</ol>
-                        <h3>?</h3>
-                        <ol>?</ol>
-                    </aside>
-                </article>
-                <article>
-                    <aside class="seitenanzeige2">
-                        <h2 class="update">Changelog</h2>
-                        <h3>?</h3>
-                        <ol>?</ol>
-                        <h3>?</h3>
-                        <ol>?</ol>
-                    </aside>
-                </article>
-            </section> -->
         </main>
     </div>
 </template>
@@ -53,21 +18,37 @@
         name: "Scoreboard",
         data(){
             return{
-                sections: [
+                player:[
                     {
-                    text: 'ingame',
-                    align: 'left',
-                    sortable: 'false',
-                    value: 'names'},
-
-                    {text: 'Reached level', value: 'level'},
-                    {text: 'Score', value: 'score'}
+                        text: 'Player',
+                        align: 'left',
+                        sortable: 'false',
+                        value: 'name',
+                    },
+                    {   text: 'Score', value: 'score'},
+                    {   text: 'Reached level', value: 'level'},
                 ],
-                usernames: [
+                infos:[
                     {
-                    names: 'Jonathan',
-                    level: '2',
-                    score: '8',},
+                        name: 'Jonathan',
+                        score: 6,
+                        level: 2,
+                    },
+                    {
+                        name: 'Marcus',
+                        score: 3,
+                        level: 1,
+                    },
+                    {
+                        name: 'Niclas',
+                        score: 1,
+                        level: 2,
+                    },
+                    {
+                        name: 'Jonathan',
+                        score: 8,
+                        level: 4,
+                    },
                 ],
             }
         },
@@ -75,6 +56,14 @@
 </script>
 
 <style scoped>
-
-
+    .scorebard{
+        width: 1000px;
+        margin-left: 500px;
+        margin-top: 40px;
+    }
+    .überschrift{
+        font-size: 50px;
+        text-align: center;
+        color: yellowgreen;
+    }
 </style>
