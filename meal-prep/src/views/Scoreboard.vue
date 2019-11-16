@@ -1,7 +1,8 @@
 <template>
-    <div>
+    <div class="scoreboard_Seiteninhalt">
         <main>
-            <section class="ueberschrift">
+
+           <!-- <section class="ueberschrift">
                 <h1>Scoreboard Bob</h1>
             </section>
             <section class="tabelle">
@@ -37,7 +38,7 @@
                         <ol>?</ol>
                     </aside>
                 </article>
-            </section>
+            </section> -->
         </main>
     </div>
 </template>
@@ -55,6 +56,9 @@
     }
     .tabelle{
         margin: 50px 0px 0px 550px;
+    }
+    .scoreboard_Seiteninhalt{
+
     }
 
 </style>

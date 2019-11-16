@@ -13,7 +13,10 @@ import Game from "../views/Game";
 import About from "../views/About";
 import Privacy from "../views/Privacy";
 import Faq from "../views/Faq";
-
+import Magician from "../views/Magician";
+import Robot from "../views/Robot";
+import Scrapper from "../views/Scrapper";
+import Thief from "../views/Thief";
 Vue.use(VueRouter);
 
 const routes = [
@@ -81,6 +84,26 @@ const routes = [
     path: "/Privacy",
     name: "Privacy",
     component: Privacy
+  },
+  {
+    path: "/Magician",
+    name: "Magician",
+    component: Magician
+  },
+  {
+    path: "/Robot",
+    name: "Robot",
+    component: Robot
+  },
+  {
+    path: "/Scrapper",
+    name: "Scrapper",
+    component: Scrapper
+  },
+  {
+    path: "/Thief",
+    name: "Thief",
+    component: Thief
   }
 ];
 

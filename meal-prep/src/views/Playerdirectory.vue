@@ -9,8 +9,8 @@
             <section class="tabelle">
                 <article class="tabellenreiter">
                     <h2>CHARACTER CLASSES</h2>
-                    <a>Scrappers</a>
-                    <a>Thief</a>
+                    <router-link :to="Scrapper">Scrapper</router-link>
+                    <router-link :to="Thief">Thief</router-link>
                     <a>Robot</a>
                     <a>Magician</a>
                 </article>
