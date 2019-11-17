@@ -3,7 +3,7 @@
     <v-app>
       <v-app-bar app color="#181818" height="60%">
         <div class="d-flex align-center">
-          <v-img
+          <a href="/Game"><v-img
             alt="Bots Logo"
             class="shrink mr-2"
             contain
@@ -22,11 +22,12 @@
             src=""
             width="100"
           />
+          </a>
         </div>
       </v-app-bar>
       <v-content style="background-color: #333333">
         <div>
-          <v-sheet height="110px" style="background-color: #333333">
+          <v-sheet height="15" style="background-color: #333333">
             <v-container>
               <v-row style="float: right">
                 <img

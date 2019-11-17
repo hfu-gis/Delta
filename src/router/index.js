@@ -17,6 +17,7 @@ import Magician from "../views/Magician";
 import Robot from "../views/Robot";
 import Scrapper from "../views/Scrapper";
 import Thief from "../views/Thief";
+
 Vue.use(VueRouter);
 
 const routes = [
