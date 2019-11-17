@@ -1,20 +1,9 @@
 <template>
   <div>
-    <h1>Generic Privacy Policy template</h1>
 
-    <section class="istgleich">
-      <nav class="dropdownmenu">
-        <img class="drpddown" />
-        <ul class="dropdowninhalt">
-          <li><a href="Login_Bob_der_Scrumventure.html">Loginpage</a></li>
-          <li><a href="">Wiki</a></li>
-          <li>
-            <a href="playerdirectory/Playerdirectory.html">Userdirectory</a>
-          </li>
-        </ul>
-      </nav>
-    </section>
-
+<main>
+  <h1>Generic Privacy Policy template</h1>
+  <p></p>
     <h2>Privacy Policy</h2>
 
     Last updated: (add date)
@@ -99,6 +88,7 @@
     <strong>Contact Us</strong>
     <p></p>
     If you have any questions about this Privacy Policy, please contact us.
+</main>
   </div>
 </template>
 
@@ -110,5 +100,10 @@ export default {
 
 <style scoped>
 
+  main {
+    color:white;
+    margin-left: 1%;
+    margin-right: 40%;
+  }
 
 </style>

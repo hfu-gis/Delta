@@ -59,6 +59,13 @@ export default {
 </script>
 
 <style scoped>
+
+  main {
+    color:white;
+    margin-left: 1%;
+    margin-right: 40%;
+  }
+
 .ueberschrift {
   text-align: center;
 }
