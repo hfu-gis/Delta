@@ -25,7 +25,7 @@
       </v-app-bar>
       <v-content style="background-color: #333333">
         <div>
-          <v-sheet height="110px" style="background-color: #333333">
+          <v-sheet height="50px" style="background-color: #333333">
             <v-container>
               <v-row style="float: right">
                 <img
