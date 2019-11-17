@@ -101,7 +101,7 @@ export default {
         { title: "Playerdirectory", to: "/Playerdirectory" },
         { title: "Registration", to: "/Registration" },
         { title: "Scoreboard", to: "/Scoreboard" },
-        { title: "Wiki", to: "/Wiki" },
+        { title: "Wiki", to: "/Wiki" }
       ],
       links: [
         { link: "Faq", to: "/Faq" },
