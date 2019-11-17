@@ -30,6 +30,7 @@
             <v-container>
               <v-row style="float: right">
                 <img
+                        alt="Bots Logo"
                   src="./assets/menue.png"
                   height="90"
                   width="90"
