@@ -20,5 +20,15 @@ export default {
   name: "Faq"
 };
 </script>
+<style scoped>
+  input[type=text], input[type=password] {
+    width: 20%;
+    padding: 0.3%;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #D3D3D3;
+    color: black;
+  }
 
-<style scoped></style>
+</style>

@@ -4,7 +4,7 @@
       <v-app-bar app color="#181818" height="60%">
         <div class="d-flex align-center">
           <v-img
-            alt="BOB Logo"
+            alt="Bots Logo"
             class="shrink mr-2"
             contain
             src="./assets/botsloscho.png"
@@ -12,9 +12,10 @@
             width="120"
             align="center"
             style="align-items: center; justify-content: center; display: flex"
+
           />
           <v-img
-            alt="BOB Name"
+            alt="Bots Name"
             class="shrink mt-1 hidden-sm-and-down"
             contain
             min-width="100"
@@ -95,12 +96,14 @@ export default {
     return {
       drawer: null,
       items: [
-        { title: "Game", to: "/Game" },
-        { title: "LoginBotS", to: "/LoginBotS" },
-        { title: "Playerdirectory", to: "/Playerdirectory" },
+        { title: "Login", to: "/LoginBotS" },
         { title: "Registration", to: "/Registration" },
+        { title: "Game", to: "/Game" },
+        { title: "About the Game", to: "/About"},
+        { title: "Player Directory", to: "/Playerdirectory" },
         { title: "Scoreboard", to: "/Scoreboard" },
-        { title: "Wiki", to: "/Wiki" }
+        { title: "Wiki", to: "/Wiki" },
+        { title: "FAQ", to:"/Faq"}
       ],
       links: [
         { link: "Faq", to: "/Faq" },
