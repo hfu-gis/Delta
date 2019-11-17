@@ -1,9 +1,9 @@
 <template>
      <div>
          <v-app>
-            <v-app-bar app color="#181818" height="90pm">
+            <v-app-bar app color="#181818" height="60%">
               <div class="d-flex align-center">
-                <v-img alt="BOB Logo" class="shrink mr-2" contain src="./assets/bots-logo.png" height="90" width="180"  align="center" style="align-items: center; justify-content: center; display: flex"/>
+                <v-img alt="BOB Logo" class="shrink mr-2" contain src="./assets/botsloscho.png" height="50" width="120"  align="center" style="align-items: center; justify-content: center; display: flex"/>
                 <v-img alt="BOB Name" class="shrink mt-1 hidden-sm-and-down" contain min-width="100" src="" width="100"/>
               </div>
             </v-app-bar>
@@ -15,7 +15,7 @@
                                      <img src="./assets/menue.png" height="90" width="90" @click.stop="drawer = !drawer"/>
                                  </v-row>
                              </v-container>
-                             <v-navigation-drawer v-model="drawer" absolute right :value="drawer" style="background-color: limegreen">
+                             <v-navigation-drawer v-model="drawer" absolute right :value="drawer" style="background-color: limegreen; width: 15%">
                                  <v-btn color="grey" dark @click="drawer = !drawer" style="margin-top: 50px">
                                      <v-icon dark left>mdi-arrow-left</v-icon>
                                  </v-btn>
