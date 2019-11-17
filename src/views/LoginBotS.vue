@@ -1,29 +1,21 @@
 <template>
   <div>
-    <header><h1>Welcome to Bob der Scrumventure</h1></header>
+    <header><h1 class="überschrift">Welcome to Bob the Scrumventure</h1></header>
     <section>
       <article>
-        <section>
-          <h3>Login</h3>
-          <label>Name</label>
-          <textarea id="name" name="text" cols="16" rows="1"></textarea>
-          <label>Password</label>
-          <input type="password" id="password" name="text" cols="16" rows="1" />
+        <section class="login">
+          <h3>Login:</h3>
+          <label>Name&nbsp;</label>
+          <textarea class="input" id="name" name="text" cols="16" rows="1"></textarea>
+          <label>&nbsp;Password&nbsp;</label>
+          <input class="input" type="password" id="password" name="text" cols="16" rows="1" />
         </section>
       </article>
     </section>
-    <section>
+    <section class="reg">
       <article>
-        <section><h3>Sign up</h3></section>
         <a href="Registration/Registration.html">
-          <button>Registration</button>
-        </a>
-      </article>
-    </section>
-    <section>
-      <article>
-        <a href="scoreboard/Scoreboard.html">
-          <button>Scoreboard</button>
+          <button class="button"><u>Sign Up</u></button>
         </a>
       </article>
     </section>
@@ -36,4 +28,26 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+  .überschrift{
+  margin-left:30%;
+    color: white;
+  }
+  .login{
+    margin-left: 50%;
+    margin-top: 5%;
+    color: white;
+  }
+  .reg{
+    margin-left: 30%;
+    margin-top: 5%;
+    color:white;
+  }
+  .button{
+    color: white;
+  }
+  .input{
+    background:white;
+  }
+
+</style>
