@@ -1,100 +1,29 @@
 <template>
   <v-app id="inspire">
 
-    <v-navigation-drawer
-            v-model="drawer"
-            app
-            right
-            clipped
-    >
+    <v-navigation-drawer v-model="drawer" app right clipped>
       <v-list dense>
-
-        <router-link to="./views/Game.vue" style="text-decoration: none">
-        <v-list-item link>
-          <v-list-item-action>
-            <v-icon>mdi-run</v-icon>
-          </v-list-item-action>
+        <v-list-item v-for="item in items" :key="item.title" :to="item.to" link>
           <v-list-item-content>
-            <v-list-item-title>Play!</v-list-item-title>
+            <v-list-item-title>{{ item.title }}</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
-        </router-link>
-
-        <router-link to="./views/Faq.vue" style="text-decoration: none">
-        <v-list-item link>
-          <v-list-item-action>
-            <v-icon>mdi-help</v-icon>
-          </v-list-item-action>
-          <v-list-item-content>
-            <v-list-item-title>F.A.Q.</v-list-item-title>
-          </v-list-item-content>
-        </v-list-item>
-        </router-link>
-
-        <router-link to="./views/About.vue" style="text-decoration: none">
-        <v-list-item link>
-          <v-list-item-action>
-            <v-icon>mdi-gamepad-left</v-icon>
-          </v-list-item-action>
-          <v-list-item-content>
-            <v-list-item-title>About the Game</v-list-item-title>
-          </v-list-item-content>
-        </v-list-item>
-        </router-link>
-
-        <router-link to="./views/Scoreboard.vue" style="text-decoration: none">
-        <v-list-item link>
-          <v-list-item-action>
-            <v-icon>mdi-trophy</v-icon>
-          </v-list-item-action>
-          <v-list-item-content>
-            <v-list-item-title>Scoreboard</v-list-item-title>
-          </v-list-item-content>
-        </v-list-item>
-        </router-link>
-
-        <router-link to="./views/Playerdirectory.vue" style="text-decoration: none">
-          <v-list-item link>
-            <v-list-item-action>
-              <v-icon>mdi-account</v-icon>
-            </v-list-item-action>
-            <v-list-item-content>
-              <v-list-item-title>Player Directory</v-list-item-title>
-            </v-list-item-content>
-          </v-list-item>
-        </router-link>
-
-        <router-link to="./views/Privacy.vue" style="text-decoration: none">
-        <v-list-item link>
-          <v-list-item-action>
-              <v-icon>mdi-incognito</v-icon>
-            </v-list-item-action>
-            <v-list-item-content>
-              <v-list-item-title>Terms & Conditions</v-list-item-title>
-            </v-list-item-content>
-        </v-list-item>
-        </router-link>
       </v-list>
-
     </v-navigation-drawer>
 
-    <v-app-bar
-            app
-            clipped-right
-    >
+    <v-app-bar app clipped-right>
 
       <router-link to="/App.vue">
       <v-toolbar-title><v-img height="60px" width="80px" src="./assets/botsloscho.png"></v-img></v-toolbar-title>
       </router-link>
       <v-spacer/>
       <v-btn class="mr-2"> Login </v-btn>
-
       <v-btn> Register </v-btn>
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
-
     </v-app-bar>
+
     <v-content>
-      <router-view/>
+      <router-view />
     </v-content>
 
     <v-footer app>
@@ -111,6 +40,14 @@
 
     data: () => ({
       drawer: null,
+      items: [
+        { title: "Play", to: "/Game" , icon: 'mdi-run'},
+        { title: "FAQ", to: "/Faq" , icon: 'mdi-help'},
+        { title: "About", to: "/About", icon: 'mdi-gamepad-left' },
+        { title: "Scoreboard", to: "/Scoreboard", icon: 'mdi-trophy'},
+        { title: "Player Directory", to: "/Playerdirectory", icon: 'mdi-account'},
+        { title: "Terms & Conditions", to: "/Privacy", icon: 'mdi-incognito' },
+      ],
     }),
 
     created () {
