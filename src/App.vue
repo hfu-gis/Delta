@@ -63,6 +63,7 @@
             app
             clipped-right
     >
+      
       <router-link to="/App.vue">
       <v-toolbar-title><v-img height="60px" width="80px" src="./assets/botsloscho.png"></v-img></v-toolbar-title>
       </router-link>
