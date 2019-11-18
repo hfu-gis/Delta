@@ -17,6 +17,7 @@ import Magician from "../views/Magician";
 import Robot from "../views/Robot";
 import Scrapper from "../views/Scrapper";
 import Thief from "../views/Thief";
+import Playerprofile from "../views/Playerprofile";
 
 Vue.use(VueRouter);
 
@@ -25,6 +26,11 @@ const routes = [
     path: "/Registration",
     name: "Registration",
     component: Registration
+  },
+  {
+    path: "/Playerprofile",
+    name: "Playerprofile",
+    component: Playerprofile
   },
   {
     path: "/About",
@@ -68,7 +74,7 @@ const routes = [
   },
   {
     path: "/LoginBotS",
-    name: "LoginBotS",
+    name: "Login",
     component: LoginBotS
   },
   {

@@ -20,7 +20,7 @@
       <v-toolbar-title><v-img height="60px" width="80px" src="./assets/BotsLogo.png"></v-img></v-toolbar-title>
       </router-link>
       <v-spacer/>
-      <v-btn class="mr-2" to="/LoginBotS">Login</v-btn>
+      <v-btn class="mr-2" to="/Login">Login</v-btn>
       <v-btn to="/Registration"> Register </v-btn>
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
     </v-app-bar>
@@ -44,6 +44,7 @@
     data: () => ({
       drawer: null,
       items: [
+        { title: "Profil", to: "/Playerprofile" , icon: 'mdi-account'},
         { title: "Play", to: "/Game" , icon: 'mdi-run'},
         { title: "FAQ", to: "/Faq" , icon: 'mdi-help'},
         { title: "About", to: "/About", icon: 'mdi-gamepad-left' },
