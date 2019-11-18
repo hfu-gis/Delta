@@ -36,10 +36,14 @@
 </template>
 
 <script>
+  // import home from "./components/home";
   export default {
     props: {
       source: String,
     },
+    // components:{
+    //   home
+    // },
 
     data: () => ({
       drawer: null,
@@ -56,6 +60,8 @@
 
     created () {
       this.$vuetify.theme.dark = true
+      this.$router.push({path: '/LoginBotS'})
+      // this.$router.push({path: '/home'})
     },
   }
 </script>

@@ -18,6 +18,7 @@ import Robot from "../views/Robot";
 import Scrapper from "../views/Scrapper";
 import Thief from "../views/Thief";
 import Playerprofile from "../views/Playerprofile";
+// import home from "../components/home";
 
 Vue.use(VueRouter);
 
@@ -111,7 +112,13 @@ const routes = [
     path: "/Thief",
     name: "Thief",
     component: Thief
-  }
+  },
+  // {
+  //   path: "/home",
+  //   name: "home",
+  //   component: home
+  // },
+
 ];
 
 const router = new VueRouter({

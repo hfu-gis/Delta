@@ -16,7 +16,8 @@
 <script>
 export default {
   name: "Playerdirectory"
-};
+
+}
 </script>
 
 <style scoped>
