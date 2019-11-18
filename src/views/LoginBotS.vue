@@ -14,9 +14,9 @@
     </section>
     <section class="reg">
       <article>
-        <a href="Registration/Registration.html">
+        <router-link to="/Registration">
           <button class="button"><u>Sign Up</u></button>
-        </a>
+          </router-link>
       </article>
     </section>
   </div>
