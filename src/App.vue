@@ -53,7 +53,7 @@
         </v-list-item>
         </router-link>
 
-        <router-link to="./views/PlayerDirectory.vue" style="text-decoration: none">
+        <router-link to="./views/Playerdirectory.vue" style="text-decoration: none">
           <v-list-item link>
             <v-list-item-action>
               <v-icon>mdi-account</v-icon>
