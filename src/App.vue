@@ -9,6 +9,7 @@
     >
       <v-list dense>
 
+        <router-link to="./views/Game.vue" style="text-decoration: none">
         <v-list-item link>
           <v-list-item-action>
             <v-icon>mdi-run</v-icon>
@@ -17,7 +18,9 @@
             <v-list-item-title>Play!</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
+        </router-link>
 
+        <router-link to="./views/Faq.vue" style="text-decoration: none">
         <v-list-item link>
           <v-list-item-action>
             <v-icon>mdi-help</v-icon>
@@ -26,7 +29,9 @@
             <v-list-item-title>F.A.Q.</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
+        </router-link>
 
+        <router-link to="./views/About.vue" style="text-decoration: none">
         <v-list-item link>
           <v-list-item-action>
             <v-icon>mdi-gamepad-left</v-icon>
@@ -35,15 +40,29 @@
             <v-list-item-title>About the Game</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
+        </router-link>
 
+        <router-link to="./views/Scoreboard.vue" style="text-decoration: none">
         <v-list-item link>
           <v-list-item-action>
-            <v-icon>mdi-settings</v-icon>
+            <v-icon>mdi-trophy</v-icon>
           </v-list-item-action>
           <v-list-item-content>
-            <v-list-item-title>Settings</v-list-item-title>
+            <v-list-item-title>Scoreboard</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
+        </router-link>
+
+        <router-link to="./views/PlayerDirectory.vue" style="text-decoration: none">
+          <v-list-item link>
+            <v-list-item-action>
+              <v-icon>mdi-account</v-icon>
+            </v-list-item-action>
+            <v-list-item-content>
+              <v-list-item-title>Player Directory</v-list-item-title>
+            </v-list-item-content>
+          </v-list-item>
+        </router-link>
 
         <router-link to="./views/Privacy.vue" style="text-decoration: none">
         <v-list-item link>
@@ -63,7 +82,7 @@
             app
             clipped-right
     >
-      
+
       <router-link to="/App.vue">
       <v-toolbar-title><v-img height="60px" width="80px" src="./assets/botsloscho.png"></v-img></v-toolbar-title>
       </router-link>
