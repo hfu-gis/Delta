@@ -20,8 +20,8 @@
       <v-toolbar-title><v-img height="60px" width="80px" src="./assets/botsloscho.png"></v-img></v-toolbar-title>
       </router-link>
       <v-spacer/>
-      <v-btn class="mr-2"> Login </v-btn>
-      <v-btn> Register </v-btn>
+      <v-btn class="mr-2" to="/LoginBotS">Login</v-btn>
+      <v-btn to="/Registration"> Register </v-btn>
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
     </v-app-bar>
 
