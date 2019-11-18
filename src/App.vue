@@ -45,7 +45,7 @@
           </v-list-item-content>
         </v-list-item>
 
-        <router-link to="/views/Privacy.vue" text-decoration="none">
+        <router-link to="./views/Privacy.vue" style="text-decoration: none">
         <v-list-item link>
           <v-list-item-action>
               <v-icon>mdi-incognito</v-icon>
@@ -74,6 +74,9 @@
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
 
     </v-app-bar>
+    <v-content>
+      <router-view/>
+    </v-content>
 
     <v-footer app>
       <span>&copy; 2019</span>
