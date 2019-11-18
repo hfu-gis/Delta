@@ -4,6 +4,9 @@
     <v-navigation-drawer v-model="drawer" app right clipped>
       <v-list dense>
         <v-list-item v-for="item in items" :key="item.title" :to="item.to" link>
+          <v-list-item-action>
+            <v-icon v-text="item.icon"></v-icon>
+          </v-list-item-action>
           <v-list-item-content>
             <v-list-item-title>{{ item.title }}</v-list-item-title>
           </v-list-item-content>
