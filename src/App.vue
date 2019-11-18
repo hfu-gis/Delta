@@ -1,119 +1,95 @@
 <template>
-  <div>
-    <v-app>
-      <v-app-bar app color="#181818" height="60%">
-        <div class="d-flex align-center">
-          <a href="/Game"><v-img
-            alt="Bots Logo"
-            class="shrink mr-2"
-            contain
-            src="./assets/botsloscho.png"
-            height="50"
-            width="120"
-            align="center"
-            style="align-items: center; justify-content: center; display: flex"
+  <v-app id="inspire">
 
-            
-          />
-          <v-img
-            alt="Bots Name"
-            class="shrink mt-1 hidden-sm-and-down"
-            contain
-            min-width="100"
-            src=""
-            width="100"
-          />
-          </a>
-        </div>
-      </v-app-bar>
-      <v-content style="background-color: #333333">
-        <div>
-          <v-sheet height="15" style="background-color: #333333">
-            <v-container>
-              <v-row style="float: right">
-                <img
-                        alt="Bots Logo"
-                  src="./assets/menue.png"
-                  height="90"
-                  width="90"
-                  @click.stop="drawer = !drawer"
-                />
-              </v-row>
-            </v-container>
-            <v-navigation-drawer
-              v-model="drawer"
-              absolute
-              right
-              :value="drawer"
-              style="background-color: limegreen; width: 15%"
-            >
-              <v-btn
-                color="grey"
-                dark
-                @click="drawer = !drawer"
-                style="margin-top: 50px"
-              >
-                <v-icon dark left>mdi-arrow-left</v-icon>
-              </v-btn>
-              <v-list dense style="margin-top: 50px">
-                <v-list-item
-                  v-for="item in items"
-                  :key="item.title"
-                  :to="item.to"
-                  link
-                >
-                  <v-list-item-content>
-                    <v-list-item-title>{{ item.title }}</v-list-item-title>
-                  </v-list-item-content>
-                </v-list-item>
-              </v-list>
-            </v-navigation-drawer>
-          </v-sheet>
-        </div>
-        <router-view />
-      </v-content>
-      <v-footer color="grey" padless style="box-shadow: lightgray">
-        <v-row justify="center" no-gutters>
-          <v-btn
-            v-for="link in links"
-            :key="link.link"
-            :to="link.to"
-            color="green"
-            text
-            rounded
-            class="footer"
-            >{{ link.link }}</v-btn
-          >
-          <v-col cols="12"
-            >{{ new Date().getFullYear() }} - <strong>Bo.t.S.</strong></v-col
-          >
-        </v-row>
-      </v-footer>
-    </v-app>
-  </div>
+    <v-navigation-drawer
+            v-model="drawer"
+            app
+            right
+            clipped
+    >
+      <v-list dense>
+
+        <v-list-item link>
+          <v-list-item-action>
+            <v-icon>mdi-run</v-icon>
+          </v-list-item-action>
+          <v-list-item-content>
+            <v-list-item-title>Play!</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+
+        <v-list-item link>
+          <v-list-item-action>
+            <v-icon>mdi-help</v-icon>
+          </v-list-item-action>
+          <v-list-item-content>
+            <v-list-item-title>F.A.Q.</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+
+        <v-list-item link>
+          <v-list-item-action>
+            <v-icon>mdi-gamepad-left</v-icon>
+          </v-list-item-action>
+          <v-list-item-content>
+            <v-list-item-title>About the Game</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+
+        <v-list-item link>
+          <v-list-item-action>
+            <v-icon>mdi-settings</v-icon>
+          </v-list-item-action>
+          <v-list-item-content>
+            <v-list-item-title>Settings</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+
+        <router-link to="/views/Privacy.vue" text-decoration="none">
+        <v-list-item link>
+          <v-list-item-action>
+              <v-icon>mdi-incognito</v-icon>
+            </v-list-item-action>
+            <v-list-item-content>
+              <v-list-item-title>Terms & Conditions</v-list-item-title>
+            </v-list-item-content>
+        </v-list-item>
+        </router-link>
+      </v-list>
+
+    </v-navigation-drawer>
+
+    <v-app-bar
+            app
+            clipped-right
+    >
+      <v-toolbar-title><v-img height="60px" width="80px" src="./assets/botsloscho.png"></v-img></v-toolbar-title>
+      <v-spacer/>
+      <v-btn class="mr-2"> Login </v-btn>
+
+      <v-btn> Register </v-btn>
+      <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
+
+    </v-app-bar>
+
+    <v-footer app>
+      <span>&copy; 2019</span>
+    </v-footer>
+  </v-app>
 </template>
 
 <script>
-export default {
-  data() {
-    return {
+  export default {
+    props: {
+      source: String,
+    },
+
+    data: () => ({
       drawer: null,
-      items: [
-        { title: "Login", to: "/LoginBotS" },
-        { title: "Registration", to: "/Registration" },
-        { title: "Game", to: "/Game" },
-        { title: "About the Game", to: "/About"},
-        { title: "Player Directory", to: "/Playerdirectory" },
-        { title: "Scoreboard", to: "/Scoreboard" },
-        { title: "Wiki", to: "/Wiki" },
-        { title: "FAQ", to:"/Faq"}
-      ],
-      links: [
-        { link: "Faq", to: "/Faq" },
-        { link: "Privacy", to: "/Privacy" },
-        { link: "Impressum", to: "/Impressum" }
-      ]
-    };
+    }),
+
+    created () {
+      this.$vuetify.theme.dark = true
+    },
   }
-};
 </script>
