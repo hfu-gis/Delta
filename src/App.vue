@@ -13,6 +13,7 @@
             align="center"
             style="align-items: center; justify-content: center; display: flex"
 
+            
           />
           <v-img
             alt="Bots Name"
