@@ -46,7 +46,7 @@
     // },
 
     data: () => ({
-      drawer: null,
+      drawer: false,
       items: [
         { title: "Profil", to: "/Profil" , icon: 'mdi-account-details'},
         { title: "Play", to: "/Game" , icon: 'mdi-run'},
@@ -60,7 +60,7 @@
 
     created () {
       this.$vuetify.theme.dark = true
-      // this.$router.push({path: '/LoginBotS'})
+      // this.$router.push({path: '/home'})
     },
   }
 </script>

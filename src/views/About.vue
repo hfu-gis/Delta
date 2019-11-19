@@ -27,7 +27,7 @@ export default {
 <style scoped>
 
   main {
-    margin-left: 1%;
+    margin-left: 5%;
   }
 
 </style>

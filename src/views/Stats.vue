@@ -10,7 +10,7 @@
                 <img src="../assets/122043.jpg" height="70" width="40"/>
             </article>
             <article class="profilname">
-                <h2>name</h2>
+                <h2>Lorem ipsum dolor </h2>
             </article>
         </section>
         <v-container class="stats">
@@ -19,14 +19,11 @@
                     <v-container class="routes">
                         <router-link to="/Profil" class="rout">Personal</router-link>
                         <router-link to="/Stats" class="rout" style="margin-left: 1%">Stats</router-link>
-                        <router-link to="" class="rout" style="margin-left: 1%">fseeher</router-link>
-                        <router-link to="" class="rout" style="margin-left: 1%">gsgaerr</router-link>
+                        <router-link to="" class="rout" style="margin-left: 1%">Lorem ipsum dolor </router-link>
+                        <router-link to="" class="rout" style="margin-left: 1%">Lorem ipsum dolor </router-link>
                     </v-container>
                 </article>
                 <article class="profilstats">
-                    <header class="übprst">
-                        <h2>Personal Dates</h2>
-                    </header>
                     <v-container class="statstab">
                         <v-simple-table class="simptabl1">
                             <template v-slot:default>
@@ -82,68 +79,68 @@
             return {
                 desserts: [
                     {
-                        name: 'Email',
-                        info: 'abcatdfg',
+                        name: 'Lorem ipsum dolor ',
+                        info: 'Lorem ipsum dolor ',
                     },
                     {
-                        name: 'Country',
-                        info: 'abcatdfg',
+                        name: 'Lorem ipsum dolor ',
+                        info: 'Lorem ipsum dolor ',
                     },
                     {
-                        name: '?',
-                        info: 'abcatdfg',
+                        name: 'Lorem ipsum dolor ',
+                        info: 'Lorem ipsum dolor ',
                     },
                     {
-                        name: '?',
-                        info: 'abcatdfg',
+                        name: 'Lorem ipsum dolor ',
+                        info: 'Lorem ipsum dolor ',
                     },
                     {
-                        name: '?',
-                        info: 'abcatdfg',
+                        name: 'Lorem ipsum dolor ',
+                        info: 'Lorem ipsum dolor ',
                     },
                 ],
                 dess: [
                     {
-                        name: 'f',
-                        info: 'abcatdfg',
+                        name: 'Lorem ipsum dolor ',
+                        info: 'Lorem ipsum dolor ',
                     },
                     {
-                        name: 'g',
-                        info: 'abcatdfg',
+                        name: 'Lorem ipsum dolor',
+                        info: 'Lorem ipsum dolor ',
                     },
                     {
-                        name: '?',
-                        info: 'abcatdfg',
+                        name: 'Lorem ipsum dolor ',
+                        info: 'Lorem ipsum dolor ',
                     },
                     {
-                        name: '?',
-                        info: 'abcatdfg',
+                        name: 'Lorem ipsum dolor ',
+                        info: 'Lorem ipsum dolor ',
                     },
                     {
-                        name: '?',
-                        info: 'abcatdfg',
+                        name: 'Lorem ipsum dolor ',
+                        info: 'Lorem ipsum dolor ',
                     },
                 ],
                 desser: [
                     {
-                        name: 'g',
-                        info: 'abcatdfg',
+                        name: 'Lorem ipsum dolor ',
+                        info: 'Lorem ipsum dolor ',
                     },
                     {
-                        name: 'Couggntry',
-                        info: 'abcatdfg',
+                        name: 'Lorem ipsum dolor ',
+                        info: 'Lorem ipsum dolor ',
                     },
                     {
-                        name: '?',
-                        info: 'abcatdfg',
+                        name: 'Lorem ipsum dolor ',
+                        info: 'Lorem ipsum dolor ',
                     },
                     {
-                        name: '?',
-                        info: 'abcatdfg',
+                        name: 'Lorem ipsum dolor ',
+                        info: 'Lorem ipsum dolor ',
                     },
                     {
-                        name: '?',
-                        info: 'abcatdfg',
+                        name: 'Lorem ipsum dolor ',
+                        info: 'Lorem ipsum dolor ',
                     },
                 ],
             }
@@ -161,7 +158,8 @@
         box-shadow:  1px 1px 1px white;
     }
     .Profil{
-        margin-left: 1%;
+        margin-left: 5%;
+        margin-top: 2%;
     }
     .profilbild{
         margin-left: 5%;

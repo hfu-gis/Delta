@@ -102,11 +102,12 @@ export default {
 
 <style scoped>
 .scorebard {
-  margin-top: 40px;
+  margin-top: 2%;
   width: 60%;
   margin-left: 5%;
 }
 .überschrift {
-  margin-left: 1%;
+  margin-left: 5%;
+  margin-top: 2%;
 }
 </style>
