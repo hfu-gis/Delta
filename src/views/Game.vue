@@ -24,7 +24,7 @@
             ended=false
   }
   methods:{
-    punch= function() {
+    punch=function() {
       this.health -= 10;
       if (this.health<=0){
         this.ended=true;

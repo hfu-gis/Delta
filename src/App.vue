@@ -61,7 +61,6 @@
     created () {
       this.$vuetify.theme.dark = true
       this.$router.push({path: '/LoginBotS'})
-      // this.$router.push({path: '/home'})
     },
   }
 </script>
