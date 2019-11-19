@@ -18,6 +18,7 @@ import Robot from "../views/Robot";
 import Scrapper from "../views/Scrapper";
 import Thief from "../views/Thief";
 import Playerprofile from "../views/Playerprofile";
+import Stats from "../views/Stats";
 // import home from "../components/home";
 
 Vue.use(VueRouter);
@@ -29,7 +30,12 @@ const routes = [
     component: Registration
   },
   {
-    path: "/Playerprofile",
+    path: "/Stats",
+    name: "Stats",
+    component: Stats
+  },
+  {
+    path: "/Profil",
     name: "Playerprofile",
     component: Playerprofile
   },
@@ -74,8 +80,8 @@ const routes = [
     component: TheSlums
   },
   {
-    path: "/LoginBotS",
-    name: "Login",
+    path: "/Login",
+    name: "LoginBotS",
     component: LoginBotS
   },
   // {

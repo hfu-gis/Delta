@@ -7,7 +7,6 @@
         </header>
       </section>
       <section class="tabelle">
-
       </section>
     </main>
   </div>
@@ -22,14 +21,9 @@ export default {
 
 <style scoped>
 
-  main {
-    color:white;
-    margin-left: 1%;
-    margin-right: 40%;
-  }
 
 .ueberschrift {
-  text-align: center;
+  margin-left: 1%;
 }
 </style>
-Scrapper Thief Robot Magician Profile picture Username Score Playtime
+

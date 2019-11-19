@@ -27,7 +27,6 @@ export default {
 <style scoped>
 
   main {
-    color:white;
     margin-left: 1%;
   }
 

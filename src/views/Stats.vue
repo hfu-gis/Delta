@@ -1,18 +1,18 @@
 <template>
-    <div class="body" >
-            <section class="Profil">
-                <header>
-                    <h1>Profile</h1>
-                </header>
-            </section>
-            <section class="Profilinhalt">
-                <article class="profilbild">
-                    <img src="../assets/122043.jpg" height="70" width="40"/>
-                </article>
-                <article class="profilname">
-                    <h2>name</h2>
-                </article>
-            </section>
+    <div class="body">
+        <section class="Profil">
+            <header>
+                <h1>Profile</h1>
+            </header>
+        </section>
+        <section class="Profilinhalt">
+            <article class="profilbild">
+                <img src="../assets/122043.jpg" height="70" width="40"/>
+            </article>
+            <article class="profilname">
+                <h2>name</h2>
+            </article>
+        </section>
         <v-container class="stats">
             <section class="Statistiken">
                 <article class="statsmenü">
@@ -58,6 +58,16 @@
                                 </tbody>
                             </template>
                         </v-simple-table>
+                        <v-simple-table class="simptabl3">
+                            <template v-slot:default>
+                                <tbody>
+                                <tr v-for="item in desser" :key="item.name">
+                                    <td>{{ item.name }}</td>
+                                    <td>{{item.info}}</td>
+                                </tr>
+                                </tbody>
+                            </template>
+                        </v-simple-table>
                     </v-container>
                 </article>
             </section>
@@ -67,7 +77,7 @@
 
 <script>
     export default {
-        name: "Playerprofile",
+        name: "Stats",
         data () {
             return {
                 desserts: [
@@ -139,7 +149,6 @@
             }
         },
     }
-
 </script>
 
 <style scoped>
@@ -202,7 +211,5 @@
     }
     .statstab{
         display: flex;
-        margin-left: 2%;
     }
-
 </style>

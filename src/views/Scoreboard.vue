@@ -45,15 +45,55 @@ export default {
           level: 1
         },
         {
-          name: "Niclas",
+          name: "Mel Gibson",
           score: 100,
           level: 2
         },
         {
-          name: "Jonathan",
+          name: "Lukas",
           score: 8,
           level: 4
-        }
+        },
+        {
+          name: "Lukas",
+          score: 8,
+          level: 4
+        },
+        {
+          name: "Lukas",
+          score: 8,
+          level: 4
+        },
+        {
+          name: "Lukas",
+          score: 8,
+          level: 4
+        },
+        {
+          name: "Lukas",
+          score: 8,
+          level: 4
+        },
+        {
+          name: "Lukas",
+          score: 8,
+          level: 4
+        },
+        {
+          name: "Lukas",
+          score: 8,
+          level: 4
+        },
+        {
+          name: "Lukas",
+          score: 8,
+          level: 4
+        },
+        {
+          name: "Lukas",
+          score: 8,
+          level: 4
+        },
       ]
     };
   }
@@ -63,8 +103,8 @@ export default {
 <style scoped>
 .scorebard {
   margin-top: 40px;
-  width: 70%;
-  margin-left: 10%;
+  width: 60%;
+  margin-left: 5%;
 }
 .überschrift {
   margin-left: 1%;

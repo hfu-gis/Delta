@@ -30,7 +30,7 @@
 
 <script>
 export default {
-  name: "Bo.t.S._Wiki"
+  name: "Wiki"
 };
 </script>
 

@@ -48,12 +48,12 @@
     data: () => ({
       drawer: null,
       items: [
-        { title: "Profil", to: "/Playerprofile" , icon: 'mdi-account'},
+        { title: "Profil", to: "/Profil" , icon: 'mdi-account-details'},
         { title: "Play", to: "/Game" , icon: 'mdi-run'},
         { title: "FAQ", to: "/Faq" , icon: 'mdi-help'},
         { title: "About", to: "/About", icon: 'mdi-gamepad-left' },
         { title: "Scoreboard", to: "/Scoreboard", icon: 'mdi-trophy'},
-        { title: "Player Directory", to: "/Playerdirectory", icon: 'mdi-account'},
+        { title: "Player Directory", to: "/Playerdirectory", icon: 'mdi-table'},
         { title: "Terms & Conditions", to: "/Privacy", icon: 'mdi-incognito' },
       ],
     }),

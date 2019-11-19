@@ -31,7 +31,7 @@
                        onclick="window.location='LoginBotS';"/>
 
                 <p>By creating an account you agree to our <a href="Privacy">Terms & Privacy</a>.</p>
-                <p>Already have an account? <router-link to="/LoginBotS">Sign in</router-link>.</p>
+                <p>Already have an account? <router-link to="/Login">Sign in</router-link>.</p>
         </main>
     </div>
 </template>
