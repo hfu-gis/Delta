@@ -19,28 +19,33 @@
 </template>
 
 <script>
-  data:{
-    health: 100,
-            ended=false
-  }
-  methods:{
-    punch=function() {
-      this.health -= 10;
-      if (this.health<=0){
-        this.ended=true;
+  export default {
+    name: "Game",
+
+    data: function() {
+      health= 100,
+      ended= false
+    },
+    methods: {
+      punch: function () {
+        this.health -= 10;
+        if (this.health <= 0) {
+          this.ended = true;
+        }
+      },
+      restart: function () {
+        this.health = 100;
+        this.ended = false;
+      },
+      tackle: function () {
+        this.health -= 25;
+        if (this.health <= 0) {
+          this.ended = true;
+        }
       }
     },
-    restart=function() {
-      this.health =100;
-      this.ended=false;
-    },
-    tackle=function() {
-      this.health -= 25;
-      if (this.health<=0){
-        this.ended=true;
-      }
-    }
-  }
+    computed: {}
+  };
 </script>
 <style scoped>
   #Monster{

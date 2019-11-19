@@ -46,7 +46,7 @@ export default {
         },
         {
           name: "Niclas",
-          score: 1,
+          score: 100,
           level: 2
         },
         {
