@@ -6,7 +6,7 @@
           <h1>Scoreboard</h1>
         </header>
       </section>
-      <section class="scorebard">
+      <section class="scorebard" fluid>
         <v-data-table
           :headers="player"
           :items="infos"
@@ -62,12 +62,11 @@ export default {
 
 <style scoped>
 .scorebard {
-  width: 1000px;
-  margin-left: 500px;
   margin-top: 40px;
+  width: 70%;
+  margin-left: 10%;
 }
 .überschrift {
-  text-align: center;
-  color: white;
+  margin-left: 1%;
 }
 </style>

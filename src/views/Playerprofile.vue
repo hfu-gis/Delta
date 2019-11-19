@@ -15,7 +15,7 @@
                 </article>
             </section>
             <section class="Statistiken">
-                
+
             </section>
         </div>
     </div>
