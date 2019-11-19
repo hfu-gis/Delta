@@ -20,5 +20,16 @@ export default {
   name: "Faq"
 };
 </script>
+<style scoped>
+  main {
+    color:white;
+    margin-left: 1%;
+    margin-right: 40%;
+  }
 
-<style scoped></style>
+  h1 {
+    color:White;
+    margin-left: 1%;
+  }
+
+</style>

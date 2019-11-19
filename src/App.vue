@@ -1,114 +1,67 @@
 <template>
-  <div>
-    <v-app>
-      <v-app-bar app color="#181818" height="60%">
-        <div class="d-flex align-center">
-          <a href="/Game"><v-img
-            alt="BOB Logo"
-            class="shrink mr-2"
-            contain
-            src="./assets/botsloscho.png"
-            height="50"
-            width="120"
-            align="center"
-            style="align-items: center; justify-content: center; display: flex"
-          />
-          <v-img
-            alt="BOB Name"
-            class="shrink mt-1 hidden-sm-and-down"
-            contain
-            min-width="100"
-            src=""
-            width="100"
-          />
-          </a>
-        </div>
-      </v-app-bar>
-      <v-content style="background-color: #333333">
-        <div>
-          <v-sheet height="15" style="background-color: #333333">
-            <v-container>
-              <v-row style="float: right">
-                <img
-                  src="./assets/menue.png"
-                  height="90"
-                  width="90"
-                  @click.stop="drawer = !drawer"
-                />
-              </v-row>
-            </v-container>
-            <v-navigation-drawer
-              v-model="drawer"
-              absolute
-              right
-              :value="drawer"
-              style="background-color: limegreen; width: 15%"
-            >
-              <v-btn
-                color="grey"
-                dark
-                @click="drawer = !drawer"
-                style="margin-top: 50px"
-              >
-                <v-icon dark left>mdi-arrow-left</v-icon>
-              </v-btn>
-              <v-list dense style="margin-top: 50px">
-                <v-list-item
-                  v-for="item in items"
-                  :key="item.title"
-                  :to="item.to"
-                  link
-                >
-                  <v-list-item-content>
-                    <v-list-item-title>{{ item.title }}</v-list-item-title>
-                  </v-list-item-content>
-                </v-list-item>
-              </v-list>
-            </v-navigation-drawer>
-          </v-sheet>
-        </div>
-        <router-view />
-      </v-content>
-      <v-footer color="grey" padless style="box-shadow: lightgray">
-        <v-row justify="center" no-gutters>
-          <v-btn
-            v-for="link in links"
-            :key="link.link"
-            :to="link.to"
-            color="green"
-            text
-            rounded
-            class="footer"
-            >{{ link.link }}</v-btn
-          >
-          <v-col cols="12"
-            >{{ new Date().getFullYear() }} - <strong>Bo.t.S.</strong></v-col
-          >
-        </v-row>
-      </v-footer>
-    </v-app>
-  </div>
+  <v-app id="inspire">
+
+    <v-navigation-drawer v-model="drawer" app right clipped>
+      <v-list dense>
+        <v-list-item v-for="item in items" :key="item.title" :to="item.to" link>
+          <v-list-item-action>
+            <v-icon v-text="item.icon"></v-icon>
+          </v-list-item-action>
+          <v-list-item-content>
+            <v-list-item-title>{{ item.title }}</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+      </v-list>
+    </v-navigation-drawer>
+
+    <v-app-bar app clipped-right>
+
+      <router-link to="App.vue">
+      <v-toolbar-title><v-img height="60px" width="80px" src="./assets/BotsLogo.png"></v-img></v-toolbar-title>
+      </router-link>
+      <v-spacer/>
+      <v-btn class="mr-2" to="/Login">Login</v-btn>
+      <v-btn to="/Registration"> Register </v-btn>
+      <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
+    </v-app-bar>
+
+    <v-content>
+      <router-view />
+    </v-content>
+
+    <v-footer app>
+      <span>&copy; 2019</span>
+    </v-footer>
+  </v-app>
 </template>
 
 <script>
-export default {
-  data() {
-    return {
+  // import home from "./components/home";
+  export default {
+    props: {
+      source: String,
+    },
+    // components:{
+    //   home
+    // },
+
+    data: () => ({
       drawer: null,
       items: [
-        { title: "Game", to: "/Game" },
-        { title: "LoginBotS", to: "/LoginBotS" },
-        { title: "Playerdirectory", to: "/Playerdirectory" },
-        { title: "Registration", to: "/Registration" },
-        { title: "Scoreboard", to: "/Scoreboard" },
-        { title: "Wiki", to: "/Wiki" }
+        { title: "Profil", to: "/Playerprofile" , icon: 'mdi-account'},
+        { title: "Play", to: "/Game" , icon: 'mdi-run'},
+        { title: "FAQ", to: "/Faq" , icon: 'mdi-help'},
+        { title: "About", to: "/About", icon: 'mdi-gamepad-left' },
+        { title: "Scoreboard", to: "/Scoreboard", icon: 'mdi-trophy'},
+        { title: "Player Directory", to: "/Playerdirectory", icon: 'mdi-account'},
+        { title: "Terms & Conditions", to: "/Privacy", icon: 'mdi-incognito' },
       ],
-      links: [
-        { link: "Faq", to: "/Faq" },
-        { link: "Privacy", to: "/Privacy" },
-        { link: "Impressum", to: "/Impressum" }
-      ]
-    };
+    }),
+
+    created () {
+      this.$vuetify.theme.dark = true
+      this.$router.push({path: '/LoginBotS'})
+      // this.$router.push({path: '/home'})
+    },
   }
-};
 </script>

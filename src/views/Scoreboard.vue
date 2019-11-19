@@ -12,7 +12,6 @@
           :items="infos"
           :sort-by="['score', 'level']"
           :sort-desc="[false, true]"
-          fixed-header
         ></v-data-table>
       </section>
     </main>
@@ -68,8 +67,7 @@ export default {
   margin-top: 40px;
 }
 .überschrift {
-  font-size: 50px;
   text-align: center;
-  color: yellowgreen;
+  color: white;
 }
 </style>

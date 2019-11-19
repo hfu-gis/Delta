@@ -3,7 +3,7 @@
     <main>
       <h1>About the Game</h1>
       <p></p>
-      "Bob the Scrumventure" is a rogue-like RPG browser game made with
+      "B.o.t.S." is a rogue-like RPG browser game made with
       javascript. It is set in a futuristic dystopian world with cyberpunk/retro
       influences.
       <p></p>
