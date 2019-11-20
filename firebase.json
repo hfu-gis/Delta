@@ -1,5 +1,6 @@
 {
   "hosting": {
+    "site": "gis-deltaforce-bob",
     "public": "dist",
     "ignore": [
       "firebase.json",
@@ -12,5 +13,6 @@
         "destination": "/index.html"
       }
     ]
+
   }
 }
