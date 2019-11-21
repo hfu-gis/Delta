@@ -56,8 +56,10 @@
         { title: "Scoreboard", to: "/Scoreboard", icon: 'mdi-trophy'},
         { title: "Player Directory", to: "/Playerdirectory", icon: 'mdi-table'},
         { title: "Terms & Conditions", to: "/Privacy", icon: 'mdi-incognito' },
-      ],
-    }),
+      ]
+    }
+    ),
+
 
     created () {
       this.$vuetify.theme.dark = true

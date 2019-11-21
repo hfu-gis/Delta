@@ -1,53 +1,81 @@
 <template>
-  <div>
-    <header><h1 class="überschrift">Welcome to Bob the Scrumventure</h1></header>
-    <section>
-      <article>
-        <section class="login">
-          <h3>Login:</h3>
-          <label>Name&nbsp;</label>
-          <textarea class="input" id="name" name="text" cols="16" rows="1"></textarea>
-          <label>&nbsp;Password&nbsp;</label>
-          <input class="input" type="password" id="password" name="text" cols="16" rows="1" />
-        </section>
-      </article>
-    </section>
-    <section class="reg">
-      <article>
-        <router-link to="/Registration">
-          <button class="button"><u>Sign Up</u></button>
-          </router-link>
-      </article>
-    </section>
-  </div>
+  <v-container class="login">
+    <v-layout row>
+      <v-flex xs12 sm6 offset-sm3>
+        <v-card>
+          <v-card-text>
+            <v-container>
+              <form @submit.prevent="onSignin">
+                <v-layout row>
+                  <v-flex xs12>
+                    <v-text-field
+                            name="email"
+                            label="Mail"
+                            id="email"
+                            v-model="email"
+                            type="email"
+                            required></v-text-field>
+                  </v-flex>
+                </v-layout>
+                <v-layout row>
+                  <v-flex xs12>
+                    <v-text-field
+                            name="password"
+                            label="Password"
+                            id="password"
+                            v-model="password"
+                            type="password"
+                            required></v-text-field>
+                  </v-flex>
+                </v-layout>
+                <v-layout row>
+                  <v-flex xs12>
+                    <v-btn type="submit">Sign in</v-btn>
+                  </v-flex>
+                </v-layout>
+              </form>
+            </v-container>
+          </v-card-text>
+        </v-card>
+      </v-flex>
+    </v-layout>
+  </v-container>
 </template>
 
 <script>
-export default {
-  name: "LoginBotS"
-};
+  export default {
+    name: "LoginBotS",
+    data() {
+      return {
+        email: '',
+        password: '',
+      }
+    },
+    computed: {
+      user () {
+        return this.$store.getters.user
+      }
+    },
+    watch: {
+      user (value) {
+        if (value !== null && value !== undefined) {
+          this.$router.push('/')
+        }
+      }
+    },
+    methods: {
+      onSignin () {
+        this.$store.dispatch('signUserIn', {email: this.email, password: this.password})
+      }
+    }
+  }
 </script>
 
 <style scoped>
-  .überschrift{
-  margin-left:1%;
-    color: white;
+  .register{
+    margin-top: 2%;
   }
-  .login{
-    margin-left: 1%;
-    margin-top: 5%;
-    color: white;
+  p{
+    margin-top: 1%;
   }
-  .reg{
-    margin-left: 1%;
-    margin-top: 5%;
-    color:white;
-  }
-  .button{
-    color: white;
-  }
-  .input{
-    background:white;
-  }
-
 </style>
