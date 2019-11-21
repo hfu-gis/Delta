@@ -16,7 +16,7 @@
 
     <v-app-bar app clipped-right>
 
-      <router-link to="App.vue">
+      <router-link to="App">
       <v-toolbar-title><v-img height="60px" width="80px" src="./assets/BotsLogo.png"></v-img></v-toolbar-title>
       </router-link>
       <v-spacer/>

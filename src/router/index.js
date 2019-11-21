@@ -10,7 +10,7 @@ import HandgrenadeItem from "../views/HandgrenadeItem";
 import LaptopItem from "../views/LaptopItem";
 import LoginBotS from "../views/LoginBotS";
 import Impressum from "../views/Impressum";
-// import Game from "../views/Game";
+import Game from "../views/Game";
 import About from "../views/About";
 import Privacy from "../views/Privacy";
 import Faq from "../views/Faq";
@@ -90,11 +90,11 @@ const routes = [
     name: "LoginBotS",
     component: LoginBotS
   },
-  // {
-  //   path: "/Game",
-  //   name: "Game",
-  //   component: Game
-  // },
+  {
+    path: "/Game",
+    name: "Game",
+    component: Game
+  },
   {
     path: "/Faq",
     name: "Faq",

@@ -11,9 +11,11 @@
       <!--game controls-->
       <div id ="controls">
         <!-- Um die zwei Türen zu zeigen sollten wir auch v-show="ended" nehmen dann erscheinen sie erst wenn der gengener besiegt wurde-->
-        <button v-on:click="punch" v-show="!ended">Punch</button>
-        <button v-on:click="tackle" v-show="!ended">Tackle</button>
-        <button v-on:click="restart">Restart</button>
+        <div class="div">
+        <button v-on:click="punch" v-show="!ended" style="margin-right: 2%;border: solid black">Punch</button>
+        <button v-on:click="tackle" v-show="!ended" style="margin-left: 2%;border: solid black">Tackle</button>
+        </div>
+        <button v-on:click="restart" style="margin-top: 2%;border: solid black">Restart</button>
       </div>
     </div>
 </template>
@@ -22,22 +24,24 @@
   export default {
     name: "Game",
 
-    data: function() {
-      health= 100,
-      ended= false
+    data () {
+      return{
+        health: 100,
+        ended: false
+      }
     },
     methods: {
-      punch: function () {
+      punch () {
         this.health -= 10;
         if (this.health <= 0) {
           this.ended = true;
         }
       },
-      restart: function () {
+      restart () {
         this.health = 100;
         this.ended = false;
       },
-      tackle: function () {
+      tackle () {
         this.health -= 25;
         if (this.health <= 0) {
           this.ended = true;
@@ -67,5 +71,8 @@
   #controls{
     width: 120px;
     margin: 0 auto;
+  }
+  .div{
+    display: flex;
   }
 </style>

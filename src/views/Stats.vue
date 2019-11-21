@@ -1,5 +1,5 @@
 <template>
-    <div class="body">
+    <v-container class="body" xs12 sm6>
         <section class="Profil">
             <header>
                 <h1>Profile</h1>
@@ -18,7 +18,7 @@
                 <article class="statsmenü">
                     <v-container class="routes">
                         <router-link to="/Profil" class="rout">Personal</router-link>
-                        <router-link to="/Stats" class="rout" style="margin-left: 1%">Stats</router-link>
+                        <router-link to="/Profil/Stats" class="rout" style="margin-left: 1%">Stats</router-link>
                         <router-link to="" class="rout" style="margin-left: 1%">Lorem ipsum dolor </router-link>
                         <router-link to="" class="rout" style="margin-left: 1%">Lorem ipsum dolor </router-link>
                     </v-container>
@@ -69,7 +69,7 @@
                 </article>
             </section>
         </v-container>
-    </div>
+    </v-container>
 </template>
 
 <script>
@@ -155,11 +155,12 @@
         margin-left: 5%;
         margin-top: 2%;
         border: solid white;
-        box-shadow:  1px 1px 1px white;
+        box-shadow:  1px 1px 1px black;
+        background-color: 		#3D3D3D;
     }
     .Profil{
         margin-left: 5%;
-        margin-top: 2%;
+        margin-top: 0%;
     }
     .profilbild{
         margin-left: 5%;
@@ -184,10 +185,11 @@
     }
     .stats{
         border: solid white;
-        box-shadow:  1px 1px 1px white;
+        box-shadow:  1px 1px 1px black;
         width: 60%;
         margin-left: 5%;
         margin-top: 2%;
+        background-color: 		#3D3D3D;
     }
     .simptabl1{
         width: 30%;
@@ -205,9 +207,14 @@
     }
     .übprst{
         margin-top: 1%;
-        margin-left: 9%;
+        margin-left: 6%;
     }
     .statstab{
         display: flex;
+        margin-left: 2%;
     }
+    .body{
+        margin-left: -2%;
+    }
+
 </style>
