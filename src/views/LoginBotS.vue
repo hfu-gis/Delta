@@ -30,16 +30,16 @@ export default {
 
 <style scoped>
   .überschrift{
-  margin-left:30%;
+  margin-left:1%;
     color: white;
   }
   .login{
-    margin-left: 50%;
+    margin-left: 1%;
     margin-top: 5%;
     color: white;
   }
   .reg{
-    margin-left: 30%;
+    margin-left: 1%;
     margin-top: 5%;
     color:white;
   }
