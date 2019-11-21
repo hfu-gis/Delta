@@ -31,6 +31,7 @@
 
     <v-footer app>
       <span>&copy; 2019</span>
+      <router-link to="/Impressum" style="justify-content: center; text-decoration: none; margin-left: 45%">Impressum</router-link>
     </v-footer>
   </v-app>
 </template>

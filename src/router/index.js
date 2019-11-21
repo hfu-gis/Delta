@@ -9,6 +9,7 @@ import TheSlums from "../views/TheSlums";
 import HandgrenadeItem from "../views/HandgrenadeItem";
 import LaptopItem from "../views/LaptopItem";
 import LoginBotS from "../views/LoginBotS";
+import Impressum from "../views/Impressum";
 // import Game from "../views/Game";
 import About from "../views/About";
 import Privacy from "../views/Privacy";
@@ -28,6 +29,11 @@ const routes = [
     path: "/Registration",
     name: "Registration",
     component: Registration
+  },
+  {
+    path: "/Impressum",
+    name: "Impressum",
+    component: Impressum
   },
   {
     path: "/Profil/Stats",

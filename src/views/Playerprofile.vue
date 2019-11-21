@@ -73,67 +73,67 @@
                 desserts: [
                     {
                         name: 'Email',
-                        info: 'Lorem ipsum dolor',
+                        info: 'Lorem',
                     },
                     {
                         name: 'Country',
-                        info: 'Lorem ipsum dolor',
+                        info: 'Lorem',
                     },
                     {
-                        name: 'Lorem ipsum dolor',
-                        info: 'Lorem ipsum dolor',
+                        name: 'Lorem',
+                        info: 'Lorem',
                     },
                     {
-                        name: 'Lorem ipsum dolor',
-                        info: 'Lorem ipsum dolor',
+                        name: 'Lorem',
+                        info: 'Lorem',
                     },
                     {
-                        name: 'Lorem ipsum dolor',
-                        info: 'Lorem ipsum dolor',
+                        name: 'Lorem',
+                        info: 'Lorem',
                     },
                 ],
                 dess: [
                     {
-                        name: 'Lorem ipsum dolor',
-                        info: 'Lorem ipsum dolor',
+                        name: 'Lorem',
+                        info: 'Lorem',
                     },
                     {
-                        name: 'Lorem ipsum dolor',
-                        info: 'Lorem ipsum dolor',
+                        name: 'Lorem',
+                        info: 'Lorem',
                     },
                     {
-                        name: 'Lorem ipsum dolor',
-                        info: 'Lorem ipsum dolor',
+                        name: 'Lorem',
+                        info: 'Lorem',
                     },
                     {
-                        name: 'Lorem ipsum dolor',
-                        info: 'Lorem ipsum dolor',
+                        name: 'Lorem',
+                        info: 'Lorem',
                     },
                     {
-                        name: 'Lorem ipsum dolor',
-                        info: 'Lorem ipsum dolor',
+                        name: 'Lorem',
+                        info: 'Lorem',
                     },
                 ],
                 desser: [
                     {
-                        name: 'Lorem ipsum dolor',
-                        info: 'Lorem ipsum dolor',
+                        name: 'Lorem',
+                        info: 'Lorem',
                     },
                     {
-                        name: 'Lorem ipsum dolor',
-                        info: 'Lorem ipsum dolor',
+                        name: 'Lorem',
+                        info: 'Lorem',
                     },
                     {
-                        name: 'Lorem ipsum dolor',
-                        info: 'Lorem ipsum dolor',
+                        name: 'Lorem',
+                        info: 'Lorem',
                     },
                     {
-                        name: 'Lorem ipsum dolor',
-                        info: 'Lorem ipsum dolor',
+                        name: 'Lorem',
+                        info: 'Lorem',
                     },
                     {
-                        name: 'Lorem ipsum dolor',
-                        info: 'Lorem ipsum dolor',
+                        name: 'Lorem',
+                        info: 'Lorem',
                     },
                 ],
             }
