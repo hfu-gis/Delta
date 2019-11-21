@@ -1,5 +1,5 @@
 <template>
-    <v-container>
+    <v-container class="register">
         <v-layout row>
             <v-flex xs12 sm6 offset-sm3>
                 <v-card>
@@ -89,6 +89,10 @@
 </script>
 
 <style scoped>
-
-
+    .register{
+        margin-top: 2%;
+    }
+    p{
+        margin-top: 1%;
+    }
 </style>
