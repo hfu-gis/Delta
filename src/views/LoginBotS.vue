@@ -72,7 +72,7 @@
 </script>
 
 <style scoped>
-  .register{
+  .login{
     margin-top: 2%;
   }
   p{
