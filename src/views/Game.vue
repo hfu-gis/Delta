@@ -11,11 +11,9 @@
       <!--game controls-->
       <div id ="controls">
         <!-- Um die zwei Türen zu zeigen sollten wir auch v-show="ended" nehmen dann erscheinen sie erst wenn der gengener besiegt wurde-->
-        <div class="div">
-        <button v-on:click="punch" v-show="!ended" style="margin-right: 2%;border: solid black">Punch</button>
-        <button v-on:click="tackle" v-show="!ended" style="margin-left: 2%;border: solid black">Tackle</button>
-        </div>
-        <button v-on:click="restart" style="margin-top: 2%;border: solid black">Restart</button>
+        <button v-on:click="punch" v-show="!ended" style="margin-right: 2%">Punch</button>
+        <button v-on:click="tackle" v-show="!ended" style="margin-left: 2%">Tackle</button>
+        <button v-on:click="restart" style="margin-top: 2%">Restart</button>
       </div>
     </div>
 </template>
@@ -71,8 +69,5 @@
   #controls{
     width: 120px;
     margin: 0 auto;
-  }
-  .div{
-    display: flex;
   }
 </style>
