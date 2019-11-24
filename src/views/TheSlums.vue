@@ -1,9 +1,9 @@
 <template>
   <div>
-    <header><h2>Die Slums</h2></header>
+    <header><h2 class = "überschrift">Die Slums</h2></header>
     <main>
       <article>
-        <p>
+        <p class="absatz">
           Die Slums sind die unteren Regionen der Mega-Citys sie reichen maximal
           bis zu den Etagen 20-25 hier sammeln sich die sogenannten "Nutzlosen"
           die für die Gesellschaft der Reichen und Politiker keinen Wert haben
@@ -13,7 +13,7 @@
           geboren werden wissen dass sie quasi keine Chance auf Bildung oder ein
           besseres Leben haben.
         </p>
-        <p>
+        <p class="absatz">
           Es kursieren zwar immer wieder gerüchte darüber dass es einige doch
           Geschafft haben sollen die unteren Ebenen hinter sich zu lassen und
           ein einigermaßen respektables Leben in den Ebenen 26-30 zu führen,
@@ -32,4 +32,14 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+
+  .überschrift{
+    margin-left: 5%;
+  }
+  .absatz{
+    margin-top: 2%;
+    margin-left: 5%;
+
+  }
+</style>

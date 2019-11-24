@@ -1,29 +1,38 @@
 <template>
   <div>
-    <header><h3>Item</h3></header>
     <main>
       <article>
-        <table border="3">
-          <tr>
-            <td>Item</td>
-            <td>Description</td>
-            <td>Location</td>
-          </tr>
-          <tr>
-            <td>name</td>
-            <td>was</td>
-            <td>wo</td>
-          </tr>
-        </table>
+        <section class="überschrift">
+          <h1>Item</h1>
+        </section>
+        <section class="beschreibung">
+
+        </section>
+        <section class="location">
+
+        </section>
       </article>
     </main>
   </div>
 </template>
 
 <script>
-export default {
-  name: "BlancoItem"
-};
+  export default {
+    name: "BlancoItem"
+  };
 </script>
 
-<style scoped></style>
+<style scoped>
+  .überschrift{
+    margin-left: 5%;
+  }
+  .beschreibung{
+    margin-top: 2%;
+    margin-left: 5%;
+
+  }
+  .location{
+    margin-top: 2%;
+    margin-left: 5%;
+  }
+</style>

@@ -1,37 +1,75 @@
 <template>
   <div>
     <main>
-      <article>
+      <section class="überschrift">
+      <header>
+        <h1>BotSWiki</h1>
+      </header>
+      </section>
+      <section class="überschrift">
         In diesem Wiki findest du alle Informationen über die verschiedenen
-        Items und Charaktere in BOB DER SCRUMVENTURE
-      </article>
-      <article>
-        <div for="suche">
-          <label class="suche">Suchbegriff eingeben</label>
-          <input type="search" id="suche" placeholder="Suche¦" />
-        </div>
-      </article>
-      <header><h4>Items</h4></header>
-      <!--Nach Alphabet bitte einsortieren! Charaktere bekommen eine eigene Liste-->
-      <ul>
-        <li><a href="Bob_Bleirohr.html">Bleirohr</a></li>
-        <li><a href="Handgranate.html">Handgranate</a></li>
-        <li><a href="Laptop_Item.html">Laptop</a></li>
-      </ul>
-      <header><h4>Charaktere</h4></header>
-      <ul></ul>
-      <header><h4>Orte</h4></header>
-      <ul>
-        <li><a href="Die_Slums_Ort.html">Die Slums</a></li>
-      </ul>
+        Items und Charaktere in BotS
+      </section>
+      <section class="table" >
+        <v-data-table
+        :headers="Item"
+        :items="input"
+        :sort-by="input"
+        :sort-desc="[false,true]">
+
+        </v-data-table>
+
+      </section>
     </main>
   </div>
 </template>
 
 <script>
+
 export default {
-  name: "Wiki"
+  name: "Wiki",
+  data(){
+    return{
+      Item:[
+        {
+          text:"Item",
+          alligne:"left",
+          sortable:"false",
+          value:"item",
+        },
+        {text:"Character", value:"character"},
+        {text:"Locations", value:"location"},
+      ],
+      input:[
+        {
+          item: "Ledpipe",
+        character: "Scrapper",
+        location: "The Slums",
+        },
+        {
+          item: "Fraggrenade",
+          character:"Magician",
+
+        },
+        {
+          item:"Laptop",
+          character:"Thief",
+        },
+      ]
+    }
+  }
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+.überschrift{
+  margin-left: 5% ;
+
+}
+  .table{
+    margin-top: 2%;
+    width: 90%;
+    margin-left: 5%;
+  }
+
+</style>
