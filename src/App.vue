@@ -56,7 +56,7 @@
         { title: "Scoreboard", to: "Scoreboard", icon: 'mdi-trophy'},
         { title: "Player Directory", to: "Playerdirectory", icon: 'mdi-table'},
         { title: "Terms & Conditions", to: "Privacy", icon: 'mdi-incognito' },
-        { title:"Wiki", to:"Wiki", icon:'book-search' },
+        { title:"Wiki", to:"Wiki", icon:'mdi-book-search' },
       ]
     }
     ),
