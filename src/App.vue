@@ -16,7 +16,7 @@
 
     <v-app-bar app clipped-right>
 
-      <router-link to="/">
+      <router-link to="">
       <v-toolbar-title><v-img height="60px" width="80px" src="./assets/BotsLogo.png"></v-img></v-toolbar-title>
       </router-link>
       <v-spacer/>
@@ -42,7 +42,7 @@
     props: {
       source: String,
     },
-    components:{
+    component:{
       home
     },
 
@@ -56,7 +56,7 @@
         { title: "Scoreboard", to: "Scoreboard", icon: 'mdi-trophy'},
         { title: "Player Directory", to: "Playerdirectory", icon: 'mdi-table'},
         { title: "Terms & Conditions", to: "Privacy", icon: 'mdi-incognito' },
-        {title:"Wiki", to:"Wiki", icon:'book-search' },
+        { title:"Wiki", to:"Wiki", icon:'book-search' },
       ]
     }
     ),
