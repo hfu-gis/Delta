@@ -16,7 +16,7 @@
 
     <v-app-bar app clipped-right>
 
-      <router-link to="App">
+      <router-link to="/">
       <v-toolbar-title><v-img height="60px" width="80px" src="./assets/BotsLogo.png"></v-img></v-toolbar-title>
       </router-link>
       <v-spacer/>
@@ -37,14 +37,14 @@
 </template>
 
 <script>
-  // import home from "./components/home";
+  import home from "./components/home";
   export default {
     props: {
       source: String,
     },
-    // components:{
-    //   home
-    // },
+    components:{
+      home
+    },
 
     data: () => ({
       drawer: false,

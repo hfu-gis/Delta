@@ -20,7 +20,7 @@ import Scrapper from "../views/Scrapper";
 import Thief from "../views/Thief";
 import Playerprofile from "../views/Playerprofile";
 import Stats from "../views/Stats";
-// import home from "../components/home";
+import home from "../components/home";
 
 Vue.use(VueRouter);
 
@@ -125,11 +125,11 @@ const routes = [
     name: "Thief",
     component: Thief
   },
-  // {
-  //   path: "/home",
-  //   name: "home",
-  //   component: home
-  // },
+   {
+    path: "",
+    name: "home",
+    component: home
+   },
 
 ];
 
