@@ -20,7 +20,7 @@ import Scrapper from "../views/Scrapper";
 import Thief from "../views/Thief";
 import Playerprofile from "../views/Playerprofile";
 import Stats from "../views/Stats";
-import home from "../components/home";
+import home from "../views/home";
 
 Vue.use(VueRouter);
 

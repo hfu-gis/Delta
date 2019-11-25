@@ -1,6 +1,6 @@
 <template>
     <v-app>
-        <v-parallax dark src="../assets/122043.jpg" class="paralax" height="500">
+        <v-parallax dark src="../assets/maxresdefault.jpg" class="paralax" height="500">
             <v-row rows="20" align="center">
                 <v-col class="text-center" cols="12">
                     <h1 class="display-1 font-weight-thin mb-4">Bob the Scrumventure</h1>
