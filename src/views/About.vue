@@ -1,19 +1,19 @@
 <template>
     <div>
+        <header><h1>About the Game</h1></header>
         <main>
-            <h1>About the Game</h1>
             <p></p>
             "B.o.t.S." is a rogue-like RPG browser game made with
             javascript. It is set in a futuristic dystopian world with cyberpunk/retro
             influences.
-            <p></p>
+
             Fight your way through the dungeon with never ending, procedurally
             generated levels and turn-based gameplay.
-            <p></p>
-            This game is a non-profit student project and free for everyone! So
-            <a href="/Registration">join now!</a>.
-            <p></p>
 
+            This game is a non-profit student project and free for everyone! So
+            <a href="Registration">join now!</a>.
+            <p></p>
+            ToDo: Story ergänzen
         </main>
     </div>
 </template>
@@ -25,9 +25,14 @@
 </script>
 
 <style scoped>
+    h1 {
+        margin-top: 2%;
+        text-align: center;
+    }
 
     main {
-        margin-left: 5%;
+        margin-left: 26%;
+        margin-right: 26%;
     }
 
 </style>
