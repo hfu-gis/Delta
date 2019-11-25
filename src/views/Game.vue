@@ -1,9 +1,9 @@
 <template>
     <div id="vue-app">
         <!--MonsterPNG-->
-        <div id="Monster">
+        <!--<div id="Monster">
             <img src="/img/Monster1.png">
-        </div>
+        </div>-->
         <!--Monster health-->
         <div id="Monster-health">
             <div v-bind:style="{width: health + '%'}"></div>
@@ -50,6 +50,7 @@
     };
 </script>
 <style scoped>
+
     #Monster {
         width: 200px;
         height: 500px;
@@ -61,7 +62,7 @@
     #Monster-health {
         width: 200px;
         border: 2px solid #000000;
-        margin: 0 auto 20px auto;
+        margin: 25% auto 20px auto;
     }
 
     #Monster-health div {
@@ -70,7 +71,24 @@
     }
 
     #controls {
+
         width: 120px;
         margin: 0 auto;
+    }
+    main {
+        font-family: Rubik;
+        color: white;
+        margin-top:2%;
+        margin-left: 26%;
+        margin-right: 26%;
+
+    }
+
+    h1 {
+        font-family: Rubik;
+        color: White;
+        margin-top:2%;
+        margin-left: 26%;
+        margin-right: 26%;
     }
 </style>
