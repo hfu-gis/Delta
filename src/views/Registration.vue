@@ -14,7 +14,7 @@
                                                 id="username"
                                                 v-model="username"
                                                 type="username">
-                                                </v-text-field>
+                                                required</v-text-field>
                                     </v-flex>
                                 </v-layout>
                                 <v-layout row>
@@ -53,7 +53,7 @@
                                 <v-layout row>
                                     <v-flex xs12>
                                         <v-btn type="submit">Sign up</v-btn>
-                                        <p>By creating an account you agree to our <a href="Privacy">Terms & Privacy</a>.
+                                        <p>By creating an account you agree to our <router-link to="Privacy">Terms & Conditions</router-link>.
                                         </p>
                                         <p>Already have an account?
                                             <router-link to="/Login">Sign in</router-link>
@@ -106,10 +106,11 @@
 
 <style scoped>
     .register {
-        margin-top: 2%;
+        margin-top: 3%;
     }
 
     p {
-        margin-top: 1%;
+        margin-top: 3%;
     }
+
 </style>

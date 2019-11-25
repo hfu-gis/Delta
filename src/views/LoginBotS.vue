@@ -74,9 +74,9 @@
 
 <style scoped>
   .login{
-    margin-top: 2%;
+    margin-top: 3%;
   }
   p{
-    margin-top: 1%;
+    margin-top: 3%;
   }
 </style>
