@@ -9,6 +9,17 @@
                                 <v-layout row>
                                     <v-flex xs12>
                                         <v-text-field
+                                                name="username"
+                                                label="Username"
+                                                id="username"
+                                                v-model="username"
+                                                type="username">
+                                                </v-text-field>
+                                    </v-flex>
+                                </v-layout>
+                                <v-layout row>
+                                    <v-flex xs12>
+                                        <v-text-field
                                                 name="email"
                                                 label="Mail"
                                                 id="email"
@@ -60,6 +71,7 @@
         name: "Registration",
         data() {
             return {
+                username: '',
                 email: '',
                 password: '',
                 confirmPassword: ''
