@@ -101,9 +101,19 @@
 <style scoped>
 
     main {
+        font-family: Rubik;
         color: white;
-        margin-left: 1%;
-        margin-right: 40%;
+        margin-top:2%;
+        margin-left: 26%;
+        margin-right: 26%;
+    }
+
+    h1 {
+        font-family: Rubik;
+        color: White;
+        margin-top:2%;
+        margin-left: 26%;
+        margin-right: 26%;
     }
 
 </style>

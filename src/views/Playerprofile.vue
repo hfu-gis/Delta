@@ -24,7 +24,7 @@
             <section class="Statistiken">
                 <article class="statsmenü">
                     <v-container class="routes">
-                        <router-link to="Profile" class="rout">Personal</router-link>
+                        <router-link to="Profil" class="rout">Personal</router-link>
                         <router-link to="Stats" class="rout" style="margin-left: 1%">Stats</router-link>
                         <router-link to="" class="rout" style="margin-left: 1%">Lorem ipsum dolor</router-link>
                         <router-link to="" class="rout" style="margin-left: 1%">Lorem ipsum dolor</router-link>
