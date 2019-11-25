@@ -1,9 +1,14 @@
 <template>
     <v-app>
-        <v-parallax dark src="../assets/maxresdefault.jpg" class="paralax" height="500">
+        <v-parallax dark src="../assets/122043.jpg" class="parallax" height="900">
             <v-row rows="20" align="center">
+                <div id="BotsLogo">
+                    <v-img  src="../assets/BotsLogo.png"></v-img>
+                </div>
+
+
                 <v-col class="text-center" cols="12">
-                    <h1 class="display-1 font-weight-thin mb-4">Bob the Scrumventure</h1>
+
                 </v-col>
             </v-row>
         </v-parallax>
@@ -17,7 +22,4 @@
 </script>
 
 <style scoped>
-.paralax{
-    margin-top: 5%;
-}
 </style>
