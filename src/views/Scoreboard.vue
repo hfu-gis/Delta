@@ -35,65 +35,11 @@
                 ],
                 infos: [
                     {
-                        name: "Jonathan",
+                        name: "lorem",
                         score: 6,
                         level: 2
                     },
-                    {
-                        name: "Marcus",
-                        score: 3,
-                        level: 1
-                    },
-                    {
-                        name: "Mel Gibson",
-                        score: 100,
-                        level: 2
-                    },
-                    {
-                        name: "Lukas",
-                        score: 8,
-                        level: 4
-                    },
-                    {
-                        name: "Lukas",
-                        score: 8,
-                        level: 4
-                    },
-                    {
-                        name: "Lukas",
-                        score: 8,
-                        level: 4
-                    },
-                    {
-                        name: "Lukas",
-                        score: 8,
-                        level: 4
-                    },
-                    {
-                        name: "Lukas",
-                        score: 8,
-                        level: 4
-                    },
-                    {
-                        name: "Lukas",
-                        score: 8,
-                        level: 4
-                    },
-                    {
-                        name: "Lukas",
-                        score: 8,
-                        level: 4
-                    },
-                    {
-                        name: "Lukas",
-                        score: 8,
-                        level: 4
-                    },
-                    {
-                        name: "Lukas",
-                        score: 8,
-                        level: 4
-                    },
+
                 ]
             };
         }
