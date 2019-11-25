@@ -77,6 +77,7 @@
         name: "Playerprofile",
         data () {
             return {
+                user:{},
                 desserts: [
                     {
                         name: 'Email',
