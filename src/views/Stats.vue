@@ -26,8 +26,8 @@
                     <v-container class="routes">
                         <router-link to="/Profil" class="rout">Personal</router-link>
                         <router-link to="/Profil/Stats" class="rout" style="margin-left: 1%">Stats</router-link>
-                        <router-link to="" class="rout" style="margin-left: 1%">Lorem ipsum dolor </router-link>
-                        <router-link to="" class="rout" style="margin-left: 1%">Lorem ipsum dolor </router-link>
+                        <router-link to="" class="rout" style="margin-left: 1%">Lorem ipsum dolor</router-link>
+                        <router-link to="" class="rout" style="margin-left: 1%">Lorem ipsum dolor</router-link>
                     </v-container>
                 </article>
                 <article class="profilstats">
@@ -82,7 +82,7 @@
 <script>
     export default {
         name: "Stats",
-        data () {
+        data() {
             return {
                 desserts: [
                     {
@@ -156,77 +156,92 @@
 </script>
 
 <style scoped>
-    .Profilinhalt{
+    .Profilinhalt {
         display: flex;
         width: 60%;
         margin-left: 5%;
         margin-top: 2%;
         border: solid white;
-        box-shadow:  1px 1px 1px black;
-        background-color: 		#3D3D3D;
+        box-shadow: 1px 1px 1px black;
+        background-color: #3D3D3D;
     }
-    .Profil{
+
+    .Profil {
         margin-left: 5%;
         margin-top: 0%;
     }
-    .profilbild{
+
+    .profilbild {
         margin-left: 5%;
         margin-top: 1%;
     }
-    .profilname{
+
+    .profilname {
         margin-left: 2%;
         margin-top: 3%;
     }
-    .statsmenü{
+
+    .statsmenü {
         display: flex;
         font-size: 150%;
         margin-left: -1%;
     }
-    .routes{
+
+    .routes {
         margin-left: 3%;
     }
-    .rout{
+
+    .rout {
         box-sizing: border-box;
         padding: 1%;
         text-decoration: none;
     }
-    .stats{
+
+    .stats {
         border: solid white;
-        box-shadow:  1px 1px 1px black;
+        box-shadow: 1px 1px 1px black;
         width: 60%;
         margin-left: 5%;
         margin-top: 2%;
-        background-color: 		#3D3D3D;
+        background-color: #3D3D3D;
     }
-    .simptabl1{
+
+    .simptabl1 {
         width: 30%;
         margin-top: 2%;
     }
-    .simptabl2{
-        width: 30%;
-        margin-top: 2%;
-        margin-left: 3%;
-    }
-    .simptabl3{
+
+    .simptabl2 {
         width: 30%;
         margin-top: 2%;
         margin-left: 3%;
     }
-    .übprst{
+
+    .simptabl3 {
+        width: 30%;
+        margin-top: 2%;
+        margin-left: 3%;
+    }
+
+    .übprst {
         margin-top: 1%;
         margin-left: 6%;
     }
-    .statstab{
+
+    .statstab {
         display: flex;
         margin-left: 2%;
     }
-    .body{
+
+    .body {
         margin-left: -2%;
     }
-    .settings{
+
+    .settings {
         margin-left: 70%;
     }
-    .header{
+
+    .header {
         font-size: 200%;
     }
 
