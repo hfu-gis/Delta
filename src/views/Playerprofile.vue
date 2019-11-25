@@ -20,62 +20,62 @@
                 <h2>Lorem ipsum dolor </h2>
             </article>
         </section>
-            <v-container class="stats">
-                <section class="Statistiken">
-                    <article class="statsmenü">
-                        <v-container class="routes">
-                            <router-link to="Profile" class="rout">Personal</router-link>
-                            <router-link to="Stats" class="rout" style="margin-left: 1%">Stats</router-link>
-                            <router-link to="" class="rout" style="margin-left: 1%">Lorem ipsum dolor </router-link>
-                            <router-link to="" class="rout" style="margin-left: 1%">Lorem ipsum dolor </router-link>
-                        </v-container>
-                    </article>
-                    <article class="profilstats">
-                        <header class="übprst">
-                            <h2>Personal Dates</h2>
-                        </header>
-                        <v-container class="statstab">
-                            <v-simple-table class="simptabl1">
-                                <template v-slot:default>
-                                    <tbody>
-                                    <tr v-for="item in desserts" :key="item.name">
-                                        <td>{{ item.name }}</td>
-                                        <td>{{item.info}}</td>
-                                    </tr>
-                                    </tbody>
-                                </template>
-                            </v-simple-table>
-                            <v-simple-table class="simptabl2">
-                                <template v-slot:default>
-                                    <tbody>
-                                    <tr v-for="item in dess" :key="item.name">
-                                        <td>{{ item.name }}</td>
-                                        <td>{{item.info}}</td>
-                                    </tr>
-                                    </tbody>
-                                </template>
-                            </v-simple-table>
-                            <v-simple-table class="simptabl3">
-                                <template v-slot:default>
-                                    <tbody>
-                                    <tr v-for="item in desser" :key="item.name">
-                                        <td>{{ item.name }}</td>
-                                        <td>{{item.info}}</td>
-                                    </tr>
-                                    </tbody>
-                                </template>
-                            </v-simple-table>
-                        </v-container>
-                    </article>
-                </section>
-            </v-container>
+        <v-container class="stats">
+            <section class="Statistiken">
+                <article class="statsmenü">
+                    <v-container class="routes">
+                        <router-link to="Profile" class="rout">Personal</router-link>
+                        <router-link to="Stats" class="rout" style="margin-left: 1%">Stats</router-link>
+                        <router-link to="" class="rout" style="margin-left: 1%">Lorem ipsum dolor</router-link>
+                        <router-link to="" class="rout" style="margin-left: 1%">Lorem ipsum dolor</router-link>
+                    </v-container>
+                </article>
+                <article class="profilstats">
+                    <header class="übprst">
+                        <h2>Personal Dates</h2>
+                    </header>
+                    <v-container class="statstab">
+                        <v-simple-table class="simptabl1">
+                            <template v-slot:default>
+                                <tbody>
+                                <tr v-for="item in desserts" :key="item.name">
+                                    <td>{{ item.name }}</td>
+                                    <td>{{item.info}}</td>
+                                </tr>
+                                </tbody>
+                            </template>
+                        </v-simple-table>
+                        <v-simple-table class="simptabl2">
+                            <template v-slot:default>
+                                <tbody>
+                                <tr v-for="item in dess" :key="item.name">
+                                    <td>{{ item.name }}</td>
+                                    <td>{{item.info}}</td>
+                                </tr>
+                                </tbody>
+                            </template>
+                        </v-simple-table>
+                        <v-simple-table class="simptabl3">
+                            <template v-slot:default>
+                                <tbody>
+                                <tr v-for="item in desser" :key="item.name">
+                                    <td>{{ item.name }}</td>
+                                    <td>{{item.info}}</td>
+                                </tr>
+                                </tbody>
+                            </template>
+                        </v-simple-table>
+                    </v-container>
+                </article>
+            </section>
+        </v-container>
     </v-container>
 </template>
 
 <script>
     export default {
         name: "Playerprofile",
-        data () {
+        data() {
             return {
                 desserts: [
                     {
@@ -150,77 +150,92 @@
 </script>
 
 <style scoped>
-    .Profilinhalt{
+    .Profilinhalt {
         display: flex;
         width: 60%;
         margin-left: 5%;
         margin-top: 2%;
         border: solid white;
-        box-shadow:  1px 1px 1px black;
-        background-color: 		#3D3D3D;
+        box-shadow: 1px 1px 1px black;
+        background-color: #3D3D3D;
     }
-    .Profil{
+
+    .Profil {
         margin-left: 5%;
         margin-top: 0%;
     }
-    .profilbild{
+
+    .profilbild {
         margin-left: 5%;
         margin-top: 1%;
     }
-    .profilname{
+
+    .profilname {
         margin-left: 2%;
         margin-top: 3%;
     }
-    .statsmenü{
+
+    .statsmenü {
         display: flex;
         font-size: 150%;
         margin-left: -1%;
     }
-    .routes{
+
+    .routes {
         margin-left: 3%;
     }
-    .rout{
+
+    .rout {
         box-sizing: border-box;
         padding: 1%;
         text-decoration: none;
     }
-    .stats{
+
+    .stats {
         border: solid white;
-        box-shadow:  1px 1px 1px black;
+        box-shadow: 1px 1px 1px black;
         width: 60%;
         margin-left: 5%;
         margin-top: 2%;
-        background-color: 		#3D3D3D;
+        background-color: #3D3D3D;
     }
-    .simptabl1{
+
+    .simptabl1 {
         width: 30%;
         margin-top: 2%;
     }
-    .simptabl2{
-        width: 30%;
-        margin-top: 2%;
-        margin-left: 3%;
-    }
-    .simptabl3{
+
+    .simptabl2 {
         width: 30%;
         margin-top: 2%;
         margin-left: 3%;
     }
-    .übprst{
+
+    .simptabl3 {
+        width: 30%;
+        margin-top: 2%;
+        margin-left: 3%;
+    }
+
+    .übprst {
         margin-top: 1%;
         margin-left: 6%;
     }
-    .statstab{
+
+    .statstab {
         display: flex;
         margin-left: 2%;
     }
-    .body{
+
+    .body {
         margin-left: -2%;
     }
-    .settings{
+
+    .settings {
         margin-left: 70%;
     }
-    .header{
+
+    .header {
         font-size: 200%;
     }
 

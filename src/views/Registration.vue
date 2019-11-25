@@ -42,8 +42,12 @@
                                 <v-layout row>
                                     <v-flex xs12>
                                         <v-btn type="submit">Sign up</v-btn>
-                                        <p>By creating an account you agree to our <a href="Privacy">Terms & Privacy</a>.</p>
-                                        <p>Already have an account? <router-link to="/Login">Sign in</router-link>.</p>
+                                        <p>By creating an account you agree to our <a href="Privacy">Terms & Privacy</a>.
+                                        </p>
+                                        <p>Already have an account?
+                                            <router-link to="/Login">Sign in</router-link>
+                                            .
+                                        </p>
                                     </v-flex>
                                 </v-layout>
                             </form>
@@ -69,30 +73,31 @@
             comparePasswords() {
                 return this.password !== this.confirmPassword ? 'Passwords do not match' : ''
             },
-            user () {
+            user() {
                 return this.$store.getters.user
             }
         },
         watch: {
-            user (value) {
+            user(value) {
                 if (value !== null && value !== undefined) {
                     this.$router.push('/')
                 }
             }
         },
         methods: {
-            onSignup () {
-                    this.$store.dispatch('signUserUp', {email: this.email, password: this.password})
+            onSignup() {
+                this.$store.dispatch('signUserUp', {email: this.email, password: this.password})
             }
         }
     }
 </script>
 
 <style scoped>
-    .register{
+    .register {
         margin-top: 2%;
     }
-    p{
+
+    p {
         margin-top: 1%;
     }
 </style>

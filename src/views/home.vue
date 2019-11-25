@@ -3,7 +3,7 @@
         <v-parallax dark src="../assets/122043.jpg" class="parallax" height="900">
             <v-row rows="20" align="center">
                 <div id="BotsLogo">
-                    <v-img  src="../assets/BotsLogo.png"></v-img>
+                    <v-img src="../assets/BotsLogo.png"></v-img>
                 </div>
 
 
