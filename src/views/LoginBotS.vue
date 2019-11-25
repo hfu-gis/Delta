@@ -47,6 +47,7 @@
     name: "LoginBotS",
     data() {
       return {
+        username:'',
         email: '',
         password: '',
       }
