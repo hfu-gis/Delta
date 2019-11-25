@@ -89,62 +89,14 @@
                         name: 'Lorem ipsum dolor ',
                         info: 'Lorem ipsum dolor ',
                     },
-                    {
-                        name: 'Lorem ipsum dolor ',
-                        info: 'Lorem ipsum dolor ',
-                    },
-                    {
-                        name: 'Lorem ipsum dolor ',
-                        info: 'Lorem ipsum dolor ',
-                    },
-                    {
-                        name: 'Lorem ipsum dolor ',
-                        info: 'Lorem ipsum dolor ',
-                    },
-                    {
-                        name: 'Lorem ipsum dolor ',
-                        info: 'Lorem ipsum dolor ',
-                    },
                 ],
                 dess: [
                     {
                         name: 'Lorem ipsum dolor ',
                         info: 'Lorem ipsum dolor ',
                     },
-                    {
-                        name: 'Lorem ipsum dolor',
-                        info: 'Lorem ipsum dolor ',
-                    },
-                    {
-                        name: 'Lorem ipsum dolor ',
-                        info: 'Lorem ipsum dolor ',
-                    },
-                    {
-                        name: 'Lorem ipsum dolor ',
-                        info: 'Lorem ipsum dolor ',
-                    },
-                    {
-                        name: 'Lorem ipsum dolor ',
-                        info: 'Lorem ipsum dolor ',
-                    },
                 ],
                 desser: [
-                    {
-                        name: 'Lorem ipsum dolor ',
-                        info: 'Lorem ipsum dolor ',
-                    },
-                    {
-                        name: 'Lorem ipsum dolor ',
-                        info: 'Lorem ipsum dolor ',
-                    },
-                    {
-                        name: 'Lorem ipsum dolor ',
-                        info: 'Lorem ipsum dolor ',
-                    },
-                    {
-                        name: 'Lorem ipsum dolor ',
-                        info: 'Lorem ipsum dolor ',
-                    },
                     {
                         name: 'Lorem ipsum dolor ',
                         info: 'Lorem ipsum dolor ',
