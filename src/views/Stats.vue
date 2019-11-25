@@ -1,9 +1,16 @@
 <template>
     <v-container class="body" xs12 sm6>
         <section class="Profil">
-            <header>
-                <h1>Profile</h1>
-            </header>
+            <article class="header">
+                <header>
+                    <h1>Profile</h1>
+                </header>
+            </article>
+            <article class="settings">
+                <router-link to="Profileditor">
+                    <v-icon> mdi-account-settings</v-icon>
+                </router-link>
+            </article>
         </section>
         <section class="Profilinhalt">
             <article class="profilbild">
@@ -215,6 +222,12 @@
     }
     .body{
         margin-left: -2%;
+    }
+    .settings{
+        margin-left: 70%;
+    }
+    .header{
+        font-size: 200%;
     }
 
 </style>

@@ -1,9 +1,16 @@
 <template>
     <v-container class="body" xs12 sm6>
         <section class="Profil">
-            <header>
-                <h1>Profile</h1>
-            </header>
+            <article class="header">
+                <header>
+                    <h1>Profile</h1>
+                </header>
+            </article>
+            <article class="settings">
+                <router-link to="Profileditor">
+                    <v-icon> mdi-account-settings</v-icon>
+                </router-link>
+            </article>
         </section>
         <section class="Profilinhalt">
             <article class="profilbild">
@@ -17,8 +24,8 @@
                 <section class="Statistiken">
                     <article class="statsmenü">
                         <v-container class="routes">
-                            <router-link to="/Profil" class="rout">Personal</router-link>
-                            <router-link to="/Profil/Stats" class="rout" style="margin-left: 1%">Stats</router-link>
+                            <router-link to="Profile" class="rout">Personal</router-link>
+                            <router-link to="Stats" class="rout" style="margin-left: 1%">Stats</router-link>
                             <router-link to="" class="rout" style="margin-left: 1%">Lorem ipsum dolor </router-link>
                             <router-link to="" class="rout" style="margin-left: 1%">Lorem ipsum dolor </router-link>
                         </v-container>
@@ -209,6 +216,12 @@
     }
     .body{
         margin-left: -2%;
+    }
+    .settings{
+        margin-left: 70%;
+    }
+    .header{
+        font-size: 200%;
     }
 
 </style>

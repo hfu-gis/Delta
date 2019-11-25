@@ -21,6 +21,7 @@ import Thief from "../views/Thief";
 import Playerprofile from "../views/Playerprofile";
 import Stats from "../views/Stats";
 import home from "../views/home";
+import Profileditor from "../views/Profileditor";
 
 Vue.use(VueRouter);
 
@@ -36,7 +37,12 @@ const routes = [
     component: Impressum
   },
   {
-    path: "/Profil/Stats",
+    path: "/Profileditor",
+    name: "Profileditor",
+    component: Profileditor
+  },
+  {
+    path: "/Stats",
     name: "Stats",
     component: Stats
   },
