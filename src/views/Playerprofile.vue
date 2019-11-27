@@ -243,6 +243,7 @@
     }
     .header {
         font-size: 200%;
+        text-align: center;
     }
     .sidesettings{
         float: left;
