@@ -25,8 +25,8 @@
             <v-text-field name="suchfeld" label="Suche" id="suchfeld" type="suchfeld"></v-text-field>
         </v-container>
         <v-spacer/>
-      <router-link to="" class="topnavrouter"><v-btn class="topnavbtn" style="background: #424242">Registration</v-btn></router-link>
-      <router-link to="" class="topnavrouter"><v-btn class="topnavbtn" style="background: #424242">Login</v-btn></router-link>
+      <router-link to="Registration" class="topnavrouter"><v-btn class="topnavbtn" style="background: #424242">Registration</v-btn></router-link>
+      <router-link to="Login" class="topnavrouter"><v-btn class="topnavbtn" style="background: #424242">Login</v-btn></router-link>
       <div
         class="navicon"
         v-bind:class="{change:drawer}"
