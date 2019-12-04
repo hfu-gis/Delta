@@ -13,8 +13,8 @@
       </v-list>
     </v-navigation-drawer>
 
-    <v-app-bar class="appbar" app clipped-right dark shrink-on-scroll prominent scroll-threshold="300">
-      <router-link to="">
+    <v-app-bar class="appbar" app clipped-right dark height="120">
+      <router-link to="/">
         <v-toolbar-title class="routbild">
           <v-img class="logo" src="./assets/BotsLogo.png"></v-img>
         </v-toolbar-title>
@@ -41,7 +41,7 @@
       <router-view />
     </v-content>
 
-    <v-footer app class="footer">
+    <v-footer  class="footer">
             <section class="cright">
                 &copy; {{ new Date().getFullYear() }}
                 <strong>Delta Shop</strong>
@@ -92,17 +92,17 @@ methods:{
 };
 </script>
 <style scoped>
-.logo {height: 80px;width: 100px;align-content: flex-start;align-self: center;}
-.routbild {width: 200px;height: 200px;margin-left: 10%;}
+.logo {height: 80px;width: 100px;align-content: flex-start;align-self: center; margin-top: 20%}
+.routbild {width: 200px;height: 200px;margin-left: 10%; align-self: center}
 .logo:hover {height: 120px;width: 140px;transition: 1s;}
-.navicon {display: inline-block;cursor: pointer;margin-top: 2%;margin-right: 2%;order: 3;}
+.navicon {display: inline-block;cursor: pointer;align-self: center;margin-right: 2%;order: 3;}
 .bar1, .bar2, .bar3 {width: 35px;height: 5px;background-color: #9e9e9e;margin: 6px 0;transition: 0.7s;}
 .change .bar1 {-webkit-transform: rotate(-45deg) translate(-9px, 6px);transform: rotate(-45deg) translate(-9px, 6px);}
 .change .bar2 {opacity: 0;}
 .change .bar3 {-webkit-transform: rotate(45deg) translate(-9px, -6px);transform: rotate(45deg) translate(-9px, -6px);}
 .navigation {transition: 0.7s;}
 .topnavrouter {text-decoration: none;justify-content: flex-end;align-items: center;margin-right: 4%;align-self: center;order: 2;}
-.topnavrouter:hover, .topnavrouter:focus {text-decoration: underline solid red;font-weight: bold;-webkit-transform: translateY(4px);transition: 0.5s;color: white;text-underline-position: under;}
+.topnavrouter:hover, .topnavrouter:focus {text-decoration: underline solid red;font-weight: bold;-webkit-transform: translateY(4px);transition: 0.5s;color: white;text-underline-position: under}
     .cright{float: left}
     .footerergänzungslinks{margin-right: 15%}
     #linkerlink{margin-right: 50%}
@@ -111,5 +111,4 @@ methods:{
 .suchfeld{width: 50%; align-self: center; margin-right: 5%; border: white solid 1px; position: fixed;margin-left: 20%;display: flex}
 .suchicon{margin-right: 1%}
     .appbar{justify-content: space-between}
-    .topnavbtn{}
 </style>
