@@ -1,13 +1,8 @@
 <template>
   <div>
     <section class="erstesection">
-      <article class="zwischenelement">
-        <input id="checkbox" type="checkbox">
-        <section class="boxinhalt">
-        </section>
-        <v-container class="labelbox">
-          <label for="checkbox" class="textbutton"><h1>Was ist der Delta Shop?</h1></label>
-        </v-container>
+      <article>
+        <about/>
       </article>
       <nav class="kategorie">
         <kategorien/>
@@ -93,21 +88,17 @@
 <script>
 
   import kategorien from "../components/kategorien";
+  import about from "../components/about";
 export default {
   name: "Home",
   components:{
+    about,
     kategorien
   }
 };
 </script>
 
 <style scoped>
-  .boxinhalt {display: none;height:0;-webkit-animation-name: example;-webkit-animation-duration: 2s;animation-name: example;animation-duration: 2s;}
-  @-webkit-keyframes example { from {height: 0;} to {height: 200px} }
-  #checkbox {display:none;}
-  .labelbox{text-align: center;}
-  #checkbox:checked ~ .boxinhalt {display: block;height: 200px;}
-  .textbutton h1{font-size: 20px;font-weight: lighter}
   .ersteReihe{flex-direction: row; display: flex; justify-content: center; align-content: center}
   .kontainerfürbild{align-self: center}
   .zweiteReihe{flex-direction: row; display: flex; justify-content: center; align-content: center; margin-top: 2%;margin-bottom: 2%}

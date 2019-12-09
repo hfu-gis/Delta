@@ -74,7 +74,7 @@ methods:{
   data: () => ({
     drawer: false,
     items: [
-      { title: "Profil", to: "", icon: "mdi-select-place" },
+      { title: "Profile", to: "Profile", icon: "mdi-account" },
       { title: "Kategorien", to: "Categorys", icon: "mdi-select-place" },
       { title: "Lorem", to: "", icon: "mdi-select-place" },
       { title: "Lorem", to: "", icon: "mdi-select-place" },
@@ -111,4 +111,5 @@ methods:{
 .suchfeld{width: 50%; align-self: center; margin-right: 5%; border: white solid 1px; position: fixed;margin-left: 20%;display: flex}
 .suchicon{margin-right: 1%}
     .appbar{justify-content: space-between}
+    .cright strong{font-weight: lighter}
 </style>
