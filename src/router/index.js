@@ -3,10 +3,16 @@ import VueRouter from "vue-router";
 import Home from "../views/Home";
 import Registration from "../views/Registration";
 import Login from "../views/Login";
+import Categorys from "../views/Categorys";
 
 Vue.use(VueRouter);
 
 const routes = [
+  {
+    path: "/Categorys",
+    name: "Categorys",
+    component: Categorys
+  },
   {
     path: "/Registration",
     name: "Registration",

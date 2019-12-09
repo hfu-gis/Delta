@@ -75,7 +75,7 @@ methods:{
     drawer: false,
     items: [
       { title: "Profil", to: "", icon: "mdi-select-place" },
-      { title: "Lorem", to: "", icon: "mdi-select-place" },
+      { title: "Kategorien", to: "Categorys", icon: "mdi-select-place" },
       { title: "Lorem", to: "", icon: "mdi-select-place" },
       { title: "Lorem", to: "", icon: "mdi-select-place" },
       { title: "Lorem", to: "", icon: "mdi-select-place" },
