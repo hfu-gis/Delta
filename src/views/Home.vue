@@ -79,11 +79,10 @@
       <div class="dritteReihe">
         <div class="zwischenbanner">
           <v-container class="zwbanner">
-            <router-link to=""><img src="../assets/122043.jpg" height="300px" width="87%"></router-link>
+            <router-link to=""><img src="../assets/122043.jpg" height="300px" width="100%"></router-link>
           </v-container>
         </div>
       </div>
-
     </section>
     <section class="zweitesection">
 
@@ -113,10 +112,9 @@ export default {
   .kontainerfürbild{align-self: center}
   .zweiteReihe{flex-direction: row; display: flex; justify-content: center; align-content: center; margin-top: 2%;margin-bottom: 2%}
   .vorschau div div{border: #424242 solid 1px; background: #424242; height: 400px}
-  .reihe{margin: 2%; width: 300px}
+  .reihe{margin: 2%; width: 70%}
   .reihe header h2{font-weight: lighter; text-align: center}
   .kontainerfürbild img:hover{transition: 1s; transform: translateY(10px)}
-  .bilder{border: grey solid 1px; background: -moz-mac-accentdarkshadow; width: 80%; margin-left: 12%}
   .dritteReihe{margin-top: 1%}
   .zwischenbanner{justify-content: center; align-content: center; align-self: center; text-align: center; margin-left: 4%}
 </style>

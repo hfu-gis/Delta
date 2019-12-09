@@ -5,7 +5,7 @@
                 <v-btn class="kategorienbutton" style="background: red; color: white" v-on="on">Kategorien:</v-btn>
             </template>
             <v-list class="kategorieitems">
-                <v-list-item v-for="(item, index) in items" :key="index" @click="v-btn" link>
+                <v-list-item v-for="(item, index) in items" :key="index" @click="v-btn" link app>
                     <v-list-item-title class="liste">{{ item.title }}</v-list-item-title>
                 </v-list-item>
             </v-list>
