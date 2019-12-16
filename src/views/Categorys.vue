@@ -55,7 +55,8 @@
             card:[]
         }
     };
-    mounted(){ this.card.push({
+    mounted()
+        this.card.push({
         title:'',
         src:''
         })
