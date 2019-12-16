@@ -1,13 +1,11 @@
 <template>
-    <div>bestellverlauf</div>
+  <div>bestellverlauf</div>
 </template>
 
 <script>
-    export default {
-        name: "bestellverlauf"
-    }
+export default {
+  name: "bestellverlauf"
+};
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

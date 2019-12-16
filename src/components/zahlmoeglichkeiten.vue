@@ -1,13 +1,11 @@
 <template>
-    <div>zahlmöglichkeiten</div>
+  <div>zahlmöglichkeiten</div>
 </template>
 
 <script>
-    export default {
-        name: "zahlmöglichkeiten"
-    }
+export default {
+  name: "zahlmöglichkeiten"
+};
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>
