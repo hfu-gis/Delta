@@ -15,4 +15,4 @@ const db = firebase.initializeApp(firebaseConfig).firestore();
 export default db;
 
 const { TimeStamp, GeoPoint } = firebase.firestore;
-export { TimeStamp, GeoPoint }; //Nick muss groß
+export { TimeStamp, GeoPoint };

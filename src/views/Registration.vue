@@ -60,8 +60,7 @@
                     <v-btn type="submit">Sign up</v-btn>
                     <p>
                       By creating an account you agree to our
-                      <router-link to="">Terms & Conditions</router-link
-                      >.
+                      <router-link to="">Terms & Conditions</router-link>.
                     </p>
                     <p>
                       Already have an account?

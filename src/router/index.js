@@ -6,7 +6,6 @@ import Login from "../views/Login";
 import Categorys from "../views/Categorys";
 import Profile from "../views/Profile";
 
-
 Vue.use(VueRouter);
 
 const routes = [
