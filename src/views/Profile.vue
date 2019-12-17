@@ -9,7 +9,7 @@
             <ol class="navliste">
                 <li style="margin-top: 0%"><a  @click="switchTo('profil')">Profil</a></li>
                 <li><a  @click="switchTo('editor')">Profileinstellungen</a></li>
-                <li><a  @click="switchTo('favouriten')">Favouriten</a></li>
+                <li><a  @click="switchTo('favouriten')">Wunschliste</a></li>
                 <li><a  @click="switchTo('bestellverlauf')">Bestellverlauf</a></li>
                 <li><a  @click="switchTo('zahlmoeglichkeiten')">Zahlmöglichkeiten</a></li>
             </ol>
@@ -56,8 +56,8 @@ export default {
 <style scoped>
     .navliste li{list-style-type: none;margin-top: 50%;margin-left: -9%}
     .navliste a{color: white}
-    .navi{width: 10%;background: #424242;height: 500px;border: #424242 solid 1px}
+    .navi{width: auto;background: #424242;height: 500px;border: #424242 solid 1px}
     .zweitesection{display: flex}
     .inhalt{margin-left: 5%}
-    .navliste a:hover{font-weight: bold}
+    .navliste a:hover{color: #9e9e9e}
 </style>

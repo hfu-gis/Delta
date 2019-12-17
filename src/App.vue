@@ -67,21 +67,21 @@
           to=""
           class="footerlinks"
           id="linkerlink"
-          style="text-decoration: none"
+          style="text-decoration: none;color: white"
           >Impressum</router-link
         >
         <router-link
           to=""
           class="footerlinks"
           id="mittlererlink"
-          style="text-decoration: none"
+          style="text-decoration: none;color: white"
           >Kontakt</router-link
         >
         <router-link
           to=""
           class="footerlinks"
           id="rechterlink"
-          style="text-decoration: none"
+          style="text-decoration: none;color: white"
           >AGB</router-link
         >
       </section>
@@ -192,7 +192,9 @@ export default {
 }
 .footerergänzungslinks {
   margin-right: 15%;
+  color: white;
 }
+.footerlinks:hover{color: #9e9e9e}
 #linkerlink {
   margin-right: 50%;
 }
@@ -208,7 +210,7 @@ export default {
   margin-right: 5%;
   border: white solid 1px;
   position: fixed;
-  margin-left: 20%;
+  margin-left: 15%;
   display: flex;
 }
 .suchicon {

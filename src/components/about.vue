@@ -2,8 +2,8 @@
   <div class="zwischenelement">
     <input id="checkbox" type="checkbox" />
     <section class="boxinhalt">
-      <v-container>
-        Hier Text
+      <v-container class="cvont">
+        Wir kaufen Medien ding bumm
       </v-container>
     </section>
     <v-container class="labelbox">
@@ -54,4 +54,5 @@ export default {
 .textbutton h1:hover {
   font-weight: bold;
 }
+  .cvont{font-weight: lighter}
 </style>
