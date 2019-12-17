@@ -8,7 +8,7 @@
             <section>
                 <h4>Filme</h4>
                 <v-row dense>
-                    <v-col>
+                    <v-col v-for="card in cards" :key="card.title">
                         <v-card
                                 class = card
                                 max-width="250"
@@ -52,16 +52,19 @@
 <script>
     export default {
         name: "Categorys",
-        data: () => {
-            card:[]
+        data: ()=>{
+            return {
+                cards: []
+            }
         },
-    };
-        mounted() {
-        this.card.push({
+    mounted()
+    {
+            this.card.push({
                 title: '',
                 src: ''
             })
         }
+    };
 </script>
 
 <style scoped>
