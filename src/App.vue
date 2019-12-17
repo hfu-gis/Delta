@@ -96,7 +96,7 @@ methods:{
 .routbild {width: 200px;height: 200px;margin-left: 10%; align-self: center}
 .logo:hover {height: 120px;width: 140px;transition: 1s;}
 .navicon {display: inline-block;cursor: pointer;align-self: center;margin-right: 2%;order: 3;}
-.bar1, .bar2, .bar3 {width: 35px;height: 5px;background-color: #9e9e9e;margin: 6px 0;transition: 0.7s;}
+.bar1, .bar2, .bar3 {width: 35px;height: 5px;background-color: white;margin: 6px 0;transition: 0.7s;}
 .change .bar1 {-webkit-transform: rotate(-45deg) translate(-9px, 6px);transform: rotate(-45deg) translate(-9px, 6px);}
 .change .bar2 {opacity: 0;}
 .change .bar3 {-webkit-transform: rotate(45deg) translate(-9px, -6px);transform: rotate(45deg) translate(-9px, -6px);}
@@ -112,4 +112,5 @@ methods:{
 .suchicon{margin-right: 1%}
     .appbar{justify-content: space-between}
     .cright strong{font-weight: lighter}
+    .footerlinks:hover{color: white}
 </style>

@@ -9,8 +9,8 @@
                     <v-list-item
                             v-for="item in items"
                             v-bind:key="item.title"
-                            v-bind:class="['tab-button', { active: currentcomponent.title === item.component }]"
-                            @click="currentcomponent = item"
+                            v-bind:class="['tab-button', { active: this.currentcomponent.title === item.component }]"
+                            @click="this.currentcomponent = item"
                             >
                         <v-list-item-content>
                             <v-list-item-title>{{item.title}}</v-list-item-title>
@@ -20,7 +20,7 @@
             </nav>
         </section>
         <section>
-            <component :is="currentcomponent" class="sele"></component>
+            <component :is="this.currentcomponent"></component>
         </section>
     </div>
 </template>
