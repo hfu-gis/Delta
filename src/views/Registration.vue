@@ -60,12 +60,12 @@
                     <v-btn type="submit">Sign up</v-btn>
                     <p>
                       By creating an account you agree to our
-                      <router-link to="Privacy">Terms & Conditions</router-link
+                      <router-link to="">Terms & Conditions</router-link
                       >.
                     </p>
                     <p>
                       Already have an account?
-                      <router-link to="/Login">Sign in</router-link>
+                      <router-link to="Login">Sign in</router-link>
                       .
                     </p>
                   </v-flex>
