@@ -7,8 +7,8 @@
         <article class="navi">
           <nav class="navigation">
             <ol class="navliste">
-                <li style="margin-top: 0%"><a  @click="switchTo('profil')">Profil</a></li>
-                <li><a  @click="switchTo('editor')">Profileinstellungen</a></li>
+                <li style="margin-top: 0%"><a  @click="switchTo('editor')">Profil</a></li>
+                <li><a  @click="switchTo('profil')">Profileinstellungen</a></li>
                 <li><a  @click="switchTo('favouriten')">Wunschliste</a></li>
                 <li><a  @click="switchTo('bestellverlauf')">Bestellverlauf</a></li>
                 <li><a  @click="switchTo('zahlmoeglichkeiten')">Zahlmöglichkeiten</a></li>
@@ -43,7 +43,7 @@ export default {
       zahlmoeglichkeiten
       },
     data: () => ({
-        currentPage: 'profil',
+        currentPage: 'editor',
     }),
     methods: {
         switchTo: function(page) {
