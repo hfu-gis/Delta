@@ -1,19 +1,5 @@
 <template>
   <v-app id="inspire">
-    <v-navigation-drawer v-model="drawer" app right clipped class="navigation">
-      <v-list dense>
-        <v-list-item v-for="item in items" :key="item.title" :to="item.to" link>
-          <v-list-item-action>
-            <v-icon v-text="item.icon"></v-icon>
-          </v-list-item-action>
-          <v-list-item-content>
-            <v-list-item-title class="listitems">{{
-              item.title
-            }}</v-list-item-title>
-          </v-list-item-content>
-        </v-list-item>
-      </v-list>
-    </v-navigation-drawer>
 
     <v-app-bar class="appbar" app clipped-right dark height="120">
       <router-link to="/">
@@ -42,15 +28,10 @@
           >Login</v-btn
         ></router-link
       >
-      <div
-        class="navicon"
-        v-bind:class="{ change: drawer }"
-        @click.stop="drawer = !drawer"
-      >
-        <div class="bar1"></div>
-        <div class="bar2"></div>
-        <div class="bar3"></div>
-      </div>
+      <router-link to="Profile" style="text-decoration: none" class="profileicon">
+        <v-icon class="profilicon" style="background: #424242">mdi-account</v-icon>
+      </router-link>
+
     </v-app-bar>
     <v-content>
       <router-view />
@@ -95,24 +76,10 @@ export default {
     source: String
   },
   methods: {
-    change: function(event) {
-      // eslint-disable-next-line
-        console.log(event);
-      event.target.toggleClass("change");
-    }
+
   },
   data: () => ({
-    drawer: false,
-    items: [
-      { title: "Profil", to: "Profile", icon: "mdi-account" },
-      { title: "Kategorien", to: "Categorys", icon: "mdi-select-place" },
-      { title: "Lorem", to: "", icon: "mdi-select-place" },
-      { title: "Lorem", to: "", icon: "mdi-select-place" },
-      { title: "Lorem", to: "", icon: "mdi-select-place" },
-      { title: "Lorem", to: "", icon: "mdi-select-place" },
-      { title: "Lorem", to: "", icon: "mdi-select-place" },
-      { title: "Lorem", to: "", icon: "mdi-select-place" }
-    ]
+
   }),
 
   created() {
@@ -140,41 +107,11 @@ export default {
   width: 140px;
   transition: 1s;
 }
-.navicon {
-  display: inline-block;
-  cursor: pointer;
-  align-self: center;
-  margin-right: 2%;
-  order: 3;
-}
-.bar1,
-.bar2,
-.bar3 {
-  width: 35px;
-  height: 5px;
-  background-color: #9e9e9e;
-  margin: 6px 0;
-  transition: 0.7s;
-}
-.change .bar1 {
-  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
-  transform: rotate(-45deg) translate(-9px, 6px);
-}
-.change .bar2 {
-  opacity: 0;
-}
-.change .bar3 {
-  -webkit-transform: rotate(45deg) translate(-9px, -6px);
-  transform: rotate(45deg) translate(-9px, -6px);
-}
-.navigation {
-  transition: 0.7s;
-}
 .topnavrouter {
   text-decoration: none;
   justify-content: flex-end;
   align-items: center;
-  margin-right: 4%;
+  margin-right: 6%;
   align-self: center;
   order: 2;
 }
@@ -194,7 +131,9 @@ export default {
   margin-right: 15%;
   color: white;
 }
-.footerlinks:hover{color: #9e9e9e}
+.footerlinks:hover {
+  color: #9e9e9e;
+}
 #linkerlink {
   margin-right: 50%;
 }
@@ -222,4 +161,6 @@ export default {
 .cright strong {
   font-weight: lighter;
 }
+  .profileicon{float: right;margin-right: -23%;}
+  .profilicon{align-self: center}
 </style>
