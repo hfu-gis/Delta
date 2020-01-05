@@ -54,10 +54,28 @@ export default {
 </script>
 
 <style scoped>
-    .navliste li{list-style-type: none;margin-top: 50%;margin-left: -9%}
-    .navliste a{color: white}
-    .navi{width: auto;background: #424242;height: 500px;border: #424242 solid 1px}
-    .zweitesection{display: flex}
-    .inhalt{margin-left: 5%}
-    .navliste a:hover{color: #9e9e9e}
+.navliste li {
+  list-style-type: none;
+  margin-top: 50%;
+  margin-left: -9%;
+}
+.navliste a {
+  color: white;
+}
+.navi {
+  width: auto;
+  background: #424242;
+  height: 500px;
+  border: #424242 solid 1px;
+}
+.zweitesection {
+  display: flex;
+}
+.inhalt {
+  margin-left: 5%;
+}
+.navliste a:hover {
+  color: #9e9e9e;
+}
+  .content{background: #424242;}
 </style>

@@ -54,5 +54,7 @@ export default {
 .textbutton h1:hover {
   font-weight: bold;
 }
-  .cvont{font-weight: lighter}
+.cvont {
+  font-weight: lighter;
+}
 </style>
