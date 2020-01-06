@@ -4,21 +4,24 @@
       <about />
     </section>
     <section class="zweitesection">
-        <article class="navi">
-          <nav class="navigation">
-            <ol class="navliste">
-                <li style="margin-top: 0%"><a  @click="switchTo('profil')">Profil</a></li>
-                <li><a  @click="switchTo('editor')">Profileinstellungen</a></li>
-                <li><a  @click="switchTo('favouriten')">Wunschliste</a></li>
-                <li><a  @click="switchTo('bestellverlauf')">Bestellverlauf</a></li>
-                <li><a  @click="switchTo('zahlmoeglichkeiten')">Zahlmöglichkeiten</a></li>
-            </ol>
-          </nav>
-        </article>
-<keep-alive>
-                <component v-bind:is="currentPage" class="inhalt">
-                </component>
-</keep-alive>
+      <article class="navi">
+        <nav class="navigation">
+          <ol class="navliste">
+            <li style="margin-top: 0%">
+              <a @click="switchTo('profil')">Profil</a>
+            </li>
+            <li><a @click="switchTo('editor')">Profileinstellungen</a></li>
+            <li><a @click="switchTo('favouriten')">Wunschliste</a></li>
+            <li><a @click="switchTo('bestellverlauf')">Bestellverlauf</a></li>
+            <li>
+              <a @click="switchTo('zahlmoeglichkeiten')">Zahlmöglichkeiten</a>
+            </li>
+          </ol>
+        </nav>
+      </article>
+      <keep-alive>
+        <component v-bind:is="currentPage" class="inhalt"> </component>
+      </keep-alive>
     </section>
   </div>
 </template>
@@ -34,20 +37,20 @@ export default {
   name: "Profile",
   components: {
     about,
-      profil,
-      editor,
-      favouriten,
-      bestellverlauf,
-      zahlmoeglichkeiten
-      },
-    data: () => ({
-        currentPage: '',
-    }),
-    methods: {
-        switchTo: function(page) {
-            this.currentPage = page;
-        }
-    },
+    profil,
+    editor,
+    favouriten,
+    bestellverlauf,
+    zahlmoeglichkeiten
+  },
+  data: () => ({
+    currentPage: ""
+  }),
+  methods: {
+    switchTo: function(page) {
+      this.currentPage = page;
+    }
+  }
 };
 </script>
 
@@ -71,7 +74,7 @@ export default {
 }
 .inhalt {
   margin-left: 5%;
-    width: 100%;
+  width: 100%;
 }
 .navliste a:hover {
   color: #9e9e9e;

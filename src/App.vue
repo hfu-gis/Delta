@@ -1,6 +1,5 @@
 <template>
   <v-app id="inspire">
-
     <v-app-bar class="appbar" app clipped-right dark height="120">
       <router-link to="/">
         <v-toolbar-title class="routbild">
@@ -28,10 +27,15 @@
           >Login</v-btn
         ></router-link
       >
-      <router-link to="Profile" style="text-decoration: none" class="profileicon">
-        <v-icon class="profilicon" style="background: #424242">mdi-account</v-icon>
+      <router-link
+        to="Profile"
+        style="text-decoration: none"
+        class="profileicon"
+      >
+        <v-icon class="profilicon" style="background: #424242"
+          >mdi-account</v-icon
+        >
       </router-link>
-
     </v-app-bar>
     <v-content>
       <router-view />
@@ -75,12 +79,8 @@ export default {
   props: {
     source: String
   },
-  methods: {
-
-  },
-  data: () => ({
-
-  }),
+  methods: {},
+  data: () => ({}),
 
   created() {
     this.$vuetify.theme.dark = true;
@@ -161,6 +161,11 @@ export default {
 .cright strong {
   font-weight: lighter;
 }
-  .profileicon{float: right;margin-right: -23%;}
-  .profilicon{align-self: center}
+.profileicon {
+  float: right;
+  margin-right: -23%;
+}
+.profilicon {
+  align-self: center;
+}
 </style>

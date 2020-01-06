@@ -108,10 +108,10 @@ export default {
   name: "Home",
   data() {
     return {
-      filmcover:{
-        filmtitel:"",
-        imageURL:"",
-        filmbeschreibung:""
+      filmcover: {
+        filmtitel: "",
+        imageURL: "",
+        filmbeschreibung: ""
       }
     };
   },
@@ -122,8 +122,7 @@ export default {
   components: {
     about,
     kategorien
-  },
-
+  }
 };
 </script>
 

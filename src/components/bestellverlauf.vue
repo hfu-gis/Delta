@@ -1,18 +1,14 @@
 <template>
   <div>
-      <v-col
-            v-for="card in cards"
-            :key="card.title"
-            class="verlauf"
-      >
+    <v-col v-for="card in cards" :key="card.title" class="verlauf">
       <v-card elevation="4">
         <v-img
-                :src="card.src"
-                class="white--text align-end"
-                gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)"
-                height="140"
+          :src="card.src"
+          class="white--text align-end"
+          gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)"
+          height="140"
         >
-          <v-card-title v-text="card.title"/>
+          <v-card-title v-text="card.title" />
         </v-img>
 
         <v-card-actions>
@@ -41,20 +37,22 @@ export default {
   data: () => {
     return {
       cards: []
-    }
+    };
   },
   mounted() {
-    for(let i=1; i<6; i++) {
+    for (let i = 1; i < 6; i++) {
       this.cards.push({
-        title: 'Kauf ' + i,
+        title: "Kauf " + i,
         src: "./assets/placeholder/" + i
-      })
+      });
     }
   }
 };
 </script>
 
 <style scoped>
-  .verlauf{width: 40%;
-  margin-left: 22%}
+.verlauf {
+  width: 40%;
+  margin-left: 22%;
+}
 </style>

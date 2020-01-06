@@ -11,12 +11,10 @@ const firebaseConfig = {
   appId: "1:385891058660:web:7669738eb06e4df8a63df1",
   measurementId: "G-YNDBPRF37H"
 };
-firebase.initializeApp(firebaseConfig)
+firebase.initializeApp(firebaseConfig);
 
-const db = firebase.firestore()
-const auth = firebase.auth()
-const storage = firebase.storage()
+const db = firebase.firestore();
+const auth = firebase.auth();
+const storage = firebase.storage();
 
-export {
-  db, auth, storage
-}
+export { db, auth, storage };
