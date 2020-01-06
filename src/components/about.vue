@@ -3,7 +3,7 @@
     <input id="checkbox" type="checkbox" />
     <section class="boxinhalt">
       <v-container class="cvont">
-        Wir kaufen Medien ding bumm
+        Bei uns bekommt man die neusten und aktuellsten Filme, Serien und Spiele
       </v-container>
     </section>
     <v-container class="labelbox">
@@ -56,5 +56,7 @@ export default {
 }
 .cvont {
   font-weight: lighter;
+  text-align: center;
+  font-size: 40px;
 }
 </style>

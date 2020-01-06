@@ -106,10 +106,24 @@ import kategorien from "../components/kategorien";
 import about from "../components/about";
 export default {
   name: "Home",
+  data() {
+    return {
+      filmcover:{
+        filmtitel:"",
+        imageURL:"",
+        filmbeschreibung:""
+      }
+    };
+  },
+  // let storage = firebase.storage();
+  // let storageRef = storage.ref();
+  // let imagesRef=storageRef.child('Mediencover');
+
   components: {
     about,
     kategorien
-  }
+  },
+
 };
 </script>
 

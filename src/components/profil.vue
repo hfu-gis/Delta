@@ -1,76 +1,90 @@
 <template>
   <div>
-    <section class="imgupload">
-      <v-app id="app" class="mt-0">
-        <v-container grid-list-xl>
-          <image-input v-model="avatar">
-            <div slot="activator">
-              <v-avatar size="200px" v-ripple v-if="!avatar" class="z">
-                <span style="color: white">Füge Profilbild hinzu</span>
-              </v-avatar>
-              <v-avatar size="200px" v-ripple v-else class="mb-3">
-                <img :src="avatar.imageURL" alt="avatar" />
-              </v-avatar>
-            </div>
-          </image-input>
-          <v-slide-x-transition>
-            <div v-if="avatar && saved == false">
-              <v-btn
-                class="u"
-                @click="uploadImage"
-                :loading="saving"
-                style="color: white"
-                >Speichere Profilbild</v-btn
-              >
-            </div>
-          </v-slide-x-transition>
-        </v-container>
-      </v-app>
-    </section>
-    <section></section>
+    <v-card
+class="profil"
+    >
+      <v-img
+              class="profilbild"
+              src="user.imageUrl"
+      >
+        <v-card-title>{{user.nutzername}}</v-card-title>
+      </v-img>
+
+      <v-card-subtitle class="subtitl">Mein Profil:</v-card-subtitle>
+
+      <v-card-text >
+        <div class="vertlist">
+          <h3>Vorname</h3>
+          <p>{{user.vorname}}</p>
+        </div>
+       <div class="vertlist">
+         <h3>Nachname</h3>
+         <p>{{user.nachname}}</p>
+       </div>
+        <div>
+          <h3>Nachname</h3>
+          <p>{{user.nachname}}</p>
+        </div>
+        <div>
+          <h3>Email</h3>
+          <p>{{user.email}}</p>
+        </div>
+        <div>
+          <h3>Zahlmöglichkeit</h3>
+        <p>{{user.Zahlmöglichkeit}}</p>
+        </div>
+        <div>
+          <h3>Liferadresse</h3>
+          <p>{{user.lieferadresse.land}}</p>
+          <p>{{user.lieferadresse.bundesland}}</p>
+          <p>{{user.lieferadresse.plz}}</p>
+          <p>{{user.lieferadresse.anschrift}}</p>
+        </div>
+      </v-card-text>
+    </v-card>
   </div>
 </template>
 
 <script>
-import imageinput from "./imageinput";
 export default {
   name: "profil",
-  data() {
+  data () {
     return {
-      avatar: null,
-      saving: false,
-      saved: false
-    };
-  },
-  components: {
-    ImageInput: imageinput
-  },
-  watch: {
-    avatar: {
-      handler: function() {
-        this.saved = false;
+      user:{
+        nutzername:'',
+        vorname:'',
+        nachname:'',
+        Zahlmöglichkeit:'',
+        lieferadresse:{
+          vorname: '',
+          nachname: '',
+          land: '',
+          plz: '',
+          anschrift: '',
+          stadt: '',
+          bundesland: '',
+        },
+        email:'',
+        imageUrl:''
       },
-      deep: true
+
     }
   },
+
+  computed: {
+
+  },
+
   methods: {
-    uploadImage() {
-      this.saving = true;
-      setTimeout(() => this.savedAvatar(), 1000);
-    },
-    savedAvatar() {
-      this.saving = false;
-      this.saved = true;
-    }
+
+  },
+
+  created() {
   }
 };
 </script>
 
 <style scoped>
-.z {
-  background: #424242;
-}
-.u {
-  background: #424242;
-}
+.profil{width: 40%;margin-left: 20%}
+  .subtitl{margin-left: 50%}
 </style>

@@ -7,20 +7,18 @@
         <article class="navi">
           <nav class="navigation">
             <ol class="navliste">
-                <li style="margin-top: 0%"><a  @click="switchTo('editor')">Profil</a></li>
-                <li><a  @click="switchTo('profil')">Profileinstellungen</a></li>
+                <li style="margin-top: 0%"><a  @click="switchTo('profil')">Profil</a></li>
+                <li><a  @click="switchTo('editor')">Profileinstellungen</a></li>
                 <li><a  @click="switchTo('favouriten')">Wunschliste</a></li>
                 <li><a  @click="switchTo('bestellverlauf')">Bestellverlauf</a></li>
                 <li><a  @click="switchTo('zahlmoeglichkeiten')">Zahlmöglichkeiten</a></li>
             </ol>
           </nav>
         </article>
-        <article class="inhalt">
-            <keep-alive>
-                <component v-bind:is="currentPage">
+<keep-alive>
+                <component v-bind:is="currentPage" class="inhalt">
                 </component>
-            </keep-alive>
-        </article>
+</keep-alive>
     </section>
   </div>
 </template>
@@ -43,7 +41,7 @@ export default {
       zahlmoeglichkeiten
       },
     data: () => ({
-        currentPage: 'editor',
+        currentPage: '',
     }),
     methods: {
         switchTo: function(page) {
@@ -73,9 +71,9 @@ export default {
 }
 .inhalt {
   margin-left: 5%;
+    width: 100%;
 }
 .navliste a:hover {
   color: #9e9e9e;
 }
-  .content{background: #424242;}
 </style>
