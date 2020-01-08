@@ -50,7 +50,7 @@ export default {
         vorname: "",
         nachname: "",
         Zahlmöglichkeit: "",
-        lieferadresse: {
+        lieferadresse: [{
           vorname: "",
           nachname: "",
           land: "",
@@ -58,7 +58,7 @@ export default {
           anschrift: "",
           stadt: "",
           bundesland: ""
-        },
+        }],
         email: "",
         imageUrl: ""
       }

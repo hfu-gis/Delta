@@ -1,67 +1,75 @@
 <template>
   <div>
-    <v-card class="profilsettings">
-      <v-card-title>Profil</v-card-title>
-      <div class="bildinput">
-        <v-text-field
-          label="Bildwahl"
-          @click="pickFile"
-          v-model="imageName"
-          prepend-inner-icon="mdi-paperclip"
-          class="bildinputs"
-        ></v-text-field>
-        <input
-          type="file"
-          style="display: none"
-          ref="image"
-          accept="image/*"
-          @change="onFilePicked"
-        />
-      </div>
-      <div class="set">
-        <div class="Profileinstellungen">
-          <v-text-field
-            name="vorname"
-            :rules="[rules.required]"
-            label="Vorname"
-            v-model="user.vorname"
-            prepend-inner-icon="mdi-account"
-          ></v-text-field>
-          <v-text-field
-            name="nachname"
-            :rules="[rules.required]"
-            label="Nachname"
-            v-model="user.nachname"
-            prepend-inner-icon="mdi-account"
-          ></v-text-field>
-          <v-text-field
-            name="email"
-            :rules="[rules.required]"
-            label="E-Mail"
-            v-model="user.email"
-            prepend-inner-icon="mdi-email"
-          ></v-text-field>
-          <v-text-field
-            name="nutzername"
-            :rules="[rules.required]"
-            v-model="user.nutzername"
-            prepend-inner-icon="mdi-account"
-            label="Username"
-          ></v-text-field>
-        </div>
+    <div id="prfl">
+      <v-card class="profilpiktschor">
         <div class="bild">
+<!--          <h2 style="font-weight: lighter;">-->
+<!--            Dein Profilbild-->
+<!--          </h2>-->
           <img
-            :src="imageUrl"
-            height="300"
-            v-if="imageUrl"
-            class="profilbild"
+                  :src="imageUrl"
+                  height="300"
+                  width="200"
+                  v-if="imageUrl"
+                  class="profilbild"
           />
         </div>
-      </div>
-      <v-card-actions>
-        <v-btn @click="upload">Upload</v-btn>
-      </v-card-actions>
-    </v-card>
+      </v-card>
+      <v-card class="profilsettings">
+        <v-card-title>Profil</v-card-title>
+        <div class="bildinput">
+          <v-text-field
+            label="Bildwahl"
+            @click="pickFile"
+            v-model="imageName"
+            prepend-inner-icon="mdi-paperclip"
+            class="bildinputs"
+          ></v-text-field>
+          <input
+            type="file"
+            style="display: none"
+            ref="image"
+            accept="image/*"
+            @change="onFilePicked"
+          />
+        </div>
+        <div class="set">
+          <div class="Profileinstellungen">
+            <v-text-field
+              name="vorname"
+              :rules="[rules.required]"
+              label="Vorname"
+              v-model="user.vorname"
+              prepend-inner-icon="mdi-account"
+            ></v-text-field>
+            <v-text-field
+              name="nachname"
+              :rules="[rules.required]"
+              label="Nachname"
+              v-model="user.nachname"
+              prepend-inner-icon="mdi-account"
+            ></v-text-field>
+            <v-text-field
+              name="email"
+              :rules="[rules.required]"
+              label="E-Mail"
+              v-model="user.email"
+              prepend-inner-icon="mdi-email"
+            ></v-text-field>
+            <v-text-field
+              name="nutzername"
+              :rules="[rules.required]"
+              v-model="user.nutzername"
+              prepend-inner-icon="mdi-account"
+              label="Username"
+            ></v-text-field>
+          </div>
+        </div>
+        <v-card-actions>
+          <v-btn @click="upload">Upload</v-btn>
+        </v-card-actions>
+      </v-card>
+    </div>
     <v-card class="profilsettings" id="liefa">
       <v-card-title>Lieferadresse</v-card-title>
       <div class="set">
@@ -109,7 +117,7 @@
 </template>
 
 <script>
-import firebase from "firebase";
+  import firebase from "firebase";
 import db from "../db";
 export default {
   name: "editor",
@@ -191,9 +199,7 @@ export default {
     },
     upload: function() {
       let storageRef = firebase.storage().ref();
-
       let mountainsRef = storageRef.child(`Profilbild/${this.imageName}`);
-
       mountainsRef.put(this.imageFile).then(snapshot => {
         snapshot.ref.getDownloadURL().then(downloadURL => {
           this.imageUrl = downloadURL;
@@ -202,9 +208,9 @@ export default {
           db.collection("nutzer").add({
             downloadURL,
             downloadUrl:
-              `gs://gis-deltaforce-bob.appspot.com${bucketName}/Profilbild` +
-              "%2F" +
-              `${encodeURIComponent(filePath)}?alt=media`,
+                    `gs://gis-deltaforce-bob.appspot.com${bucketName}/Profilbild` +
+                    "%2F" +
+                    `${encodeURIComponent(filePath)}?alt=media`,
             timestamp: Date.now()
           });
           this.getImages();
@@ -221,6 +227,7 @@ export default {
   margin-left: 20%;
 }
 .profilbild {
+  z-index: 2;
 }
 .set {
   display: flex;
@@ -231,9 +238,9 @@ export default {
   align-content: flex-end;
   margin-left: 5%;
 }
-.bild {
-  float: right;
-  margin-left: 25%;
+.profilpiktschor {
+  width: 200px;
+  height: 300px;
 }
 .bildinputs {
   width: 36%;
@@ -242,4 +249,8 @@ export default {
 #liefa {
   margin-top: 5%;
 }
+  #prfl{display: flex}
+  .bild{
+    z-index: 1;
+  }
 </style>
