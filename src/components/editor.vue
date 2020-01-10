@@ -131,6 +131,7 @@ export default {
       imageFile: "",
       imgUrls: [],
       countries: [],
+      success: false,
       rules: {
         required: value => !!value || "Required.",
         min: v => v.length >= 8 || "Min. 8 characters"
@@ -141,6 +142,7 @@ export default {
         vorname: "",
         nachname: "",
         email: "",
+        userisalreadyRegisteres: false,
         lieferadresse: {
           vorname: "",
           nachname: "",
@@ -158,6 +160,7 @@ export default {
     //   return this.$store.getters.user
     // }
   },
+
   methods: {
     getImages: function() {
       db.collection("images")
@@ -198,6 +201,7 @@ export default {
       }
     },
     upload: function() {
+      this.register()
       let storageRef = firebase.storage().ref();
       let mountainsRef = storageRef.child(`Profilbild/${this.imageName}`);
       mountainsRef.put(this.imageFile).then(snapshot => {
@@ -216,7 +220,17 @@ export default {
           this.getImages();
         });
       });
-    }
+    },
+    register()  {
+      this.user.isAlreadyRegistered = true
+      let docRef = db.collection('Nutzer').doc(this.user.username)
+      docRef.set(this.user)
+
+              .then(() => this.success = true)
+              // eslint-disable-next-line
+              .catch(error => console.log(error))
+      //docRef.update(this.user)
+    },
   }
 };
 </script>
