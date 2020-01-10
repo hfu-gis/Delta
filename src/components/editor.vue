@@ -3,15 +3,15 @@
     <div id="prfl">
       <v-card class="profilpiktschor">
         <div class="bild">
-<!--          <h2 style="font-weight: lighter;">-->
-<!--            Dein Profilbild-->
-<!--          </h2>-->
+          <!--          <h2 style="font-weight: lighter;">-->
+          <!--            Dein Profilbild-->
+          <!--          </h2>-->
           <img
-                  :src="imageUrl"
-                  height="300"
-                  width="200"
-                  v-if="imageUrl"
-                  class="profilbild"
+            :src="imageUrl"
+            height="300"
+            width="200"
+            v-if="imageUrl"
+            class="profilbild"
           />
         </div>
       </v-card>
@@ -117,7 +117,7 @@
 </template>
 
 <script>
-  import firebase from "firebase";
+import firebase from "firebase";
 import db from "../db";
 export default {
   name: "editor",
@@ -212,9 +212,9 @@ export default {
           db.collection("nutzer").add({
             downloadURL,
             downloadUrl:
-                    `gs://gis-deltaforce-bob.appspot.com${bucketName}/Profilbild` +
-                    "%2F" +
-                    `${encodeURIComponent(filePath)}?alt=media`,
+              `gs://gis-deltaforce-bob.appspot.com${bucketName}/Profilbild` +
+              "%2F" +
+              `${encodeURIComponent(filePath)}?alt=media`,
             timestamp: Date.now()
           });
           this.getImages();
@@ -263,8 +263,10 @@ export default {
 #liefa {
   margin-top: 5%;
 }
-  #prfl{display: flex}
-  .bild{
-    z-index: 1;
-  }
+#prfl {
+  display: flex;
+}
+.bild {
+  z-index: 1;
+}
 </style>
