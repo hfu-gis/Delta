@@ -5,6 +5,7 @@ import Registration from "../views/Registration";
 import Login from "../views/Login";
 import Categorys from "../views/Categorys";
 import Profile from "../views/Profile";
+import Verzeichnis from "../views/Verzeichnis";
 
 Vue.use(VueRouter);
 
@@ -13,6 +14,11 @@ const routes = [
     path: "/Categorys",
     name: "Categorys",
     component: Categorys
+  },
+  {
+    path: "/Verzeichnis",
+    name: "Verzeichnis",
+    component: Verzeichnis
   },
   {
     path: "/Registration",

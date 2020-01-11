@@ -3,7 +3,30 @@
     <input id="checkbox" type="checkbox" />
     <section class="boxinhalt">
       <v-container class="cvont">
-        Bei uns bekommt man die neusten und aktuellsten Filme, Serien und Spiele
+        <div class="Info">
+          Bei uns bekommt man die neusten und aktuellsten Filme, Serien und
+          Spiele
+        </div>
+        <div class="Kurzübersicht">
+          <div @click="$router.push({ name: 'Home' })" class="infor">
+            <h3 class="üb">
+              Startseite
+            </h3>
+            <v-icon style="font-size: 35px">mdi-view-list</v-icon>
+          </div>
+          <div @click="$router.push({ name: 'Verzeichnis' })" class="infor">
+            <h3 class="üb">
+              Verzeichnis
+            </h3>
+            <v-icon style="font-size: 35px">mdi-shape</v-icon>
+          </div>
+          <div @click="$router.push({ name: 'Releases' })" class="infor">
+            <h3 class="üb">
+              Aktuelleste News und Release Informationen
+            </h3>
+            <v-icon style="font-size: 35px">mdi-newspaper</v-icon>
+          </div>
+        </div>
       </v-container>
     </section>
     <v-container class="labelbox">
@@ -55,8 +78,30 @@ export default {
   font-weight: bold;
 }
 .cvont {
+}
+.Info {
   font-weight: lighter;
   text-align: center;
   font-size: 40px;
+}
+.Kurzübersicht {
+  display: flex;
+}
+.Kurzübersicht h3 {
+  font-weight: lighter;
+  font-size: 20px;
+}
+.infor {
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  margin-left: 19%;
+}
+.üb {
+  text-align: center;
+}
+.infor:hover {
+  cursor: pointer;
+  color: #9e9e9e;
 }
 </style>

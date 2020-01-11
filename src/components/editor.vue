@@ -14,6 +14,9 @@
             class="profilbild"
           />
         </div>
+        <v-card-actions class="upload">
+          <v-btn @click="upload">Upload</v-btn>
+        </v-card-actions>
       </v-card>
       <v-card class="profilsettings">
         <v-card-title>Profil</v-card-title>
@@ -65,12 +68,9 @@
             ></v-text-field>
           </div>
         </div>
-        <v-card-actions>
-          <v-btn @click="upload">Upload</v-btn>
-        </v-card-actions>
       </v-card>
     </div>
-    <v-card class="profilsettings" id="liefa">
+    <v-card id="liefa">
       <v-card-title>Lieferadresse</v-card-title>
       <div class="set">
         <div class="Profileinstellungen">
@@ -201,7 +201,7 @@ export default {
       }
     },
     upload: function() {
-      this.register()
+      this.register();
       let storageRef = firebase.storage().ref();
       let mountainsRef = storageRef.child(`Profilbild/${this.imageName}`);
       mountainsRef.put(this.imageFile).then(snapshot => {
@@ -221,16 +221,17 @@ export default {
         });
       });
     },
-    register()  {
-      this.user.isAlreadyRegistered = true
-      let docRef = db.collection('Nutzer').doc(this.user.username)
-      docRef.set(this.user)
+    register() {
+      this.user.isAlreadyRegistered = true;
+      let docRef = db.collection("Nutzer").doc(this.user.username);
+      docRef
+        .set(this.user)
 
-              .then(() => this.success = true)
-              // eslint-disable-next-line
+        .then(() => (this.success = true))
+        // eslint-disable-next-line
               .catch(error => console.log(error))
       //docRef.update(this.user)
-    },
+    }
   }
 };
 </script>
@@ -262,11 +263,17 @@ export default {
 }
 #liefa {
   margin-top: 5%;
+  width: 40%;
+  margin-left: 32%;
 }
 #prfl {
   display: flex;
 }
 .bild {
   z-index: 1;
+}
+.upload {
+  position: absolute;
+  top: 100%;
 }
 </style>

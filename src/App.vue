@@ -144,12 +144,12 @@ export default {
   margin-right: 50%;
 }
 .suchfeld {
-  width: 50%;
+  width: 30%;
   align-self: center;
   margin-right: 5%;
   border: white solid 1px;
   position: fixed;
-  margin-left: 15%;
+  left: 35%;
   display: flex;
 }
 .suchicon {
