@@ -5,7 +5,7 @@
     </section>
     <section class="zweitesection">
       <article class="navi">
-        <nav class="navigation">
+        <v-card class="navigation">
           <ol class="navliste">
             <li style="margin-top: 0%">
               <a @click="switchTo('profil')">Profil</a>
@@ -17,7 +17,7 @@
               <a @click="switchTo('zahlmoeglichkeiten')">Zahlmöglichkeiten</a>
             </li>
           </ol>
-        </nav>
+        </v-card>
       </article>
       <keep-alive>
         <component v-bind:is="currentPage" class="inhalt"> </component>
@@ -67,7 +67,8 @@ export default {
   width: auto;
   background: #424242;
   height: 500px;
-  border: #424242 solid 1px;
+  /*border: #424242 solid 1px;*/
+  margin-left: 2%;
 }
 .zweitesection {
   display: flex;
@@ -76,7 +77,9 @@ export default {
   margin-left: 5%;
   width: 100%;
 }
+.navigation{height: 100%}
 .navliste a:hover {
   color: #9e9e9e;
 }
+  a{font-weight: lighter;font-size: 20px}
 </style>

@@ -24,7 +24,7 @@
                 v-for="item in musik"
                 :key="item.title"
                 link
-                @click="$router.push({ name: item.to })"
+                @click="switchTo(item.page)"
               >
                 <v-img :src="item.src">
                   <v-card-title class="titel">{{ item.title }}</v-card-title>
@@ -35,7 +35,7 @@
                 v-for="item in spiele"
                 :key="item.title"
                 link
-                @click="$router.push({ name: item.to })"
+                @click="switchTo(item.page)"
               >
                 <v-img :src="item.src">
                   <v-card-title class="titel">{{ item.title }}</v-card-title>
@@ -64,8 +64,41 @@ import komödien from "../components/komödien";
 import thriller from "../components/thriller";
 import krimi from "../components/krimi";
 import romantik from "../components/romantik";
+import metal from "../components/metal";
+import pop from "../components/pop";
+import hiphop from "../components/hiphop";
+import house from "../components/house";
+import techno from "../components/techno";
+import rocknroll from "../components/rocknroll";
+import rpg from "../components/rpg";
+import mmorpg from "../components/mmorpg";
+import adventure from "../components/adventure";
+import strategie from "../components/strategie";
+import shooter from "../components/shooter";
 export default {
   name: "Verzeichnis",
+    components: {
+        pop,
+        house,
+        hiphop,
+        techno,
+        rocknroll,
+        rpg,
+        mmorpg,
+        adventure,
+        strategie,
+        shooter,
+        about,
+        horror,
+        action,
+        doku,
+        scifi,
+        komödien,
+        thriller,
+        krimi,
+        romantik,
+        metal,
+    },
   data: () => ({
     filme: [
       { title: "Horror", page: "horror" },
@@ -78,33 +111,23 @@ export default {
       { title: "Romantik", page: "romantik" }
     ],
     musik: [
-      { title: "Metal" },
-      { title: "Pop" },
-      { title: "Hip Hop" },
-      { title: "House" },
-      { title: "Techno" },
-      { title: "Rock n´Roll" }
+      { title: "Metal",page:"metal"},
+      { title: "Pop",page:"pop"},
+      { title: "Hip Hop",page:"hiphop"},
+      { title: "House",page:"house"},
+      { title: "Techno",page:"techno"},
+      { title: "Rock n´Roll",page:"rocknroll"}
     ],
     spiele: [
-      { title: "RPG" },
-      { title: "MMORPG" },
-      { title: "Adventure" },
-      { title: "Strategie" },
-      { title: "Shooter" }
+      { title: "RPG",page:"rpg"},
+      { title: "MMORPG",page:"mmorpg"},
+      { title: "Adventure", page:"adventure"},
+      { title: "Strategie",page:"strategie"},
+      { title: "Shooter",page:"shooter"}
     ],
     currentPage: ""
   }),
-  components: {
-    about,
-    horror,
-    action,
-    doku,
-    scifi,
-    komödien,
-    thriller,
-    krimi,
-    romantik
-  },
+
   methods: {
     switchTo: function(page) {
       this.currentPage = page;
@@ -121,6 +144,12 @@ export default {
   margin-left: 5%;
 }
 .kategorienliste {
-  margin-left: 3%;
+  margin-left: 2%;
+}
+  .top{font-weight: lighter;text-align: center;font-size: 40px}
+  .titel{font-weight: lighter}
+.ueschrift {
+  margin-top: 2%;
+  font-size: 30px;
 }
 </style>
