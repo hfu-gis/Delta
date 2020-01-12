@@ -3,16 +3,22 @@ import VueRouter from "vue-router";
 import Home from "../views/Home";
 import Registration from "../views/Registration";
 import Login from "../views/Login";
-import Categorys from "../views/Categorys";
 import Profile from "../views/Profile";
+import BlancoArticle from "../views/BlancoArticle";
+import Impressum from "../views/Impressum";
 
 Vue.use(VueRouter);
 
 const routes = [
   {
-    path: "/Categorys",
-    name: "Categorys",
-    component: Categorys
+    path:"impressum",
+    name:"impressum",
+    component: Impressum
+  },
+  {
+    path:"/Item",
+    name: "Item",
+    component: BlancoArticle
   },
   {
     path: "/Registration",
