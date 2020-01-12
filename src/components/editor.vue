@@ -264,7 +264,7 @@ export default {
 #liefa {
   margin-top: 5%;
   width: 40%;
-  margin-left: 32%;
+  margin-left: 32.5%;
 }
 #prfl {
   display: flex;

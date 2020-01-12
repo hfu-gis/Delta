@@ -39,15 +39,15 @@
     </v-app-bar>
     <v-content>
       <v-btn
-              v-scroll="onScroll"
-              v-show="fab"
-              fab
-              dark
-              fixed
-              bottom
-              right
-              color="red"
-              @click="toTop"
+        v-scroll="onScroll"
+        v-show="fab"
+        fab
+        dark
+        fixed
+        bottom
+        right
+        color="red"
+        @click="toTop"
       >
         <v-icon>mdi-chevron-triple-up</v-icon>
       </v-btn>
@@ -90,13 +90,13 @@
 <script>
 export default {
   methods: {
-    onScroll (e) {
-      if (typeof window === 'undefined') return
-      const top = window.pageYOffset ||   e.target.scrollTop || 0
-      this.fab = top > 10
+    onScroll(e) {
+      if (typeof window === "undefined") return;
+      const top = window.pageYOffset || e.target.scrollTop || 0;
+      this.fab = top > 10;
     },
-    toTop () {
-      this.$vuetify.goTo(0)
+    toTop() {
+      this.$vuetify.goTo(0);
     }
   },
   data: () => ({
@@ -110,7 +110,6 @@ export default {
 };
 </script>
 <style scoped>
-
 .logo {
   height: 80px;
   width: 100px;

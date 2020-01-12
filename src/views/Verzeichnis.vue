@@ -77,28 +77,28 @@ import strategie from "../components/strategie";
 import shooter from "../components/shooter";
 export default {
   name: "Verzeichnis",
-    components: {
-        pop,
-        house,
-        hiphop,
-        techno,
-        rocknroll,
-        rpg,
-        mmorpg,
-        adventure,
-        strategie,
-        shooter,
-        about,
-        horror,
-        action,
-        doku,
-        scifi,
-        komödien,
-        thriller,
-        krimi,
-        romantik,
-        metal,
-    },
+  components: {
+    pop,
+    house,
+    hiphop,
+    techno,
+    rocknroll,
+    rpg,
+    mmorpg,
+    adventure,
+    strategie,
+    shooter,
+    about,
+    horror,
+    action,
+    doku,
+    scifi,
+    komödien,
+    thriller,
+    krimi,
+    romantik,
+    metal
+  },
   data: () => ({
     filme: [
       { title: "Horror", page: "horror" },
@@ -111,19 +111,19 @@ export default {
       { title: "Romantik", page: "romantik" }
     ],
     musik: [
-      { title: "Metal",page:"metal"},
-      { title: "Pop",page:"pop"},
-      { title: "Hip Hop",page:"hiphop"},
-      { title: "House",page:"house"},
-      { title: "Techno",page:"techno"},
-      { title: "Rock n´Roll",page:"rocknroll"}
+      { title: "Metal", page: "metal" },
+      { title: "Pop", page: "pop" },
+      { title: "Hip Hop", page: "hiphop" },
+      { title: "House", page: "house" },
+      { title: "Techno", page: "techno" },
+      { title: "Rock n´Roll", page: "rocknroll" }
     ],
     spiele: [
-      { title: "RPG",page:"rpg"},
-      { title: "MMORPG",page:"mmorpg"},
-      { title: "Adventure", page:"adventure"},
-      { title: "Strategie",page:"strategie"},
-      { title: "Shooter",page:"shooter"}
+      { title: "RPG", page: "rpg" },
+      { title: "MMORPG", page: "mmorpg" },
+      { title: "Adventure", page: "adventure" },
+      { title: "Strategie", page: "strategie" },
+      { title: "Shooter", page: "shooter" }
     ],
     currentPage: "horror"
   }),
@@ -147,8 +147,14 @@ export default {
   margin-left: 2%;
   margin-top: 0.7%;
 }
-  .top{font-weight: lighter;text-align: center;font-size: 40px}
-  .titel{font-weight: lighter}
+.top {
+  font-weight: lighter;
+  text-align: center;
+  font-size: 40px;
+}
+.titel {
+  font-weight: lighter;
+}
 .ueschrift {
   margin-top: 2%;
   font-size: 30px;

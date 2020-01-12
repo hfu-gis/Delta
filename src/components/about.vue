@@ -14,7 +14,11 @@
             </h3>
             <v-icon style="font-size: 35px">mdi-view-list</v-icon>
           </div>
-          <div @click="$router.push({ name: 'Verzeichnis' })" class="infor" id="i">
+          <div
+            @click="$router.push({ name: 'Verzeichnis' })"
+            class="infor"
+            id="i"
+          >
             <h3 class="üb">
               Verzeichnis
             </h3>
@@ -78,7 +82,6 @@ export default {
   font-weight: bold;
 }
 .cvont {
-
 }
 .Info {
   font-weight: lighter;

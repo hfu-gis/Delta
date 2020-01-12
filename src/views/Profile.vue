@@ -77,9 +77,14 @@ export default {
   margin-left: 5%;
   width: 100%;
 }
-.navigation{height: 100%}
+.navigation {
+  height: 100%;
+}
 .navliste a:hover {
   color: #9e9e9e;
 }
-  a{font-weight: lighter;font-size: 20px}
+a {
+  font-weight: lighter;
+  font-size: 20px;
+}
 </style>
