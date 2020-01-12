@@ -62,7 +62,7 @@
       <v-spacer />
       <section class="footerergänzungslinks">
         <router-link
-          to=""
+          to="impressum"
           class="footerlinks"
           id="linkerlink"
           style="text-decoration: none;color: white"
