@@ -1,6 +1,6 @@
 <template>
 
-    <main>
+    <div>
 
         <div>
         <h1 class="überschrift">
@@ -34,7 +34,7 @@
             </v-btn>
         </div>
         </div>
-    </main>
+    </div>
 </template>
 
 <script>

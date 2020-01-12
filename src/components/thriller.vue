@@ -15,6 +15,10 @@
               <v-icon>mdi-heart</v-icon>
             </v-btn>
 
+            <v-btn icon @click="$router.push({name:'BlancoArticle'})">
+              <v-icon>mdi-table-of-contents</v-icon>
+            </v-btn>
+
             <v-btn icon @click="toCart">
               <v-icon>mdi-cart</v-icon>
             </v-btn>

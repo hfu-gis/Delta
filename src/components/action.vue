@@ -44,8 +44,12 @@ export default {
   },
   methods: {
     favPush: function() {
-      let x = this.card;
-      this.user.favouriten.push(x);
+
+      this.user.favouriten.push({
+        title: this.cart.title,
+        src: this.cart.src,
+        text: this.cart.text
+      });
       // eslint-disable-next-line
           console.log('did')
     },
