@@ -125,7 +125,7 @@ export default {
       { title: "Strategie",page:"strategie"},
       { title: "Shooter",page:"shooter"}
     ],
-    currentPage: ""
+    currentPage: "horror"
   }),
 
   methods: {
@@ -145,6 +145,7 @@ export default {
 }
 .kategorienliste {
   margin-left: 2%;
+  margin-top: 0.7%;
 }
   .top{font-weight: lighter;text-align: center;font-size: 40px}
   .titel{font-weight: lighter}

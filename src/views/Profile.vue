@@ -44,7 +44,7 @@ export default {
     zahlmoeglichkeiten
   },
   data: () => ({
-    currentPage: ""
+    currentPage: "profil"
   }),
   methods: {
     switchTo: function(page) {

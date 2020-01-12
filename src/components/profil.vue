@@ -49,7 +49,7 @@ export default {
   data() {
     return {
       user: {
-        nutzername: "a",
+        nutzername: "",
         vorname: "",
         nachname: "",
         Zahlmöglichkeit: "",
