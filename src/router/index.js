@@ -7,10 +7,22 @@ import Profile from "../views/Profile";
 import Verzeichnis from "../views/Verzeichnis";
 import BlancoArticle from "../views/BlancoArticle";
 import Impressum from "../views/Impressum";
+import AGB from "../views/AGB";
+import Kontakt from "../views/Kontakt";
 
 Vue.use(VueRouter);
 
 const routes = [
+    {
+        path:"/Kontakt",
+        name:"Kontakt",
+        component: Kontakt
+    },
+    {
+        path:"/AGB",
+        name:"AGB",
+        component: AGB
+    },
   {
     path:"/Impressum",
     name:"Impressum",

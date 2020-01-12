@@ -69,14 +69,14 @@
           >Impressum</router-link
         >
         <router-link
-          to=""
+          to="Kontakt"
           class="footerlinks"
           id="mittlererlink"
           style="text-decoration: none;color: white"
           >Kontakt</router-link
         >
         <router-link
-          to=""
+          to="AGB"
           class="footerlinks"
           id="rechterlink"
           style="text-decoration: none;color: white"
