@@ -38,6 +38,19 @@
       </router-link>
     </v-app-bar>
     <v-content>
+      <v-btn
+        v-scroll="onScroll"
+        v-show="fab"
+        fab
+        dark
+        fixed
+        bottom
+        right
+        color="red"
+        @click="toTop"
+      >
+        <v-icon>mdi-chevron-triple-up</v-icon>
+      </v-btn>
       <router-view />
     </v-content>
 
@@ -76,11 +89,19 @@
 
 <script>
 export default {
-  props: {
-    source: String
+  methods: {
+    onScroll(e) {
+      if (typeof window === "undefined") return;
+      const top = window.pageYOffset || e.target.scrollTop || 0;
+      this.fab = top > 10;
+    },
+    toTop() {
+      this.$vuetify.goTo(0);
+    }
   },
-  methods: {},
-  data: () => ({}),
+  data: () => ({
+    fab: false
+  }),
 
   created() {
     this.$vuetify.theme.dark = true;
@@ -144,12 +165,12 @@ export default {
   margin-right: 50%;
 }
 .suchfeld {
-  width: 50%;
+  width: 30%;
   align-self: center;
   margin-right: 5%;
   border: white solid 1px;
   position: fixed;
-  margin-left: 15%;
+  left: 35%;
   display: flex;
 }
 .suchicon {

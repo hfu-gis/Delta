@@ -1,12 +1,15 @@
 <template>
   <div>
     <v-carousel v-model="model" class="favlist" height="400">
-      <v-carousel-item v-for="(favourite, i) in favouriten" :key="favourite">
-        <v-sheet :img="favourite" height="100%" tile>
+      <v-carousel-item
+        v-for="(favourite, i) in user.favouriten"
+        :key="favourite"
+      >
+        <v-img :img="favourite" height="100%" tile>
           <v-row class="fill-height" align="center" justify="center">
             <div class="display-3">Slide {{ i + 1 }}</div>
           </v-row>
-        </v-sheet>
+        </v-img>
       </v-carousel-item>
     </v-carousel>
   </div>
@@ -17,9 +20,18 @@ export default {
   name: "favourite",
   data() {
     return {
-      favouriten: ["white"],
+      user: {
+        favouriten: []
+      },
       model: 0
     };
+  },
+  mounted() {
+    for (let i = 0; i < 7; i++) {
+      this.user.favouriten.push({
+        src: "../assets/placeholder"
+      });
+    }
   }
 };
 </script>

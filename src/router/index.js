@@ -3,9 +3,8 @@ import VueRouter from "vue-router";
 import Home from "../views/Home";
 import Registration from "../views/Registration";
 import Login from "../views/Login";
+import Categorys from "../views/Categorys";
 import Profile from "../views/Profile";
-import BlancoArticle from "../views/BlancoArticle";
-import Impressum from "../views/Impressum";
 
 Vue.use(VueRouter);
 
@@ -19,6 +18,11 @@ const routes = [
     path:"/Item",
     name: "Item",
     component: BlancoArticle
+  },
+  {
+    path: "/Verzeichnis",
+    name: "Verzeichnis",
+    component: Verzeichnis
   },
   {
     path: "/Registration",

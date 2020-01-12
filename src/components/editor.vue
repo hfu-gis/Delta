@@ -1,68 +1,76 @@
 <template>
   <div>
-    <v-card class="profilsettings">
-      <v-card-title>Profil</v-card-title>
-      <div class="bildinput">
-        <v-text-field
-          label="Bildwahl"
-          @click="pickFile"
-          v-model="imageName"
-          prepend-inner-icon="mdi-paperclip"
-          class="bildinputs"
-        ></v-text-field>
-        <input
-          type="file"
-          style="display: none"
-          ref="image"
-          accept="image/*"
-          @change="onFilePicked"
-        />
-      </div>
-      <div class="set">
-        <div class="Profileinstellungen">
-          <v-text-field
-            name="vorname"
-            :rules="[rules.required]"
-            label="Vorname"
-            v-model="user.vorname"
-            prepend-inner-icon="mdi-account"
-          ></v-text-field>
-          <v-text-field
-            name="nachname"
-            :rules="[rules.required]"
-            label="Nachname"
-            v-model="user.nachname"
-            prepend-inner-icon="mdi-account"
-          ></v-text-field>
-          <v-text-field
-            name="email"
-            :rules="[rules.required]"
-            label="E-Mail"
-            v-model="user.email"
-            prepend-inner-icon="mdi-email"
-          ></v-text-field>
-          <v-text-field
-            name="nutzername"
-            :rules="[rules.required]"
-            v-model="user.nutzername"
-            prepend-inner-icon="mdi-account"
-            label="Username"
-          ></v-text-field>
-        </div>
+    <div id="prfl">
+      <v-card class="profilpiktschor">
         <div class="bild">
+          <!--          <h2 style="font-weight: lighter;">-->
+          <!--            Dein Profilbild-->
+          <!--          </h2>-->
           <img
             :src="imageUrl"
             height="300"
+            width="200"
             v-if="imageUrl"
             class="profilbild"
           />
         </div>
-      </div>
-      <v-card-actions>
-        <v-btn @click="upload">Upload</v-btn>
-      </v-card-actions>
-    </v-card>
-    <v-card class="profilsettings" id="liefa">
+        <v-card-actions class="upload">
+          <v-btn @click="upload">Upload</v-btn>
+        </v-card-actions>
+      </v-card>
+      <v-card class="profilsettings">
+        <v-card-title>Profil</v-card-title>
+        <div class="bildinput">
+          <v-text-field
+            label="Bildwahl"
+            @click="pickFile"
+            v-model="imageName"
+            prepend-inner-icon="mdi-paperclip"
+            class="bildinputs"
+          ></v-text-field>
+          <input
+            type="file"
+            style="display: none"
+            ref="image"
+            accept="image/*"
+            @change="onFilePicked"
+          />
+        </div>
+        <div class="set">
+          <div class="Profileinstellungen">
+            <v-text-field
+              name="vorname"
+              :rules="[rules.required]"
+              label="Vorname"
+              v-model="user.vorname"
+              prepend-inner-icon="mdi-account"
+            ></v-text-field>
+            <v-text-field
+              name="nachname"
+              :rules="[rules.required]"
+              label="Nachname"
+              v-model="user.nachname"
+              prepend-inner-icon="mdi-account"
+            ></v-text-field>
+            <v-text-field
+              name="email"
+              :rules="[rules.required]"
+              label="E-Mail"
+              v-model="user.email"
+              prepend-inner-icon="mdi-email"
+            ></v-text-field>
+            <v-text-field
+              name="nutzername"
+              :rules="[rules.required]"
+              v-model="user.nutzername"
+              prepend-inner-icon="mdi-account"
+              label="Username"
+            ></v-text-field>
+          </div>
+        </div>
+      </v-card>
+    </div>
+    <v-card id="liefa">
       <v-card-title>Lieferadresse</v-card-title>
       <div class="set">
         <div class="Profileinstellungen">
@@ -123,6 +131,7 @@ export default {
       imageFile: "",
       imgUrls: [],
       countries: [],
+      success: false,
       rules: {
         required: value => !!value || "Required.",
         min: v => v.length >= 8 || "Min. 8 characters"
@@ -133,6 +142,7 @@ export default {
         vorname: "",
         nachname: "",
         email: "",
+        userisalreadyRegisteres: false,
         lieferadresse: {
           vorname: "",
           nachname: "",
@@ -150,6 +160,7 @@ export default {
     //   return this.$store.getters.user
     // }
   },
+
   methods: {
     getImages: function() {
       db.collection("images")
@@ -190,10 +201,9 @@ export default {
       }
     },
     upload: function() {
+      this.register();
       let storageRef = firebase.storage().ref();
-
       let mountainsRef = storageRef.child(`Profilbild/${this.imageName}`);
-
       mountainsRef.put(this.imageFile).then(snapshot => {
         snapshot.ref.getDownloadURL().then(downloadURL => {
           this.imageUrl = downloadURL;
@@ -210,6 +220,17 @@ export default {
           this.getImages();
         });
       });
+    },
+    register() {
+      this.user.isAlreadyRegistered = true;
+      let docRef = db.collection("Nutzer").doc(this.user.username);
+      docRef
+        .set(this.user)
+
+        .then(() => (this.success = true))
+        // eslint-disable-next-line
+              .catch(error => console.log(error))
+      //docRef.update(this.user)
     }
   }
 };
@@ -221,6 +242,7 @@ export default {
   margin-left: 20%;
 }
 .profilbild {
+  z-index: 2;
 }
 .set {
   display: flex;
@@ -231,9 +253,9 @@ export default {
   align-content: flex-end;
   margin-left: 5%;
 }
-.bild {
-  float: right;
-  margin-left: 25%;
+.profilpiktschor {
+  width: 200px;
+  height: 300px;
 }
 .bildinputs {
   width: 36%;
@@ -241,5 +263,17 @@ export default {
 }
 #liefa {
   margin-top: 5%;
+  width: 40%;
+  margin-left: 32.5%;
+}
+#prfl {
+  display: flex;
+}
+.bild {
+  z-index: 1;
+}
+.upload {
+  position: absolute;
+  top: 100%;
 }
 </style>

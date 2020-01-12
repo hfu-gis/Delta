@@ -4,96 +4,176 @@
       <article>
         <about />
       </article>
-      <nav class="kategorie">
-        <kategorien />
-      </nav>
-      <div class="bilder">
-        <v-container class="vorschau">
-          <div class="ersteReihe">
-            <div class="reihe">
-              <header><h2>Lorem</h2></header>
-              <v-container class="kontainerfürbild">
-                <router-link to="" class="bildrout"
-                  ><img src="../assets/122043.jpg" height="250" width="275"
-                /></router-link>
-              </v-container>
-              <article></article>
+      <div class="content">
+        <nav class="kategorie">
+          <kategorien />
+        </nav>
+        <div class="bilder">
+          <v-container class="vorschau">
+            <div class="ersteReihe">
+              <div class="reihe">
+                <header><h2>Lorem</h2></header>
+                <v-container class="kontainerfürbild">
+                  <router-link to="" class="bildrout"
+                    ><img src="../assets/122043.jpg" height="250" width="275"
+                  /></router-link>
+                </v-container>
+                <article></article>
+              </div>
+              <div class="reihe">
+                <header><h2>Lorem</h2></header>
+                <v-container class="kontainerfürbild">
+                  <router-link to="" class="bildrout"
+                    ><img src="../assets/122043.jpg" height="250" width="275"
+                  /></router-link>
+                </v-container>
+                <article></article>
+              </div>
+              <div class="reihe">
+                <header><h2>Lorem</h2></header>
+                <v-container class="kontainerfürbild">
+                  <router-link to="" class="bildrout"
+                    ><img src="../assets/122043.jpg" height="250" width="275"
+                  /></router-link>
+                </v-container>
+                <article></article>
+              </div>
+              <div class="reihe">
+                <header><h2>Lorem</h2></header>
+                <v-container class="kontainerfürbild">
+                  <router-link to="" class="bildrout"
+                    ><img src="../assets/122043.jpg" height="250" width="275"
+                  /></router-link>
+                </v-container>
+                <article></article>
+              </div>
             </div>
-            <div class="reihe">
-              <header><h2>Lorem</h2></header>
-              <v-container class="kontainerfürbild">
-                <router-link to="" class="bildrout"
-                  ><img src="../assets/122043.jpg" height="250" width="275"
-                /></router-link>
-              </v-container>
-              <article></article>
+            <div class="zweiteReihe">
+              <div class="reihe">
+                <header><h2>Lorem</h2></header>
+                <v-container class="kontainerfürbild">
+                  <router-link to="" class="bildrout"
+                    ><img src="../assets/122043.jpg" height="250" width="275"
+                  /></router-link>
+                </v-container>
+                <article></article>
+              </div>
+              <div class="reihe">
+                <header><h2>Lorem</h2></header>
+                <v-container class="kontainerfürbild">
+                  <router-link to="" class="bildrout"
+                    ><img src="../assets/122043.jpg" height="250" width="275"
+                  /></router-link>
+                </v-container>
+                <article></article>
+              </div>
+              <div class="reihe">
+                <header><h2>Lorem</h2></header>
+                <v-container class="kontainerfürbild">
+                  <router-link to="" class="bildrout"
+                    ><img src="../assets/122043.jpg" height="250" width="275"
+                  /></router-link>
+                </v-container>
+                <article></article>
+              </div>
+              <div class="reihe">
+                <header><h2>Lorem</h2></header>
+                <v-container class="kontainerfürbild">
+                  <router-link to="" class="bildrout"
+                    ><img src="../assets/122043.jpg" height="250" width="275"
+                  /></router-link>
+                </v-container>
+                <article></article>
+              </div>
             </div>
-            <div class="reihe">
-              <header><h2>Lorem</h2></header>
-              <v-container class="kontainerfürbild">
-                <router-link to="" class="bildrout"
-                  ><img src="../assets/122043.jpg" height="250" width="275"
-                /></router-link>
-              </v-container>
-              <article></article>
-            </div>
-            <div class="reihe">
-              <header><h2>Lorem</h2></header>
-              <v-container class="kontainerfürbild">
-                <router-link to="" class="bildrout"
-                  ><img src="../assets/122043.jpg" height="250" width="275"
-                /></router-link>
-              </v-container>
-              <article></article>
-            </div>
-          </div>
-          <div class="zweiteReihe">
-            <div class="reihe">
-              <header><h2>Lorem</h2></header>
-              <v-container class="kontainerfürbild">
-                <router-link to="" class="bildrout"
-                  ><img src="../assets/122043.jpg" height="250" width="275"
-                /></router-link>
-              </v-container>
-              <article></article>
-            </div>
-            <div class="reihe">
-              <header><h2>Lorem</h2></header>
-              <v-container class="kontainerfürbild">
-                <router-link to="" class="bildrout"
-                  ><img src="../assets/122043.jpg" height="250" width="275"
-                /></router-link>
-              </v-container>
-              <article></article>
-            </div>
-            <div class="reihe">
-              <header><h2>Lorem</h2></header>
-              <v-container class="kontainerfürbild">
-                <router-link to="" class="bildrout"
-                  ><img src="../assets/122043.jpg" height="250" width="275"
-                /></router-link>
-              </v-container>
-              <article></article>
-            </div>
-            <div class="reihe">
-              <header><h2>Lorem</h2></header>
-              <v-container class="kontainerfürbild">
-                <router-link to="" class="bildrout"
-                  ><img src="../assets/122043.jpg" height="250" width="275"
-                /></router-link>
-              </v-container>
-              <article></article>
-            </div>
-          </div>
-        </v-container>
-      </div>
-      <div class="dritteReihe">
-        <div class="zwischenbanner">
-          <v-container class="zwbanner">
-            <router-link to=""
-              ><img src="../assets/122043.jpg" height="300px" width="80%"
-            /></router-link>
           </v-container>
+          <v-container class="vorschau">
+            <div class="ersteReihe">
+              <div class="reihe">
+                <header><h2>Lorem</h2></header>
+                <v-container class="kontainerfürbild">
+                  <router-link to="" class="bildrout"
+                    ><img src="../assets/122043.jpg" height="250" width="275"
+                  /></router-link>
+                </v-container>
+                <article></article>
+              </div>
+              <div class="reihe">
+                <header><h2>Lorem</h2></header>
+                <v-container class="kontainerfürbild">
+                  <router-link to="" class="bildrout"
+                    ><img src="../assets/122043.jpg" height="250" width="275"
+                  /></router-link>
+                </v-container>
+                <article></article>
+              </div>
+              <div class="reihe">
+                <header><h2>Lorem</h2></header>
+                <v-container class="kontainerfürbild">
+                  <router-link to="" class="bildrout"
+                    ><img src="../assets/122043.jpg" height="250" width="275"
+                  /></router-link>
+                </v-container>
+                <article></article>
+              </div>
+              <div class="reihe">
+                <header><h2>Lorem</h2></header>
+                <v-container class="kontainerfürbild">
+                  <router-link to="" class="bildrout"
+                    ><img src="../assets/122043.jpg" height="250" width="275"
+                  /></router-link>
+                </v-container>
+                <article></article>
+              </div>
+            </div>
+            <div class="zweiteReihe">
+              <div class="reihe">
+                <header><h2>Lorem</h2></header>
+                <v-container class="kontainerfürbild">
+                  <router-link to="" class="bildrout"
+                    ><img src="../assets/122043.jpg" height="250" width="275"
+                  /></router-link>
+                </v-container>
+                <article></article>
+              </div>
+              <div class="reihe">
+                <header><h2>Lorem</h2></header>
+                <v-container class="kontainerfürbild">
+                  <router-link to="" class="bildrout"
+                    ><img src="../assets/122043.jpg" height="250" width="275"
+                  /></router-link>
+                </v-container>
+                <article></article>
+              </div>
+              <div class="reihe">
+                <header><h2>Lorem</h2></header>
+                <v-container class="kontainerfürbild">
+                  <router-link to="" class="bildrout"
+                    ><img src="../assets/122043.jpg" height="250" width="275"
+                  /></router-link>
+                </v-container>
+                <article></article>
+              </div>
+              <div class="reihe">
+                <header><h2>Lorem</h2></header>
+                <v-container class="kontainerfürbild">
+                  <router-link to="" class="bildrout"
+                    ><img src="../assets/122043.jpg" height="250" width="275"
+                  /></router-link>
+                </v-container>
+                <article></article>
+              </div>
+            </div>
+          </v-container>
+        </div>
+        <div class="dritteReihe">
+          <div class="zwischenbanner">
+            <v-container class="zwbanner">
+              <router-link to=""
+                ><img src="../assets/122043.jpg" height="300px" width="80%"
+              /></router-link>
+            </v-container>
+          </div>
         </div>
       </div>
     </section>
@@ -162,6 +242,7 @@ export default {
 }
 .dritteReihe {
   margin-top: 1%;
+  margin-left: 15%;
 }
 .zwischenbanner {
   justify-content: center;
@@ -176,5 +257,11 @@ export default {
   align-self: center;
   justify-content: center;
   align-content: center;
+}
+.bilder {
+  margin-left: 12%;
+}
+.content {
+  display: flex;
 }
 </style>
