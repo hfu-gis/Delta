@@ -2,7 +2,7 @@
     <main>
         <v-card class="impressum" shaped elevation="20" >
             <v-card-title class="überschrift">
-                Imrpessum
+                Impressum
             </v-card-title>
             <v-card-text class="text">
                 Delta-Shop<br/>
