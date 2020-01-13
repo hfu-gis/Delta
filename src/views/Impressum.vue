@@ -1,5 +1,8 @@
 <template>
-    <main>
+    <div>
+        <article>
+            <about />
+        </article>
         <v-card class="impressum" shaped elevation="20" >
             <v-card-title class="überschrift">
                 Impressum
@@ -35,12 +38,16 @@
             </v-card-text>
 
         </v-card>
-    </main>
+    </div>
 </template>
 
 <script>
+    import about from "../components/about";
     export default {
-        name: "Impressum"
+        name: "Impressum",
+        components:{
+            about
+        }
     }
 </script>
 

@@ -1,5 +1,8 @@
 <template>
     <div class="cart">
+        <article>
+            <about />
+        </article>
         <h1 class="title">Your Cart</h1>
         <p v-show="!products.length">
             <i>Your cart is empty!</i>
@@ -33,8 +36,12 @@
 </template>
 
 <script>
+    import about from "../components/about";
     export default {
         name: "Cart",
+        components:{
+            about
+        },
         data: () => ({
             products: [{
                 product_id: 'test item',

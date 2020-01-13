@@ -15,7 +15,7 @@
             <v-icon style="font-size: 35px">mdi-view-list</v-icon>
           </div>
           <div
-            @click="$router.push({ name: 'Verzeichnis' })"
+            @click="$router.push({ name: 'Home' })"
             class="infor"
             id="i"
           >

@@ -1,7 +1,9 @@
 <template>
 
     <div>
-
+        <article>
+            <about />
+        </article>
         <div>
         <h1 class="überschrift">
             ProductTitle
@@ -38,8 +40,12 @@
 </template>
 
 <script>
+    import about from "../components/about";
     export default {
-        name: "BlancoArticle"
+        name: "BlancoArticle",
+        components:{
+            about
+        }
     }
 </script>
 

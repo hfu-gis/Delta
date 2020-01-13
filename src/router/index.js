@@ -4,7 +4,7 @@ import Home from "../views/Home";
 import Registration from "../views/Registration";
 import Login from "../views/Login";
 import Profile from "../views/Profile";
-import Verzeichnis from "../views/Verzeichnis";
+
 import BlancoArticle from "../views/BlancoArticle";
 import Impressum from "../views/Impressum";
 import AGB from "../views/AGB";
@@ -32,11 +32,6 @@ const routes = [
     path:"/BlancoArticle",
     name: "BlancoArticle",
     component: BlancoArticle
-  },
-  {
-    path: "/Verzeichnis",
-    name: "Verzeichnis",
-    component: Verzeichnis
   },
   {
     path: "/Registration",

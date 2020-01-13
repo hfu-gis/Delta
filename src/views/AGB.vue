@@ -1,5 +1,8 @@
 <template>
-    <main>
+    <div>
+     <article>
+      <about />
+     </article>
         <v-card class="AGB" shaped elevation="20" >
             <v-card-title class="überschrift">
                 Allgemeine Geschäftsbedingungen der Firma Delta-Shop
@@ -127,12 +130,16 @@
             </v-card-text>
 
         </v-card>
-    </main>
+    </div>
 </template>
 
 <script>
+ import about from "../components/about";
     export default {
-        name: "AGB"
+        name: "AGB",
+     components:{
+         about
+     }
     }
 </script>
 
