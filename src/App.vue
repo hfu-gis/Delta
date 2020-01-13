@@ -168,7 +168,6 @@ export default {
   width: 30%;
   align-self: center;
   margin-right: 5%;
-  border: white solid 1px;
   position: fixed;
   left: 35%;
   display: flex;
