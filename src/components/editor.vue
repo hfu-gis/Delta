@@ -150,7 +150,7 @@ export default {
           plz: "",
           anschrift: "",
           stadt: "",
-          bundesland: "",
+          bundesland: ""
         }
       }
     };
@@ -161,10 +161,10 @@ export default {
     // }
   },
   created() {
-    let docRef = db.collection('Länder')
-    docRef.get().then(docs =>{
-      docs.forEach(doc => this.countries.push(doc.data().name))
-    })
+    let docRef = db.collection("Länder");
+    docRef.get().then(docs => {
+      docs.forEach(doc => this.countries.push(doc.data().name));
+    });
   },
 
   methods: {
@@ -207,7 +207,7 @@ export default {
       }
     },
     upload: function() {
-      this.update()
+      this.update();
       // let storageRef = firebase.storage().ref();
       // let mountainsRef = storageRef.child(`Profilbild/${this.imageName}`);
       // mountainsRef.put(this.imageFile).then(snapshot => {
@@ -227,16 +227,17 @@ export default {
       //   });
       // });
     },
-    update:function() {
+    update: function() {
       // this.user.isAlreadyRegistered = true;
       let docRef = db.collection("Nutzer").doc(this.user.username);
-      docRef.set(this.user)
+      docRef
+        .set(this.user)
         .then(() => (this.success = true))
         // eslint-disable-next-line
               .catch(error => console.log('tut net', error))
-      docRef.update()
-      this.$router.push({name:'Profile'})
-    },
+      docRef.update();
+      this.$router.push({ name: "Profile" });
+    }
   }
 };
 </script>

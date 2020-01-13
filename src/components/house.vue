@@ -14,7 +14,7 @@
             <v-btn icon @click="favPush">
               <v-icon>mdi-heart</v-icon>
             </v-btn>
-            <v-btn icon @click="$router.push({name:'BlancoArticle'})">
+            <v-btn icon @click="$router.push({ name: 'BlancoArticle' })">
               <v-icon>mdi-table-of-contents</v-icon>
             </v-btn>
             <v-btn icon @click="toCart">
@@ -68,17 +68,20 @@ export default {
     // }
   },
   created() {
-    db.collection('Angebot').doc('Musik').collection('House').get()
-            .then(musikausDB =>{
-              musikausDB.forEach(doc =>{
-                this.cards.push(doc.data())
-              })
-            })
-            .catch((err) => {
-              // eslint-disable-next-line
+    db.collection("Angebot")
+      .doc("Musik")
+      .collection("House")
+      .get()
+      .then(musikausDB => {
+        musikausDB.forEach(doc => {
+          this.cards.push(doc.data());
+        });
+      })
+      .catch(err => {
+        // eslint-disable-next-line
               console.log('nix gefunden', err)
-            })
-  },
+      });
+  }
 };
 </script>
 

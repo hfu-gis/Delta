@@ -14,7 +14,7 @@
             <v-btn icon @click="favPush">
               <v-icon>mdi-heart</v-icon>
             </v-btn>
-            <v-btn icon @click="$router.push({name:'BlancoArticle'})">
+            <v-btn icon @click="$router.push({ name: 'BlancoArticle' })">
               <v-icon>mdi-table-of-contents</v-icon>
             </v-btn>
             <v-btn icon @click="toCart">
@@ -48,7 +48,6 @@ export default {
   },
   methods: {
     favPush: function() {
-
       this.user.favouriten.push({
         title: this.cart.title,
         src: this.cart.src,
@@ -64,17 +63,19 @@ export default {
   },
   computed: {},
   created() {
-    db.collection('Angebot').doc('Filme').collection('Action').get()
-            .then(filmeAusDb =>{
-              filmeAusDb.forEach(doc =>{
-                this.cards.push(doc.data())
-              })
-            })
-            .catch((err) => {
-              // eslint-disable-next-line
+    db.collection("Angebot")
+      .doc("Filme")
+      .collection("Action")
+      .get()
+      .then(filmeAusDb => {
+        filmeAusDb.forEach(doc => {
+          this.cards.push(doc.data());
+        });
+      })
+      .catch(err => {
+        // eslint-disable-next-line
               console.log('nix gefunden', err)
-            })
-
+      });
   },
   mounted() {
     // for (let i = 1; i < 16; i++) {

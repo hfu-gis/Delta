@@ -13,23 +13,23 @@ import Kontakt from "../views/Kontakt";
 Vue.use(VueRouter);
 
 const routes = [
-    {
-        path:"/Kontakt",
-        name:"Kontakt",
-        component: Kontakt
-    },
-    {
-        path:"/AGB",
-        name:"AGB",
-        component: AGB
-    },
   {
-    path:"/Impressum",
-    name:"Impressum",
+    path: "/Kontakt",
+    name: "Kontakt",
+    component: Kontakt
+  },
+  {
+    path: "/AGB",
+    name: "AGB",
+    component: AGB
+  },
+  {
+    path: "/Impressum",
+    name: "Impressum",
     component: Impressum
   },
   {
-    path:"/BlancoArticle",
+    path: "/BlancoArticle",
     name: "BlancoArticle",
     component: BlancoArticle
   },

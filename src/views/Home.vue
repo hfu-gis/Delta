@@ -1,8 +1,8 @@
 <template>
   <div>
-      <article>
-        <about />
-      </article>
+    <article>
+      <about />
+    </article>
     <div class="content">
       <nav class="kategorienliste">
         <v-card elevation="12" width="250" class="list">
@@ -10,10 +10,10 @@
             <v-list>
               <v-list-item-title class="ueschrift">Filme:</v-list-item-title>
               <v-list-item
-                      v-for="item in filme"
-                      :key="item.title"
-                      link
-                      @click="switchTo(item.page)"
+                v-for="item in filme"
+                :key="item.title"
+                link
+                @click="switchTo(item.page)"
               >
                 <v-img :src="item.src">
                   <v-card-title class="titel">{{ item.title }}</v-card-title>
@@ -21,10 +21,10 @@
               </v-list-item>
               <v-list-item-title class="ueschrift">Musik:</v-list-item-title>
               <v-list-item
-                      v-for="item in musik"
-                      :key="item.title"
-                      link
-                      @click="switchTo(item.page)"
+                v-for="item in musik"
+                :key="item.title"
+                link
+                @click="switchTo(item.page)"
               >
                 <v-img :src="item.src">
                   <v-card-title class="titel">{{ item.title }}</v-card-title>
@@ -32,10 +32,10 @@
               </v-list-item>
               <v-list-item-title class="ueschrift">Games:</v-list-item-title>
               <v-list-item
-                      v-for="item in spiele"
-                      :key="item.title"
-                      link
-                      @click="switchTo(item.page)"
+                v-for="item in spiele"
+                :key="item.title"
+                link
+                @click="switchTo(item.page)"
               >
                 <v-img :src="item.src">
                   <v-card-title class="titel">{{ item.title }}</v-card-title>
@@ -111,60 +111,58 @@ export default {
   // let storageRef = storage.ref();
   // let imagesRef=storageRef.child('Mediencover');
 
-    components: {
-          pop,
-          house,
-          hiphop,
-          techno,
-          rocknroll,
-          rpg,
-          mmorpg,
-          adventure,
-          strategie,
-          shooter,
-          about,
-          horror,
-          action,
-          doku,
-          scifi,
-          komödien,
-          thriller,
-          krimi,
-          romantik,
-          metal,
-          home
-      },
-        methods: {
-          switchTo: function(page) {
-          this.currentPage = page;
-        }
+  components: {
+    pop,
+    house,
+    hiphop,
+    techno,
+    rocknroll,
+    rpg,
+    mmorpg,
+    adventure,
+    strategie,
+    shooter,
+    about,
+    horror,
+    action,
+    doku,
+    scifi,
+    komödien,
+    thriller,
+    krimi,
+    romantik,
+    metal,
+    home
+  },
+  methods: {
+    switchTo: function(page) {
+      this.currentPage = page;
     }
-  };
+  }
+};
 </script>
 
 <style scoped>
-
-
-  .content {
-    display: flex;
-  }
-  .lis {
-    margin-left: 5%;
-  }
-  .kategorienliste {
-    margin-left: 2%;
-    margin-top: 0.7%;
-  }
-  .top {
-    font-weight: lighter;
-    text-align: center;
-    font-size: 40px;
-  }
-  .titel {
-    font-weight: lighter;
-  }
-  .ueschrift {
-    margin-top: 2%;
-    font-size: 30px;
-  }
+.content {
+  display: flex;
+}
+.lis {
+  margin-left: 5%;
+}
+.kategorienliste {
+  margin-left: 2%;
+  margin-top: 0.7%;
+}
+.top {
+  font-weight: lighter;
+  text-align: center;
+  font-size: 40px;
+}
+.titel {
+  font-weight: lighter;
+}
+.ueschrift {
+  margin-top: 2%;
+  font-size: 30px;
+}
 </style>

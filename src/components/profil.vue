@@ -44,13 +44,12 @@
 </template>
 
 <script>
-  import db from "../db";
+import db from "../db";
 export default {
   name: "profil",
   data() {
     return {
-      user: {
-      }
+      user: {}
     };
   },
 
@@ -59,14 +58,16 @@ export default {
   methods: {},
 
   created() {
-    db.collection('Nutzer').doc('Nickhaec').get()
-    .then(doc =>{
-      this.user = doc.data()
-    })
-    .catch(err =>{
-      // eslint-disable-next-line
+    db.collection("Nutzer")
+      .doc("Nickhaec")
+      .get()
+      .then(doc => {
+        this.user = doc.data();
+      })
+      .catch(err => {
+        // eslint-disable-next-line
       console.log('Nutzer nicht gefunden', err)
-    })
+      });
   }
 };
 </script>
