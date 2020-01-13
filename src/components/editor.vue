@@ -117,7 +117,7 @@
 </template>
 
 <script>
-import firebase from "firebase";
+// import firebase from "firebase";
 import db from "../db";
 export default {
   name: "editor",
@@ -202,27 +202,27 @@ export default {
     },
     upload: function() {
       this.register();
-      let storageRef = firebase.storage().ref();
-      let mountainsRef = storageRef.child(`Profilbild/${this.imageName}`);
-      mountainsRef.put(this.imageFile).then(snapshot => {
-        snapshot.ref.getDownloadURL().then(downloadURL => {
-          this.imageUrl = downloadURL;
-          const bucketName = "image-upload-62ed7.appspot.com";
-          const filePath = this.imageName;
-          db.collection("nutzer").add({
-            downloadURL,
-            downloadUrl:
-              `gs://gis-deltaforce-bob.appspot.com${bucketName}/Profilbild` +
-              "%2F" +
-              `${encodeURIComponent(filePath)}?alt=media`,
-            timestamp: Date.now()
-          });
-          this.getImages();
-        });
-      });
+      // let storageRef = firebase.storage().ref();
+      // let mountainsRef = storageRef.child(`Profilbild/${this.imageName}`);
+      // mountainsRef.put(this.imageFile).then(snapshot => {
+      //   snapshot.ref.getDownloadURL().then(downloadURL => {
+      //     this.imageUrl = downloadURL;
+      //     const bucketName = "image-upload-62ed7.appspot.com";
+      //     const filePath = this.imageName;
+      //     db.collection("nutzer").add({
+      //       downloadURL,
+      //       downloadUrl:
+      //         `gs://gis-deltaforce-bob.appspot.com${bucketName}/Profilbild` +
+      //         "%2F" +
+      //         `${encodeURIComponent(filePath)}?alt=media`,
+      //       timestamp: Date.now()
+      //     });
+      //     this.getImages();
+      //   });
+      // });
     },
     register() {
-      this.user.isAlreadyRegistered = true;
+      // this.user.isAlreadyRegistered = true;
       let docRef = db.collection("Nutzer").doc(this.user.username);
       docRef
         .set(this.user)
@@ -230,7 +230,7 @@ export default {
         .then(() => (this.success = true))
         // eslint-disable-next-line
               .catch(error => console.log(error))
-      //docRef.update(this.user)
+      docRef.update(this.user)
     }
   }
 };
