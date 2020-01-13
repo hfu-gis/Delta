@@ -1,10 +1,10 @@
 <template>
   <div>
     <v-row>
-      <v-col v-for="card in cards" :key="card.title">
+      <v-col v-for="card in cards" :key="card.titel">
         <v-card elevation="4" class="carfs">
           <v-image :src="card.src" height="140">
-            <v-card-title v-text="card.title" />
+            <v-card-title v-text="card.titel" />
           </v-image>
           <v-card-text v-text="card.text" />
 
@@ -34,6 +34,8 @@
 </template>
 
 <script>
+import db from "../db";
+
 export default {
   name: "thriller",
   data: () => {
@@ -59,14 +61,26 @@ export default {
   },
   computed: {},
   mounted() {
-    for (let i = 1; i < 16; i++) {
-      this.cards.push({
-        title: "Titel" + " " + i,
-        src: "./assets/placeholder/" + i,
-        text: "Lorem ipsum"
-      });
-    }
-  }
+    // for (let i = 1; i < 16; i++) {
+    //   this.cards.push({
+    //     title: "Titel" + " " + i,
+    //     src: "./assets/placeholder/" + i,
+    //     text: "Lorem ipsum"
+    //   });
+    // }
+  },
+  created() {
+    db.collection('Angebot').doc('Filme').collection('Thriller').get()
+            .then(filmeausDB =>{
+              filmeausDB.forEach(doc =>{
+                this.cards.push(doc.data())
+              })
+            })
+            .catch((err) => {
+              // eslint-disable-next-line
+              console.log('nix gefunden', err)
+            })
+  },
 };
 </script>
 

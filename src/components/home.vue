@@ -1,6 +1,11 @@
 <template>
     <div>
+<!--        <v-btn @click="produktzahl(5)" text>5</v-btn>-->
+<!--        <v-btn @click="produktzahl(10)" text>10</v-btn>-->
+<!--        <v-btn @click="produktzahl(15)" text>15</v-btn>-->
+<!--        <v-btn @click="produktzahl(this.produkte.length)" text>Alle</v-btn>-->
         <v-row>
+
             <v-col v-for="produkt in produkte" :key="produkt.title">
                 <v-card elevation="4" class="carfs">
                     <v-image :src="produkt.src" height="250">
@@ -38,6 +43,7 @@
         name: "home",
         data: () => {
             return {
+                products: [],
                 produkte: [],
                 user: {
                     favouriten: [],
@@ -45,7 +51,30 @@
                 }
             };
         },
+        props:{
+
+        },
         methods: {
+            resetprodukte:function(){
+                this.products = this.products.splice(0, this.products.length)
+            },
+            produktzahl: function(zahl){
+                this.resetprodukte()
+                for(let i=0;i<=this.produkte.length;i++){
+                    if(i<=zahl){
+                        let j=i
+                        this.products.push(this.produkte[j])
+                    }
+                }
+            },
+
+            // anzahlderprodukte: function(zahl){
+            //     for (let i=0;i<= this.produkte.length;i++){
+            //        for(let j=0;j<=zahl;j++) {
+            //            this.products.push(this.produkte[i])
+            //        }
+            //     }
+            // },
             favPush: function() {
                 let x = this.card;
                 this.user.favouriten.push(x);
@@ -64,6 +93,18 @@
                     this.produkte.push(doc.data())
                 })
             })
+            db.collection('Angebot').doc('Neuste Produkte').collection('Games').get()
+                .then(gamesAusDb =>{
+                    gamesAusDb.forEach(doc =>{
+                        this.produkte.push(doc.data())
+                    })
+                })
+            db.collection('Angebot').doc('Neuste Produkte').collection('Musik').get()
+                .then(musikAusDb =>{
+                    musikAusDb.forEach(doc =>{
+                        this.produkte.push(doc.data())
+                    })
+                })
                 .catch((err) => {
                 // eslint-disable-next-line
                 console.log('nix gefunden', err)

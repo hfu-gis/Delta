@@ -2,7 +2,7 @@
   <div class="inhalt">
     <v-card class="bildporf">
       <v-img class="profilbild" src="user.imageUrl">
-        <v-card-title class="usna">{{ user.nutzername }}</v-card-title>
+        <v-card-title class="usna">{{ user.username }}</v-card-title>
       </v-img>
     </v-card>
     <v-card class="profil">
@@ -18,8 +18,8 @@
           <p class="cont">{{ user.nachname }}</p>
         </div>
         <div class="vertlist">
-          <h3>Nachname:</h3>
-          <p class="cont">{{ user.nachname }}</p>
+          <h3>Username:</h3>
+          <p class="cont">{{ user.username }}</p>
         </div>
         <div class="vertlist">
           <h3>Email:</h3>
@@ -44,26 +44,12 @@
 </template>
 
 <script>
+  import db from "../db";
 export default {
   name: "profil",
   data() {
     return {
       user: {
-        nutzername: "",
-        vorname: "",
-        nachname: "",
-        Zahlmöglichkeit: "",
-        lieferadresse: {
-          vorname: "",
-          nachname: "",
-          land: "",
-          plz: "",
-          anschrift: "",
-          stadt: "",
-          bundesland: ""
-        },
-        email: "",
-        imageUrl: ""
       }
     };
   },
@@ -72,7 +58,16 @@ export default {
 
   methods: {},
 
-  created() {}
+  created() {
+    db.collection('Nutzer').doc('Nickhaec').get()
+    .then(doc =>{
+      this.user = doc.data()
+    })
+    .catch(err =>{
+      // eslint-disable-next-line
+      console.log('Nutzer nicht gefunden', err)
+    })
+  }
 };
 </script>
 

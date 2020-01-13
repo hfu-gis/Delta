@@ -15,7 +15,7 @@
           />
         </div>
         <v-card-actions class="upload">
-          <v-btn @click="upload">Upload</v-btn>
+          <v-btn @click="upload">Update</v-btn>
         </v-card-actions>
       </v-card>
       <v-card class="profilsettings">
@@ -62,7 +62,7 @@
             <v-text-field
               name="nutzername"
               :rules="[rules.required]"
-              v-model="user.nutzername"
+              v-model="user.username"
               prepend-inner-icon="mdi-account"
               label="Username"
             ></v-text-field>
@@ -77,35 +77,35 @@
           <v-text-field
             name="anschrift"
             :rules="[rules.required]"
-            v-model="user.anschrift"
+            v-model="user.lieferadresse.anschrift"
             prepend-inner-icon="mdi-account"
             label="Anschrift"
           ></v-text-field>
           <v-text-field
             name="stadt"
             :rules="[rules.required]"
-            v-model="user.stadt"
+            v-model="user.lieferadresse.stadt"
             prepend-inner-icon="mdi-city"
             label="Stadt"
           ></v-text-field>
           <v-text-field
             name="bundesland"
             :rules="[rules.required]"
-            v-model="user.bundesland"
+            v-model="user.lieferadresse.bundesland"
             prepend-inner-icon="mdi-account"
             label="Bundesland"
           ></v-text-field>
           <v-text-field
             name="Plz"
             :rules="[rules.required]"
-            v-model="user.plz"
+            v-model="user.lieferadresse.plz"
             prepend-inner-icon="mdi-account"
             label="Postleitzahl"
           ></v-text-field>
           <v-select
-            label="Country"
+            label="Land"
             :items="countries"
-            v-model="user.land"
+            v-model="user.lieferadresse.land"
             required
             clearable
             :rules="selectionRules"
@@ -142,7 +142,7 @@ export default {
         vorname: "",
         nachname: "",
         email: "",
-        userisalreadyRegisteres: false,
+        // userisalreadyRegisteres: false,
         lieferadresse: {
           vorname: "",
           nachname: "",
@@ -150,7 +150,7 @@ export default {
           plz: "",
           anschrift: "",
           stadt: "",
-          bundesland: ""
+          bundesland: "",
         }
       }
     };
@@ -159,6 +159,12 @@ export default {
     // user(){
     //   return this.$store.getters.user
     // }
+  },
+  created() {
+    let docRef = db.collection('Länder')
+    docRef.get().then(docs =>{
+      docs.forEach(doc => this.countries.push(doc.data().name))
+    })
   },
 
   methods: {
@@ -201,7 +207,7 @@ export default {
       }
     },
     upload: function() {
-      this.register();
+      this.update()
       // let storageRef = firebase.storage().ref();
       // let mountainsRef = storageRef.child(`Profilbild/${this.imageName}`);
       // mountainsRef.put(this.imageFile).then(snapshot => {
@@ -221,17 +227,16 @@ export default {
       //   });
       // });
     },
-    register() {
+    update:function() {
       // this.user.isAlreadyRegistered = true;
       let docRef = db.collection("Nutzer").doc(this.user.username);
-      docRef
-        .set(this.user)
-
+      docRef.set(this.user)
         .then(() => (this.success = true))
         // eslint-disable-next-line
-              .catch(error => console.log(error))
-      docRef.update(this.user)
-    }
+              .catch(error => console.log('tut net', error))
+      docRef.update()
+      this.$router.push({name:'Profile'})
+    },
   }
 };
 </script>
