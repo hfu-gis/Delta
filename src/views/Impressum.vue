@@ -31,10 +31,10 @@
         e-mail: musteradresse@delta-shop.de<br />
         <br />
         Handelsregister: HRA 12345 A<br />
-        Amtsgericht Musterstadt<br />
+        Amtsgericht Stuttgart<br />
         UST-ID: DE123456789<br />
         <br />
-        Geschäftsführer: Alfred Walther-Weyland<br />
+        Geschäftsführer: Der Doktor<br />
       </v-card-text>
     </v-card>
   </div>
