@@ -1,14 +1,14 @@
 <template>
   <div>
-    <!--        <v-btn @click="produktzahl(5)" text>5</v-btn>-->
-    <!--        <v-btn @click="produktzahl(10)" text>10</v-btn>-->
-    <!--        <v-btn @click="produktzahl(15)" text>15</v-btn>-->
-    <!--        <v-btn @click="produktzahl(this.produkte.length)" text>Alle</v-btn>-->
+            <v-btn @click="produktzahl(5)" style="background: #424242" text>5</v-btn>
+            <v-btn @click="produktzahl(10)" style="background: #424242;margin-left: 1%" text>10</v-btn>
+            <v-btn @click="produktzahl(15)" style="background: #424242;margin-left: 1%" text>15</v-btn>
+            <v-btn @click="produktzahl(50)" style="background: #424242;margin-left: 1%" text>Alle</v-btn>
     <v-row>
-      <v-col v-for="produkt in produkte" :key="produkt.title">
+      <v-col v-for="produkt in produkte" :key="produkt.titel">
         <v-card elevation="4" class="carfs">
           <v-image :src="produkt.src" height="250">
-            <v-card-title v-text="produkt.title" />
+            <v-card-title v-text="produkt.titel" />
           </v-image>
           <v-card-text v-text="produkt.text" class="beschreibung" />
 
@@ -53,16 +53,17 @@ export default {
   props: {},
   methods: {
     resetprodukte: function() {
-      this.products = this.products.splice(0, this.products.length);
+      this.products = []
     },
     produktzahl: function(zahl) {
-      this.resetprodukte();
+
       for (let i = 0; i <= this.produkte.length; i++) {
         if (i <= zahl) {
-          let j = i;
-          this.products.push(this.produkte[j]);
+          let j = this.produkte[i]
+          this.products.push(j);
         }
       }
+      this.resetprodukte();
     },
 
     // anzahlderprodukte: function(zahl){
