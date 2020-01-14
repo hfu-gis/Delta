@@ -1,9 +1,9 @@
 <template>
   <div>
-            <v-btn @click="produktzahl(5)" style="background: #424242" text>5</v-btn>
-            <v-btn @click="produktzahl(10)" style="background: #424242;margin-left: 1%" text>10</v-btn>
-            <v-btn @click="produktzahl(15)" style="background: #424242;margin-left: 1%" text>15</v-btn>
-            <v-btn @click="produktzahl(50)" style="background: #424242;margin-left: 1%" text>Alle</v-btn>
+<!--            <v-btn @click="produktzahl(5)" style="background: #424242" text>5</v-btn>-->
+<!--            <v-btn @click="produktzahl(10)" style="background: #424242;margin-left: 1%" text>10</v-btn>-->
+<!--            <v-btn @click="produktzahl(15)" style="background: #424242;margin-left: 1%" text>15</v-btn>-->
+<!--            <v-btn @click="produktzahl(50)" style="background: #424242;margin-left: 1%" text>Alle</v-btn>-->
     <v-row>
       <v-col v-for="produkt in produkte" :key="produkt.titel">
         <v-card elevation="4" class="carfs">
