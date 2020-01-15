@@ -37,6 +37,7 @@
         right
         color="red"
         @click="toTop"
+        class="up"
       >
         <v-icon>mdi-chevron-triple-up</v-icon>
       </v-btn>
@@ -177,4 +178,5 @@ export default {
 .profilicon {
   align-self: center;
 }
+  .up{margin-bottom: 2%}
 </style>
