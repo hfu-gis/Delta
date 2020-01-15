@@ -17,25 +17,14 @@
         ></v-text-field>
       </v-container>
       <v-spacer />
-      <router-link to="Registration" class="topnavrouter"
-        ><v-btn class="topnavbtn" style="background: #424242"
+      <v-btn class="topnavbtn" style="background: #424242;float:right;margin-right: 2%" @click="$router.push({name:'Registration'})"
           >Registration</v-btn
-        ></router-link
-      >
-      <router-link to="Login" class="topnavrouter"
-        ><v-btn class="topnavbtn" style="background: #424242"
-          >Login</v-btn
-        ></router-link
-      >
-      <router-link
-        to="Profile"
-        style="text-decoration: none"
-        class="profileicon"
-      >
-        <v-icon class="profilicon" style="background: #424242"
+        >
+     <v-btn class="topnavbtn" style="background: #424242;float:right;margin-right: 2%" @click="$router.push({name:'Login'})"
+          >Login</v-btn>
+        <v-icon class="profilicon" style="background: #424242;float: right" @click="$router.push({name:'Profile'})"
           >mdi-account</v-icon
         >
-      </router-link>
     </v-app-bar>
     <v-content>
       <v-btn

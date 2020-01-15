@@ -1,7 +1,7 @@
 <template>
   <div>
     <v-row>
-      <v-col v-for="card in cards" :key="card.titel">
+      <v-col v-for="(card, index) in cards" :key="card.titel">
         <v-card elevation="4" class="carfs">
           <v-image :src="card.src" height="140">
             <v-card-title v-text="card.titel" />
@@ -11,7 +11,7 @@
           <v-card-actions>
             <v-spacer></v-spacer>
 
-            <v-btn icon @click="favPush">
+            <v-btn icon @click="favPush(index )">
               <v-icon>mdi-heart</v-icon>
             </v-btn>
             <v-btn icon @click="$router.push({ name: 'BlancoArticle' })">
@@ -40,17 +40,23 @@ export default {
     return {
       cards: [],
       user: {
-        favouriten: [],
+        favoriten: [],
         cart: []
       }
     };
   },
   methods: {
-    favPush: function() {
-      let x = this.card;
-      this.user.favouriten.push(x);
+    favPush: function(index) {
+      this.user.favoriten.push(this.produkte[index]);
+      this.updateFav();
       // eslint-disable-next-line
-                console.log('did')
+      console.log('did')
+    },
+    updateFav: function () {
+      let self = this
+      db.collection('Nutzer').doc('Nickhaec').update({
+        "favoriten":self.user.favoriten
+      })
     },
     toCart: function() {
       let x = this.card;

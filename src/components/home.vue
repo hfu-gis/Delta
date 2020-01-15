@@ -1,21 +1,23 @@
 <template>
   <div>
-<!--            <v-btn @click="produktzahl(5)" style="background: #424242" text>5</v-btn>-->
-<!--            <v-btn @click="produktzahl(10)" style="background: #424242;margin-left: 1%" text>10</v-btn>-->
-<!--            <v-btn @click="produktzahl(15)" style="background: #424242;margin-left: 1%" text>15</v-btn>-->
-<!--            <v-btn @click="produktzahl(50)" style="background: #424242;margin-left: 1%" text>Alle</v-btn>-->
+    <div class="seitenanzahl">
+            <v-btn @click="products = 5" style="background: #424242" text>5</v-btn>
+            <v-btn @click="products = 10" style="background: #424242;margin-left: 1em" text>10</v-btn>
+            <v-btn @click="products = 15" style="background: #424242;margin-left: 1em" text>15</v-btn>
+            <v-btn @click="products = produkte.length" style="background: #424242;margin-left: 1em" text>Alle</v-btn>
+    </div>
     <v-row>
-      <v-col v-for="produkt in produkte" :key="produkt.titel">
-        <v-card elevation="4" class="carfs">
-          <v-image :src="produkt.src" height="250">
-            <v-card-title v-text="produkt.titel" />
+      <v-col v-for="index of products" :key="index">
+        <v-card elevation="4" class="carfs" v-if="index <= produkte.length">
+          <v-image :src="produkte[index - 1].src" height="250">
+            <v-card-title v-text="produkte[index - 1].titel" />
           </v-image>
-          <v-card-text v-text="produkt.text" class="beschreibung" />
+          <v-card-text v-text="produkte[index - 1].text" class="beschreibung" />
 
           <v-card-actions>
             <v-spacer></v-spacer>
 
-            <v-btn icon @click="favPush">
+            <v-btn icon @click="favPush(index - 1)">
               <v-icon>mdi-heart</v-icon>
             </v-btn>
 
@@ -42,40 +44,39 @@ export default {
   name: "home",
   data: () => {
     return {
-      products: [],
+      products: 0,
       produkte: [],
       user: {
-        favouriten: [],
+        favoriten: [],
         cart: []
       }
     };
   },
   props: {},
   methods: {
+    updateFav: function () {
+      let self = this
+      db.collection('Nutzer').doc('Nickhaec').update({
+        "favoriten":self.user.favoriten
+      })
+    },
     resetprodukte: function() {
       this.products = []
     },
     produktzahl: function(zahl) {
-
+      /*this.resetprodukte();
       for (let i = 0; i <= this.produkte.length; i++) {
-        if (i <= zahl) {
-          let j = this.produkte[i]
-          this.products.push(j);
+        if (i < zahl) {
+          // let j = this.produkte[i]
+          this.products.push(this.produkte[i]);
         }
-      }
-      this.resetprodukte();
+      }*/
+      this.products = zahl;
     },
 
-    // anzahlderprodukte: function(zahl){
-    //     for (let i=0;i<= this.produkte.length;i++){
-    //        for(let j=0;j<=zahl;j++) {
-    //            this.products.push(this.produkte[i])
-    //        }
-    //     }
-    // },
-    favPush: function() {
-      let x = this.card;
-      this.user.favouriten.push(x);
+    favPush: function(index) {
+      this.user.favoriten.push(this.produkte[index]);
+      this.updateFav();
       // eslint-disable-next-line
                 console.log('did')
     },
@@ -110,6 +111,7 @@ export default {
       .then(musikAusDb => {
         musikAusDb.forEach(doc => {
           this.produkte.push(doc.data());
+          this.products = this.produkte.length
         });
       })
       .catch(err => {
@@ -137,4 +139,5 @@ export default {
 .beschreibung {
   height: 120px;
 }
+  .seitenanzahl{display: flex}
 </style>

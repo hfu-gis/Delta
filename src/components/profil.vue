@@ -30,7 +30,7 @@
           <p class="cont">{{ user.Zahlmöglichkeit }}</p>
         </div>
         <div class="vertlist">
-          <h3>Liferadresse:</h3>
+          <h3>Lieferadresse:</h3>
           <div class="cont">
             <p>{{ user.lieferadresse.land }}</p>
             <p>{{ user.lieferadresse.bundesland }}</p>

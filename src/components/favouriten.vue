@@ -1,37 +1,45 @@
 <template>
   <div>
-    <v-carousel v-model="model" class="favlist" height="400">
+    <v-carousel
+            cycle
+            height="400"
+            hide-delimiter-background
+            show-arrows-on-hover
+            class="favlist"
+    >
       <v-carousel-item
-        v-for="(favourite, i) in user.favouriten"
-        :key="favourite"
+              v-for="(item,i) in user.favoriten"
+              :key="i"
+              :src="item.src"
+              v-text="item.titel"
       >
-        <v-img :img="favourite" height="100%" tile>
-          <v-row class="fill-height" align="center" justify="center">
-            <div class="display-3">Slide {{ i + 1 }}</div>
-          </v-row>
-        </v-img>
       </v-carousel-item>
     </v-carousel>
   </div>
 </template>
 
 <script>
-export default {
+import db from "../db";
+
+  export default {
   name: "favourite",
   data() {
     return {
       user: {
-        favouriten: []
+        favoriten: []
       },
       model: 0
     };
   },
   mounted() {
-    for (let i = 0; i < 7; i++) {
-      this.user.favouriten.push({
-        src: "../assets/placeholder"
-      });
-    }
+    db.collection("Nutzer").doc('Nickhaec').get()
+    .then(res => {
+      // alert(res.data().favoriten)
+        this.user.favoriten = res.data().favoriten;
+    })
+  },
+  methods:{
+
   }
 };
 </script>
