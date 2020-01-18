@@ -62,22 +62,19 @@
                         class="footerlinks"
                         id="linkerlink"
                         style="text-decoration: none;color: white"
-                >Impressum
-                </router-link>
+                >Impressum</router-link>
                 <router-link
                         to="Kontakt"
                         class="footerlinks"
                         id="mittlererlink"
                         style="text-decoration: none;color: white"
-                >Kontakt
-                </router-link>
+                >Kontakt</router-link>
                 <router-link
                         to="AGB"
                         class="footerlinks"
                         id="rechterlink"
                         style="text-decoration: none;color: white"
-                >AGB
-                </router-link>
+                >AGB</router-link>
             </section>
         </v-footer>
     </v-app>
