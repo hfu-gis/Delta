@@ -3,7 +3,7 @@
         <v-app-bar class="appbar" app clipped-right dark height="120">
             <router-link to="/">
                 <v-toolbar-title class="routbild">
-                    <v-img class="logo" src="./assets/BotsLogo.png"></v-img>
+                    <v-img class="logo" src="./assets/DeltaLogo.png"></v-img>
                 </v-toolbar-title>
             </router-link>
             <v-spacer/>
@@ -123,15 +123,15 @@
     }
 
     .routbild {
-        width: 200px;
-        height: 200px;
+        width: 120px;
+        height: 140px;
         margin-left: 10%;
         align-self: center;
     }
 
     .logo:hover {
-        height: 120px;
-        width: 140px;
+        height: 110px;
+        width: 130px;
         transition: 1s;
     }
 
