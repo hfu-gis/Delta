@@ -12,9 +12,9 @@
                         </li>
                         <li><a @click="switchTo('editor')">Profileinstellungen</a></li>
                         <li><a @click="switchTo('favouriten')">Wunschliste</a></li>
+                        <li><a @click="switchTo('warenkorb')">Warenkorb</a></li>
                         <li><a @click="switchTo('bestellverlauf')">Bestellverlauf</a></li>
-                        <li>
-                            <a @click="switchTo('zahlmoeglichkeiten')">Zahlmöglichkeiten</a>
+                        <li><a @click="switchTo('zahlmoeglichkeiten')">Zahlmöglichkeiten</a>
                         </li>
                     </ol>
                 </v-card>
@@ -31,6 +31,7 @@
     import profil from "../components/profil";
     import editor from "../components/editor";
     import favouriten from "../components/favouriten";
+    import warenkorb from "../components/warenkorb";
     import bestellverlauf from "../components/bestellverlauf";
     import zahlmoeglichkeiten from "../components/zahlmoeglichkeiten";
 
@@ -41,6 +42,7 @@
             profil,
             editor,
             favouriten,
+            warenkorb,
             bestellverlauf,
             zahlmoeglichkeiten
         },
@@ -69,7 +71,7 @@
     .navi {
         width: auto;
         background: #424242;
-        height: 500px;
+        height: 600px;
         /*border: #424242 solid 1px;*/
         margin-left: 2%;
     }

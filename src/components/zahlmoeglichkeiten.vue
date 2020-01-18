@@ -1,5 +1,5 @@
 <template>
-  <div>zahlmöglichkeiten</div>
+  <div>Auswahl der Zahlmöglichkeiten</div>
 </template>
 
 <script>
