@@ -69,7 +69,7 @@ export default {
   },
   created() {
     db.collection("Angebot")
-      .doc("Filome")
+      .doc("Filme")
       .collection("Science-Fiction")
       .get()
       .then(filmeausDB => {
