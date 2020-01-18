@@ -4,8 +4,10 @@ import router from "./router";
 import { store } from "./store";
 import vuetify from "./plugins/vuetify";
 import * as firebase from "firebase";
+import Alert from "./components/Alert";
 
 Vue.config.productionTip = false;
+Vue.component("app-alert", Alert);
 
 new Vue({
   router,
