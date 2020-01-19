@@ -115,7 +115,11 @@
         watch: {
             user(value) {
                 if (value !== null && value !== undefined) {
+<<<<<<< HEAD
                    
+=======
+                    this.$router.push({name:'/Login'});
+>>>>>>> 6caff381893e5ed7569942739695825a5ba4d273
                 }
             }
         },
