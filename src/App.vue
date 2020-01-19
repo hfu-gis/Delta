@@ -127,8 +127,8 @@
     }
 
     .logo:hover {
-        height: 110px;
-        width: 130px;
+        height: 120px;
+        width: 140px;
         transition: 1s;
     }
 

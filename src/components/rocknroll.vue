@@ -70,7 +70,7 @@ export default {
   created() {
     db.collection("Angebot")
       .doc("Musik")
-      .collection("Rock n´Roll")
+      .collection("Rock")
       .get()
       .then(musikausDB => {
         musikausDB.forEach(doc => {

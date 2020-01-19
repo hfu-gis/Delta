@@ -70,7 +70,7 @@ export default {
   created() {
     db.collection("Angebot")
       .doc("Games")
-      .collection("Rpg")
+      .collection("RPG")
       .get()
       .then(spieleausDB => {
         spieleausDB.forEach(doc => {
