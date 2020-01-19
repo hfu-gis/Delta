@@ -7,14 +7,37 @@
                 </v-toolbar-title>
             </router-link>
             <v-spacer/>
+
             <v-container class="suchfeld">
                 <v-icon class="suchicon">mdi-magnify</v-icon>
-                <v-text-field
-                        name="suchfeld"
-                        label="Suche"
-                        id="suchfeld"
-                        type="suchfeld"
-                ></v-text-field>
+
+                <label>
+                    <input type="search" list="Shop">
+                    <datalist id="Shop">
+                        <option>Pulp Fiction</option>
+                        <option>Schimpansen</option>
+                        <option>Conjuring 2</option>
+                        <option>Leuchtturm</option>
+                        <option>Irishman</option>
+                        <option>Joker</option>
+                        <option>Titanic</option>
+                        <option>Arrival</option>
+                        <option>ExMachina</option>
+                        <option>Star Wars</option>
+                        <option>Parasite</option>
+                        <option>Uncut Gems</option>
+                        <option>Counter Strike Global Offense</option>
+                        <option>Grand Theft Auto 5</option>
+                        <option>Rainbow Six Siege</option>
+                        <option>Red Dead Redemption 2</option>
+                        <option>Civilisation 6</option>
+                        <option>Rome 2</option>
+                        <option>Stellaris</option>
+
+
+                    </datalist>
+                </label>
+
             </v-container>
             <v-spacer/>
             <v-btn v-if="!this.userIsAuthenticated" class="topnavbtn"
@@ -107,7 +130,7 @@
         created() {
             this.$vuetify.theme.dark = true;
             // this.$router.push({path: '/home'})
-        }
+        },
     };
 </script>
 <style scoped>
@@ -183,6 +206,8 @@
         position: fixed;
         left: 35%;
         display: flex;
+        border: 2px solid #999;
+        border-radius: 0.5em;
     }
 
     .suchicon {
