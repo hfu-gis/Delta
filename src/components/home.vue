@@ -81,13 +81,7 @@ export default {
       this.products = [];
     },
     produktzahl: function(zahl) {
-      /*this.resetprodukte();
-      for (let i = 0; i <= this.produkte.length; i++) {
-        if (i < zahl) {
-          // let j = this.produkte[i]
-          this.products.push(this.produkte[i]);
-        }
-      }*/
+     
       this.products = zahl;
     },
 
@@ -137,15 +131,6 @@ export default {
       });
   },
   computed: {}
-  // mounted() {
-  //     for (let i = 1; i < 9; i++) {
-  //         this.cards.push({
-  //             title: "Titel" + " " + i,
-  //             src: 'https://picsum.photos/140?random=' + i,
-  //             text: "Lorem ipsum"
-  //         });
-  //     }
-  // }
 };
 </script>
 

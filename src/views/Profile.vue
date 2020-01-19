@@ -7,16 +7,12 @@
       <article class="navi">
         <v-card class="navigation">
           <ol class="navliste">
-            <li style="margin-top: 0%">
-              <a @click="switchTo('profil')">Profil</a>
-            </li>
+            <li style="margin-top: 0%"><a @click="switchTo('profil')">Profil</a></li>
             <li><a @click="switchTo('editor')">Profileinstellungen</a></li>
             <li><a @click="switchTo('favouriten')">Wunschliste</a></li>
             <li><a @click="switchTo('warenkorb')">Warenkorb</a></li>
             <li><a @click="switchTo('bestellverlauf')">Bestellverlauf</a></li>
-            <li>
-              <a @click="switchTo('zahlmoeglichkeiten')">Zahlmöglichkeiten</a>
-            </li>
+            <li><a @click="switchTo('zahlmoeglichkeiten')">Zahlmöglichkeiten</a></li>
           </ol>
         </v-card>
       </article>
