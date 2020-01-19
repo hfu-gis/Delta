@@ -62,7 +62,7 @@
                                 </v-layout>
                                 <v-layout row>
                                     <v-flex xs12>
-                                        <v-btn type="submit">Sign up</v-btn>
+                                        <v-btn type="submit" >Sign up</v-btn>
                                         <p>
                                             By creating an account you agree to our
                                             <router-link to="">Terms & Conditions</router-link>
@@ -115,7 +115,7 @@
         watch: {
             user(value) {
                 if (value !== null && value !== undefined) {
-                    this.$router.push("/Login");
+                   
                 }
             }
         },
@@ -125,6 +125,7 @@
                     email: this.email,
                     password: this.password
                 });
+                 this.$router.push({name:'Login'});
             },
             onDismissed() {
                 this.$store.dispatch("clearError");
