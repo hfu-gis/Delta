@@ -57,41 +57,7 @@
 </template>
 
 <script>
-<<<<<<< HEAD
 import db from "../db";
-export default {
-  name: "home",
-  data: () => {
-    return {
-      products: 0,
-      produkte: [],
-      user: {
-        favoriten: [],
-        cart: []
-      }
-    };
-  },
-  props: {},
-  methods: {
-    updateFav: function() {
-      let self = this;
-      db.collection("Nutzer")
-        .doc("Nickhaec")
-        .update({
-          favoriten: self.user.favoriten
-        });
-    },
-    resetprodukte: function() {
-      this.products = [];
-    },
-    produktzahl: function(zahl) {
-     
-      this.products = zahl;
-    },
-=======
-    import db from "../db";
->>>>>>> 616527b59f8696c451286f5926a6b84d117bd92a
-
     export default {
         name: "home",
         data: () => {
@@ -119,20 +85,14 @@ export default {
                 db.collection("Nutzer")
                     .doc("Nickhaec")
                     .update({
-                        warenkorb: self.user.warenkorb
+                        warenkorb: self.user.cart
                     });
             },
             resetprodukte: function () {
                 this.products = [];
             },
             produktzahl: function (zahl) {
-                /*this.resetprodukte();
-                for (let i = 0; i <= this.produkte.length; i++) {
-                  if (i < zahl) {
-                    // let j = this.produkte[i]
-                    this.products.push(this.produkte[i]);
-                  }
-                }*/
+               
                 this.products = zahl;
             },
 
@@ -141,12 +101,11 @@ export default {
                 this.updateFav();
                 // eslint-disable-next-line
                 console.log('did')
-<<<<<<< HEAD
     },
-    toCart: function() {
-      let x = this.card;
-      this.user.cart.push(x);
-    }
+              toCart: function (index) {
+                this.user.cart.push(this.produkte[index]);
+                this.updateCart();
+            }
   },
   created() {
     db.collection("Angebot")
@@ -184,59 +143,6 @@ export default {
   },
   computed: {}
 };
-=======
-            },
-            toCart: function (index) {
-                this.user.warenkorb.push(this.produkte[index]);
-                this.updateCart();
-            }
-        },
-        created() {
-            db.collection("Angebot")
-                .doc("Neuste Produkte")
-                .collection("Filme")
-                .get()
-                .then(filmeAusDb => {
-                    filmeAusDb.forEach(doc => {
-                        this.produkte.push(doc.data());
-                    });
-                });
-            db.collection("Angebot")
-                .doc("Neuste Produkte")
-                .collection("Games")
-                .get()
-                .then(gamesAusDb => {
-                    gamesAusDb.forEach(doc => {
-                        this.produkte.push(doc.data());
-                    });
-                });
-            db.collection("Angebot")
-                .doc("Neuste Produkte")
-                .collection("Musik")
-                .get()
-                .then(musikAusDb => {
-                    musikAusDb.forEach(doc => {
-                        this.produkte.push(doc.data());
-                        this.products = this.produkte.length;
-                    });
-                })
-                .catch(err => {
-                    // eslint-disable-next-line
-                    console.log('nix gefunden', err)
-                });
-        },
-        computed: {}
-        // mounted() {
-        //     for (let i = 1; i < 9; i++) {
-        //         this.cards.push({
-        //             title: "Titel" + " " + i,
-        //             src: 'https://picsum.photos/140?random=' + i,
-        //             text: "Lorem ipsum"
-        //         });
-        //     }
-        // }
-    };
->>>>>>> 616527b59f8696c451286f5926a6b84d117bd92a
 </script>
 
 <style scoped>
