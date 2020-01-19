@@ -11,7 +11,7 @@
           <v-card-actions>
             <v-spacer></v-spacer>
 
-            <v-btn icon @click="favPush(index )">
+            <v-btn icon @click="favPush(index)">
               <v-icon>mdi-heart</v-icon>
             </v-btn>
             <v-btn icon @click="$router.push({ name: 'BlancoArticle' })">
@@ -52,11 +52,13 @@ export default {
       // eslint-disable-next-line
       console.log('did')
     },
-    updateFav: function () {
-      let self = this
-      db.collection('Nutzer').doc('Nickhaec').update({
-        "favoriten":self.user.favoriten
-      })
+    updateFav: function() {
+      let self = this;
+      db.collection("Nutzer")
+        .doc("Nickhaec")
+        .update({
+          favoriten: self.user.favoriten
+        });
     },
     toCart: function() {
       let x = this.card;
