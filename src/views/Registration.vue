@@ -115,7 +115,7 @@
         watch: {
             user(value) {
                 if (value !== null && value !== undefined) {
-                    this.$router.push("/Login");
+                    this.$router.push({name:'/Login'});
                 }
             }
         },
