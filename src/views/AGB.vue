@@ -3,6 +3,7 @@
     <article>
       <about />
     </article>
+    <v-flex xs20 sm450 lginfinity>
     <v-card class="AGB" shaped elevation="20">
       <v-card-title class="überschrift">
         Allgemeine Geschäftsbedingungen der Firma Delta-Shop
@@ -184,6 +185,7 @@
         Stand der AGB Jan.2020
       </v-card-text>
     </v-card>
+    </v-flex>
   </div>
 </template>
 
