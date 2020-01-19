@@ -47,16 +47,21 @@ export default {
     };
   },
   methods: {
-    updateFav: function () {
+    updateFav: function() {
       let self = this;
-      db.collection('Nutzer').doc('Nickhaec').get().then((res) => {
-        for(let i in res.data().favoriten){
-          self.user.favoriten.push(i);
-        }
-        db.collection('Nutzer').doc('Nickhaec').update({
-          "favoriten": self.user.favoriten
-        })
-      })
+      db.collection("Nutzer")
+        .doc("Nickhaec")
+        .get()
+        .then(res => {
+          for (let i in res.data().favoriten) {
+            self.user.favoriten.push(i);
+          }
+          db.collection("Nutzer")
+            .doc("Nickhaec")
+            .update({
+              favoriten: self.user.favoriten
+            });
+        });
     },
     favPush: function(index) {
       this.user.favoriten.push(this.cards[index]);

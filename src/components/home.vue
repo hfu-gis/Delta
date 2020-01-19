@@ -1,10 +1,25 @@
 <template>
   <div>
     <div class="seitenanzahl">
-            <v-btn @click="products = 5" style="background: #424242" text>5</v-btn>
-            <v-btn @click="products = 10" style="background: #424242;margin-left: 1em" text>10</v-btn>
-            <v-btn @click="products = 15" style="background: #424242;margin-left: 1em" text>15</v-btn>
-            <v-btn @click="products = produkte.length" style="background: #424242;margin-left: 1em" text>Alle</v-btn>
+      <v-btn @click="products = 5" style="background: #424242" text>5</v-btn>
+      <v-btn
+        @click="products = 10"
+        style="background: #424242;margin-left: 1em"
+        text
+        >10</v-btn
+      >
+      <v-btn
+        @click="products = 15"
+        style="background: #424242;margin-left: 1em"
+        text
+        >15</v-btn
+      >
+      <v-btn
+        @click="products = produkte.length"
+        style="background: #424242;margin-left: 1em"
+        text
+        >Alle</v-btn
+      >
     </div>
     <v-row>
       <v-col v-for="index of products" :key="index">
@@ -54,14 +69,16 @@ export default {
   },
   props: {},
   methods: {
-    updateFav: function () {
-      let self = this
-      db.collection('Nutzer').doc('Nickhaec').update({
-        "favoriten":self.user.favoriten
-      })
+    updateFav: function() {
+      let self = this;
+      db.collection("Nutzer")
+        .doc("Nickhaec")
+        .update({
+          favoriten: self.user.favoriten
+        });
     },
     resetprodukte: function() {
-      this.products = []
+      this.products = [];
     },
     produktzahl: function(zahl) {
       /*this.resetprodukte();
@@ -111,7 +128,7 @@ export default {
       .then(musikAusDb => {
         musikAusDb.forEach(doc => {
           this.produkte.push(doc.data());
-          this.products = this.produkte.length
+          this.products = this.produkte.length;
         });
       })
       .catch(err => {
@@ -139,5 +156,7 @@ export default {
 .beschreibung {
   height: 120px;
 }
-  .seitenanzahl{display: flex}
+.seitenanzahl {
+  display: flex;
+}
 </style>
