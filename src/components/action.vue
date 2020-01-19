@@ -17,7 +17,7 @@
             <v-btn icon @click="$router.push({ name: 'BlancoArticle' })">
               <v-icon>mdi-table-of-contents</v-icon>
             </v-btn>
-            <v-btn icon @click="toCart">
+            <v-btn icon @click="toCart(index - 1)">
               <v-icon>mdi-cart</v-icon>
             </v-btn>
 
@@ -63,15 +63,23 @@ export default {
             });
         });
     },
+    updateCart: function(){
+      let self = this;
+      db.collection("Nutzer")
+              .doc("Nickhaec")
+              .update({
+                warenkorb: self.user.cart
+              });
+    },
     favPush: function(index) {
       this.user.favoriten.push(this.cards[index]);
       this.updateFav();
       // eslint-disable-next-line
       console.log('did')
     },
-    toCart: function() {
-      let x = this.card;
-      this.user.cart.push(x);
+    toCart: function(index) {
+      this.user.cart.push(this.produkte[index]);
+      this.updateCart();
     }
   },
   computed: {},
