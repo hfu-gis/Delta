@@ -58,6 +58,7 @@ export default {
   methods: {},
 
   created() {
+    // zeigt Daten aus DB an
     db.collection("Nutzer")
       .doc("Nickhaec")
       .get()

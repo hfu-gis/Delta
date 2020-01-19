@@ -32,6 +32,7 @@ export default {
     };
   },
   mounted() {
+    // pusht alles aus DB in Array
     db.collection("Nutzer")
       .doc("Nickhaec")
       .get()

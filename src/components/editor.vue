@@ -3,9 +3,6 @@
     <div id="prfl">
       <v-card class="profilpiktschor">
         <div class="bild">
-          <!--          <h2 style="font-weight: lighter;">-->
-          <!--            Dein Profilbild-->
-          <!--          </h2>-->
           <img
             :src="imageUrl"
             height="300"
@@ -15,7 +12,9 @@
           />
         </div>
         <v-card-actions class="upload">
-          <v-btn @click="upload">Update</v-btn>
+          <v-btn @click="upload" style="background: red;border:black solid 1px"
+            >Update</v-btn
+          >
         </v-card-actions>
       </v-card>
       <v-card class="profilsettings">
@@ -117,7 +116,6 @@
 </template>
 
 <script>
-// import firebase from "firebase";
 import db from "../db";
 export default {
   name: "editor",
@@ -142,7 +140,7 @@ export default {
         vorname: "",
         nachname: "",
         email: "",
-        // userisalreadyRegisteres: false,
+
         lieferadresse: {
           vorname: "",
           nachname: "",
@@ -155,12 +153,9 @@ export default {
       }
     };
   },
-  computed: {
-    // user(){
-    //   return this.$store.getters.user
-    // }
-  },
+  computed: {},
   created() {
+    // gettet Länder aus DB
     let docRef = db.collection("Länder");
     docRef.get().then(docs => {
       docs.forEach(doc => this.countries.push(doc.data().name));
@@ -168,6 +163,7 @@ export default {
   },
 
   methods: {
+    // lässt Bild temporär anzeigen
     getImages: function() {
       db.collection("images")
         .get()
@@ -183,6 +179,7 @@ export default {
       this.imageFile = "";
       this.imageUrl = "";
     },
+    // pickt Bild
     pickFile() {
       this.$refs.image.click();
     },
@@ -208,27 +205,9 @@ export default {
     },
     upload: function() {
       this.update();
-      // let storageRef = firebase.storage().ref();
-      // let mountainsRef = storageRef.child(`Profilbild/${this.imageName}`);
-      // mountainsRef.put(this.imageFile).then(snapshot => {
-      //   snapshot.ref.getDownloadURL().then(downloadURL => {
-      //     this.imageUrl = downloadURL;
-      //     const bucketName = "image-upload-62ed7.appspot.com";
-      //     const filePath = this.imageName;
-      //     db.collection("nutzer").add({
-      //       downloadURL,
-      //       downloadUrl:
-      //         `gs://gis-deltaforce-bob.appspot.com${bucketName}/Profilbild` +
-      //         "%2F" +
-      //         `${encodeURIComponent(filePath)}?alt=media`,
-      //       timestamp: Date.now()
-      //     });
-      //     this.getImages();
-      //   });
-      // });
     },
+    // pusht Daten von Data in Datenbank
     update: function() {
-      // this.user.isAlreadyRegistered = true;
       let docRef = db.collection("Nutzer").doc(this.user.username);
       docRef
         .set(this.user)
@@ -236,7 +215,6 @@ export default {
         // eslint-disable-next-line
               .catch(error => console.log('tut net', error))
       docRef.update();
-      this.$router.push({ name: "Profile" });
     }
   }
 };
@@ -270,7 +248,7 @@ export default {
 #liefa {
   margin-top: 5%;
   width: 40%;
-  margin-left: 32.5%;
+  margin-left: 33.3%;
 }
 #prfl {
   display: flex;

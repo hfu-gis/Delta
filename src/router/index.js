@@ -13,6 +13,7 @@ import Kontakt from "../views/Kontakt";
 Vue.use(VueRouter);
 
 const routes = [
+  // setzt Routerpoints
   {
     path: "/Kontakt",
     name: "Kontakt",

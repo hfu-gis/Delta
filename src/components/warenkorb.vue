@@ -31,6 +31,7 @@ export default {
       model: 0
     };
   },
+  // pusht Content aus DB in Array
   mounted() {
     db.collection("Nutzer")
       .doc("Nickhaec")

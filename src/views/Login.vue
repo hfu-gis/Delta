@@ -32,7 +32,11 @@
                 </v-layout>
                 <v-layout row>
                   <v-flex xs12>
-                    <v-btn type="submit">Sign in</v-btn>
+                    <v-btn
+                      type="submit"
+                      style="background: red;border:black solid 1px"
+                      >Sign in</v-btn
+                    >
                   </v-flex>
                 </v-layout>
               </form>
@@ -55,6 +59,7 @@ export default {
     };
   },
   computed: {
+    // gibt user aus auth
     user() {
       return this.$store.getters.user;
     }
@@ -67,6 +72,7 @@ export default {
     }
   },
   methods: {
+    // meldet an
     onSignin() {
       this.$store.dispatch("signUserIn", {
         email: this.email,

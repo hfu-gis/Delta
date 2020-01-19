@@ -6,7 +6,7 @@
           <v-image :src="card.src" height="140">
             <v-card-title v-text="card.titel" />
           </v-image>
-          <v-card-text v-text="card.text" />
+          <v-card-text v-text="card.text" class="beschreibung" />
 
           <v-card-actions>
             <v-spacer></v-spacer>
@@ -52,13 +52,13 @@ export default {
       // eslint-disable-next-line
       console.log('did')
     },
-    updateCart: function(){
+    updateCart: function() {
       let self = this;
       db.collection("Nutzer")
-              .doc("Nickhaec")
-              .update({
-                warenkorb: self.user.cart
-              });
+        .doc("Nickhaec")
+        .update({
+          warenkorb: self.user.cart
+        });
     },
     toCart: function(index) {
       this.user.cart.push(this.produkte[index]);
@@ -66,15 +66,7 @@ export default {
     }
   },
   computed: {},
-  mounted() {
-    // for (let i = 1; i < 16; i++) {
-    //   this.cards.push({
-    //     title: "Titel" + " " + i,
-    //     src: "./assets/placeholder/" + i,
-    //     text: "Lorem ipsum"
-    //   });
-    // }
-  },
+  mounted() {},
   created() {
     db.collection("Angebot")
       .doc("Filme")
@@ -97,4 +89,5 @@ export default {
 .carfs {
   width: 450px;
 }
+/* .beschreibung{height: 120px;} */
 </style>

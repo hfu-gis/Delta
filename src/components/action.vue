@@ -6,7 +6,7 @@
           <v-image :src="card.src" height="140">
             <v-card-title v-text="card.titel" />
           </v-image>
-          <v-card-text v-text="card.text" />
+          <v-card-text v-text="card.text" class="beschreibung" />
 
           <v-card-actions>
             <v-spacer></v-spacer>
@@ -63,13 +63,13 @@ export default {
             });
         });
     },
-    updateCart: function(){
+    updateCart: function() {
       let self = this;
       db.collection("Nutzer")
-              .doc("Nickhaec")
-              .update({
-                warenkorb: self.user.cart
-              });
+        .doc("Nickhaec")
+        .update({
+          warenkorb: self.user.cart
+        });
     },
     favPush: function(index) {
       this.user.favoriten.push(this.cards[index]);
@@ -98,15 +98,7 @@ export default {
               console.log('nix gefunden', err)
       });
   },
-  mounted() {
-    // for (let i = 1; i < 16; i++) {
-    //   this.cards.push({
-    //     title: "Titel" + " " + i,
-    //     src: "./assets/placeholder/" + i,
-    //     text: "Lorem ipsum"
-    //   });
-    // }
-  }
+  mounted() {}
 };
 </script>
 
@@ -114,4 +106,5 @@ export default {
 .carfs {
   width: 450px;
 }
+/* .beschreibung{height: 120px;background-attachment: fixed;} */
 </style>

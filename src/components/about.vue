@@ -7,26 +7,32 @@
           Bei uns bekommt man die neusten und aktuellsten Filme, Serien und
           Spiele
         </div>
-        <div class="Kurzübersicht">
+        <v-container class="Kurzübersicht">
           <div @click="$router.push({ name: 'Home' })" class="infor">
-            <h3 class="üb">
+            <h3 class="ueb">
               Startseite
             </h3>
-            <v-icon style="font-size: 35px">mdi-view-list</v-icon>
+            <v-icon style="font-size: 35px;margin-left:25%" class="icon"
+              >mdi-view-list</v-icon
+            >
           </div>
           <div @click="$router.push({ name: 'Home' })" class="infor" id="i">
-            <h3 class="üb">
+            <h3 class="ueb">
               Verzeichnis
             </h3>
-            <v-icon style="font-size: 35px">mdi-shape</v-icon>
+            <v-icon style="font-size: 35px;margin-left:30%" class="icon"
+              >mdi-shape</v-icon
+            >
           </div>
           <div @click="$router.push({ name: 'Releases' })" class="infor">
-            <h3 class="üb">
+            <h3 class="ueb">
               Aktuelleste News und Release Informationen
             </h3>
-            <v-icon style="font-size: 35px">mdi-newspaper</v-icon>
+            <v-icon style="font-size: 35px;margin-left:45%" class="icon"
+              >mdi-newspaper</v-icon
+            >
           </div>
-        </div>
+        </v-container>
       </v-container>
     </section>
     <v-container class="labelbox">
@@ -57,7 +63,7 @@ export default {
     height: 0;
   }
   to {
-    height: 200px;
+    height: 250px;
   }
 }
 #checkbox {
@@ -68,7 +74,7 @@ export default {
 }
 #checkbox:checked ~ .boxinhalt {
   display: block;
-  height: 200px;
+  height: 250px;
 }
 .textbutton h1 {
   font-size: 20px;
@@ -76,9 +82,9 @@ export default {
 }
 .textbutton h1:hover {
   font-weight: bold;
+  cursor: pointer;
 }
-.cvont {
-}
+
 .Info {
   font-weight: lighter;
   text-align: center;
@@ -87,22 +93,20 @@ export default {
 .Kurzübersicht {
   display: flex;
   margin-top: 2%;
+  justify-content: space-around;
 }
 .Kurzübersicht h3 {
   font-weight: lighter;
   font-size: 20px;
 }
-.infor {
-  justify-content: center;
+.Infor {
   align-content: center;
-  text-align: center;
-  margin-left: 19%;
+  justify-content: center;
 }
-.üb {
-  text-align: center;
+.icon {
 }
 .infor:hover {
   cursor: pointer;
-  color: #9e9e9e;
+  color: red;
 }
 </style>

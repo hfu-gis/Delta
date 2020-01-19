@@ -6,12 +6,12 @@
           <v-image :src="card.src" height="140">
             <v-card-title v-text="card.titel" />
           </v-image>
-          <v-card-text v-text="card.text" />
+          <v-card-text v-text="card.text" class="beschreibung" />
 
           <v-card-actions>
             <v-spacer></v-spacer>
 
-            <v-btn icon @click="favPush(index)">
+            <v-btn icon @click="favPush(index - 1)">
               <v-icon>mdi-heart</v-icon>
             </v-btn>
             <v-btn icon @click="$router.push({ name: 'BlancoArticle' })">
@@ -60,13 +60,13 @@ export default {
           favoriten: self.user.favoriten
         });
     },
-    updateCart: function(){
+    updateCart: function() {
       let self = this;
       db.collection("Nutzer")
-              .doc("Nickhaec")
-              .update({
-                warenkorb: self.user.cart
-              });
+        .doc("Nickhaec")
+        .update({
+          warenkorb: self.user.cart
+        });
     },
     toCart: function(index) {
       this.user.cart.push(this.produkte[index]);
@@ -74,15 +74,7 @@ export default {
     }
   },
   computed: {},
-  mounted() {
-    // for (let i = 1; i < 16; i++) {
-    //   this.cards.push({
-    //     title: "Titel" + " " + i,
-    //     src: "./assets/placeholder/" + i,
-    //     text: "Lorem ipsum"
-    //   });
-    // }
-  },
+  mounted() {},
   created() {
     db.collection("Angebot")
       .doc("Games")
@@ -105,4 +97,5 @@ export default {
 .carfs {
   width: 450px;
 }
+/* .beschreibung{height: 120px;} */
 </style>
