@@ -134,6 +134,7 @@ export default {
     metal,
     home
   },
+  // switcht angeklikcte Seite
   methods: {
     switchTo: function(page) {
       this.currentPage = page;
@@ -164,5 +165,6 @@ export default {
 .ueschrift {
   margin-top: 2%;
   font-size: 30px;
+  margin-left: 10%;
 }
 </style>

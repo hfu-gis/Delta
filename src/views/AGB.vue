@@ -189,6 +189,7 @@
 
 <script>
 import about from "../components/about";
+
 export default {
   name: "AGB",
   components: {
@@ -203,10 +204,12 @@ export default {
   margin-right: 35%;
   margin-top: 5%;
 }
+
 .überschrift {
   margin-left: 10%;
   font-size: x-large;
 }
+
 .text {
   font-size: large;
   text-align: left;

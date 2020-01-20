@@ -6,7 +6,7 @@
           <v-image :src="card.src" height="140">
             <v-card-title v-text="card.titel" />
           </v-image>
-          <v-card-text v-text="card.text" />
+          <v-card-text v-text="card.text" class="beschreibung" />
 
           <v-card-actions>
             <v-spacer></v-spacer>
@@ -19,7 +19,7 @@
               <v-icon>mdi-table-of-contents</v-icon>
             </v-btn>
 
-            <v-btn icon @click="toCart">
+            <v-btn icon @click="toCart(index - 1)">
               <v-icon>mdi-cart</v-icon>
             </v-btn>
 
@@ -48,27 +48,28 @@ export default {
     };
   },
   methods: {
+    // aktiviert update funktion und pusht
     favPush: function() {
       let x = this.card;
       this.user.favouriten.push(x);
       // eslint-disable-next-line
-       console.log('did')
+                console.log('did')
     },
-    toCart: function() {
-      let x = this.card;
-      this.user.cart.push(x);
+    updateCart: function() {
+      let self = this;
+      db.collection("Nutzer")
+        .doc("Nickhaec")
+        .update({
+          warenkorb: self.user.cart
+        });
+    },
+    toCart: function(index) {
+      this.user.cart.push(this.produkte[index]);
+      this.updateCart();
     }
   },
   computed: {},
-  mounted() {
-    // for (let i = 1; i < 16; i++) {
-    //   this.cards.push({
-    //     title: "Titel" + " " + i,
-    //     src: "./assets/placeholder/" + i,
-    //     text: "Lorem ipsum"
-    //   });
-    // }
-  },
+  mounted() {},
   created() {
     db.collection("Angebot")
       .doc("Filme")
@@ -81,7 +82,7 @@ export default {
       })
       .catch(err => {
         // eslint-disable-next-line
-              console.log('nix gefunden', err)
+                    console.log('nix gefunden', err)
       });
   }
 };
@@ -91,4 +92,5 @@ export default {
 .carfs {
   width: 450px;
 }
+/* .beschreibung{height: 120px;} */
 </style>

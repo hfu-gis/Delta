@@ -6,7 +6,7 @@
           <v-image :src="card.src" height="140">
             <v-card-title v-text="card.titel" />
           </v-image>
-          <v-card-text v-text="card.text" />
+          <v-card-text v-text="card.text" class="beschreibung" />
 
           <v-card-actions>
             <v-spacer></v-spacer>
@@ -17,7 +17,7 @@
             <v-btn icon @click="$router.push({ name: 'BlancoArticle' })">
               <v-icon>mdi-table-of-contents</v-icon>
             </v-btn>
-            <v-btn icon @click="toCart">
+            <v-btn icon @click="toCart(index - 1)">
               <v-icon>mdi-cart</v-icon>
             </v-btn>
 
@@ -47,16 +47,29 @@ export default {
     };
   },
   methods: {
-    updateFav: function () {
+    updateFav: function() {
       let self = this;
-      db.collection('Nutzer').doc('Nickhaec').get().then((res) => {
-        for(let i in res.data().favoriten){
-          self.user.favoriten.push(i);
-        }
-        db.collection('Nutzer').doc('Nickhaec').update({
-          "favoriten": self.user.favoriten
-        })
-      })
+      db.collection("Nutzer")
+        .doc("Nickhaec")
+        .get()
+        .then(res => {
+          for (let i in res.data().favoriten) {
+            self.user.favoriten.push(i);
+          }
+          db.collection("Nutzer")
+            .doc("Nickhaec")
+            .update({
+              favoriten: self.user.favoriten
+            });
+        });
+    },
+    updateCart: function() {
+      let self = this;
+      db.collection("Nutzer")
+        .doc("Nickhaec")
+        .update({
+          warenkorb: self.user.cart
+        });
     },
     favPush: function(index) {
       this.user.favoriten.push(this.cards[index]);
@@ -64,9 +77,9 @@ export default {
       // eslint-disable-next-line
       console.log('did')
     },
-    toCart: function() {
-      let x = this.card;
-      this.user.cart.push(x);
+    toCart: function(index) {
+      this.user.cart.push(this.produkte[index]);
+      this.updateCart();
     }
   },
   computed: {},
@@ -85,15 +98,7 @@ export default {
               console.log('nix gefunden', err)
       });
   },
-  mounted() {
-    // for (let i = 1; i < 16; i++) {
-    //   this.cards.push({
-    //     title: "Titel" + " " + i,
-    //     src: "./assets/placeholder/" + i,
-    //     text: "Lorem ipsum"
-    //   });
-    // }
-  }
+  mounted() {}
 };
 </script>
 
@@ -101,4 +106,5 @@ export default {
 .carfs {
   width: 450px;
 }
+/* .beschreibung{height: 120px;background-attachment: fixed;} */
 </style>

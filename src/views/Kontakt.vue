@@ -45,6 +45,7 @@
 
 <script>
 import about from "../components/about";
+
 export default {
   name: "Kontakt",
   components: {
@@ -59,14 +60,17 @@ export default {
   margin-right: 40%;
   margin-top: 5%;
 }
+
 .überschrift {
   font-size: xx-large;
   margin-left: 20%;
 }
+
 .text {
   font-size: large;
   text-align: center;
 }
+
 .submitbtn {
   background-color: #4caf50;
   color: white;
@@ -76,6 +80,7 @@ export default {
   cursor: pointer;
   width: 60%;
 }
+
 input[type="text"],
 input[type="email"] {
   width: 60%;

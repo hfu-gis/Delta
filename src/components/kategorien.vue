@@ -48,6 +48,7 @@ export default {
   data: () => ({
     filme: [
       {
+        // navigationsleisteninhalt aller Kategorien
         title: "Horror",
         src: "../assets/placeholder/3-days-to-kill-2.jpg",
         to: "Verzeichnis"
